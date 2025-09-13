@@ -1,0 +1,240 @@
+{
+    "PK": "SERVICE#0220439a-d3ea-408b-b05a-5e2e5316325a",
+    "SK": "PROFILE#DETAILS",
+    "alias": "aqua-world",
+    "timezone": "America/Caracas",
+    "type": "RECURRING",
+    "averageRating": 0,
+    "bookingScope": {
+        "bookingFlow": "WHATSAPP_BOOKING",
+        "requiredData": ["email", "firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["DE_TODITO", "BEACH"],
+    "createdAt": "2024-07-07T21:49:39.718Z",
+    "customPage": {
+        "checkoutTitle": "Reserva esta aventura",
+        "hostTitle": "Conoce al experto",
+        "theme": {
+            "primary": "#a1cbe5"
+        }
+    },
+    "description": "¡Siente la adrenalina recorriendo tu cuerpo mientras navegas las olas del Caribe en moto acuática! Diviértete en la Isla de Margarita, la perla del Caribe, y disfruta de paisajes paradisíacos desde una perspectiva única.",
+    "highlightedFeatures": [
+        {
+            "caption": "Anfitrión estrella",
+            "icon": "medal"
+        }
+    ],
+    "hostId": "7607664d-b762-48e5-a7e3-36e0a3c07ed7",
+    "keyFeatures": [
+        {
+            "caption": "Carrera de pura adrenalina",
+            "description": "Siente la emoción mientras aceleras por las olas a bordo de tu moto de agua, ¡como si estuvieras en una película de acción! 😎",
+            "icon": "boat"
+        },
+        {
+            "caption": "Una vista brutaal!",
+            "description": "Consigue las mejores fotos con fondos de playas paradisíacas y agua cristalina 🌴 ¡para que tus seguidores mueran de envidia! 😏",
+            "icon": "island"
+        },
+        {
+            "caption": "Splash y risas garantizadas",
+            "description": "Prepárate para divertirte y reír a carcajadas mientras desafías las olas y salpicas a tus amigos 😂",
+            "icon": "drop"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.9576,
+            "longitude": -63.864
+        },
+        "country": "Venezuela",
+        "description": "Playa El Yaque, Isla de Margarita",
+        "state": "Nueva Esparta"
+    },
+    "minCapacity": 2,
+    "price": {
+        "amount": 10,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "privateGroup": "OPTIONAL",
+    "published": true,
+    "recordId": "0220439a-d3ea-408b-b05a-5e2e5316325a",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Disfruta de una emocionante aventura en moto de agua por las cristalinas aguas de la Isla de Margarita"
+                },
+                {
+                    "description": "Explora la belleza natural de la isla, incluyendo playas de arena blanca y manglares exóticos"
+                },
+                {
+                    "description": "Descubre la rica vida marina mientras navegas por la costa"
+                },
+                {
+                    "description": "Haz una parada para nadar y practicar snorkel en arrecifes de coral"
+                },
+                {
+                    "description": "Siente la adrenalina mientras recorres las olas y disfrutas del sol caribeño"
+                }
+            ],
+            "position": 0,
+            "section": "WHAT_WILL_YOU_DO"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Vive una experiencia única de 4 horas en moto de agua por la impresionante Isla de Margarita. Comienza tu aventura en Playa El Yaque, uno de los destinos más famosos de la isla, conocido por sus aguas tranquilas y su arena fina. <br/><br/> Recorre la costa de la isla, pasando por hermosos paisajes naturales y playas vírgenes. Haz una parada en una de las mejores zonas de snorkel de la isla, donde podrás sumergirte en el agua cristalina y descubrir la ..."
+                }
+            ],
+            "position": 1,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Moto de Agua - Para 2 personas",
+                    "icon": "boat"
+                },
+                {
+                    "caption": "Combustible",
+                    "icon": "gas-pump"
+                },
+                {
+                    "caption": "Bolsa impermeable para tus pertenencias",
+                    "icon": "tote"
+                },
+                {
+                    "caption": "Chalecos salvavidas",
+                    "icon": "lifebuoy"
+                },
+                {
+                    "caption": "Merienda",
+                    "icon": "fork-knife"
+                },
+                {
+                    "caption": "Tour guiado por 30 minutos",
+                    "icon": "clock"
+                },
+                {
+                    "caption": "Fotos y videos de la experiencia",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Sombrilla en la playa",
+                    "icon": "umbrella-simple"
+                },
+                {
+                    "caption": "Gafas de sol",
+                    "icon": "sunglasses"
+                },
+                {
+                    "caption": "Transporte desde el hotel",
+                    "icon": "van"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "COMPOSED",
+            "items": [
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "En caso de mal tiempo, como lluvia fuerte o tormenta, el proveedor de la actividad puede cancelar el tour. Si esto ocurre, podrás elegir una alternativa o recibir un reembolso completo."
+                        },
+                        {
+                            "description": "Se requiere experiencia previa para manejar la moto de agua o tomar una breve sesión de entrenamiento incluida en el tour."
+                        }
+                    ],
+                    "position": 0,
+                    "section": "RESERVATION"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Servicio sólo disponible para mayores de 18 años."
+                        },
+                        {
+                            "description": "No ofrecemos servicios de transporte."
+                        }
+                    ],
+                    "position": 1,
+                    "section": "WARNINGS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Aceptamos: pago móvil, transferencia bancaria, Zelle, Paypal y efectivo."
+                        },
+                        {
+                            "description": "Si el pago se realiza en efectivo, el monto debe ser exacto."
+                        }
+                    ],
+                    "position": 2,
+                    "section": "PAYMENTS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "La cancelación de la reserva sólo está disponible 48 horas antes de la fecha reservada."
+                        }
+                    ],
+                    "position": 3,
+                    "section": "CANCELLATION_POLICY"
+                }
+            ],
+            "position": 4,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "tags": [
+        "Aventura",
+        "Deportes Acuáticos",
+        "Moto de Agua",
+        "Isla de Margarita",
+        "Playa",
+        "Diversión",
+        "Aventura Extrema"
+    ],
+    "testimonials": [
+        {
+            "comment": "¡Excelente experiencia! El servicio fue maravilloso y todo estuvo perfecto.",
+            "date": "2024-11-07T10:30:00.000Z",
+            "images": [
+                "public/experiences/0220439a-d3ea-408b-b05a-5e2e5316325a/testimonials/testimonio-aqua-world-1.jpeg",
+                "public/experiences/0220439a-d3ea-408b-b05a-5e2e5316325a/testimonials/testimonio-aqua-world-2.jpeg"
+            ],
+            "rating": 5,
+            "userName": "Carlos Mendoza"
+        }
+    ],
+    "title": "Excursión en la Isla de Margarita en Moto de Agua",
+    "totalBookings": 11,
+    "totalReviews": 0,
+    "sessions": [
+        {
+            "dayOfTheWeek": "MONDAY",
+            "times": ["10:00", "11:00", "12:00"]
+        },
+        {
+            "date": "TUESDAY",
+            "times": ["14:00", "15:00", "16:00"]
+        }
+    ]
+}

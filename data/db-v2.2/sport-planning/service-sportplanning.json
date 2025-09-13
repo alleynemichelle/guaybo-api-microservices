@@ -1,0 +1,416 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "SK": "PROFILE#DETAILS",
+    "alias": "sportplanning",
+    "averageRating": 0,
+    "categories": ["FITNESS"],
+    "createdAt": "2024-11-14T00:00:00.000Z",
+    "currencies": ["USD", "VES"],
+    "customPage": {
+        "checkoutTitle": "Inscribirme",
+        "hostTitle": "Un poco sobre Sport Planning",
+        "mainTitle": "¡Transforma tu vida en 45 días!",
+        "theme": {
+            "primary": "#21B36F"
+        }
+    },
+    "description": "<strong>Además de cambiar tu físico en solo 45 días 🗓️, cambiamos tu estilo de vida PARA SIEMPRE 💪</strong> Te ayudamos a lograr un cambio físico <strong>sostenible</strong>, enseñándote cómo y por qué es tan importante entrenar, comer y descansar adecuadamente.<br/> <br/> Al unirte al reto, estarás participando por increíbles premios.",
+    "faqs": [
+        {
+            "answer": "De momento somos un servicio 100% online, ¡pero esperamos pronto abrir dicha modalidad!",
+            "order": 1,
+            "question": "¿Son un gym físico?"
+        },
+        {
+            "answer": "Entrenamos en San Antonio de Los Altos, Miranda, Venezuela.",
+            "order": 2,
+            "question": "¿Dónde entrenan?"
+        },
+        {
+            "answer": "Sí, son cupos limitados.",
+            "order": 3,
+            "question": "¿Son cupos limitados?"
+        },
+        {
+            "answer": "Por supuesto que puedes participar, siempre y cuando tengas un dispositivo con internet y ganas de entrenar.",
+            "order": 4,
+            "question": "¿Si soy de otro país puedo participar?"
+        },
+        {
+            "answer": "No necesitas entrenar en un gym para participar, para eso te entregamos una rutina de casa, en la que no necesitas ningún instrumento, solo tu peso corporal.",
+            "order": 5,
+            "question": "¿Tengo que entrenar obligatoriamente en el gym?"
+        },
+        {
+            "answer": "Sí, puedes participar. Te recomendamos revisar el material con tu médico en caso de tener alguna condición médica.",
+            "order": 6,
+            "question": "¿Si tengo más de 30-40 años puedo participar?"
+        },
+        {
+            "answer": "Las inscripciones cierran 3 días antes del inicio del reto.",
+            "order": 7,
+            "question": "¿Cuándo se cierran las inscripciones?"
+        }
+    ],
+    "highlightedFeatures": [
+        {
+            "caption": "Online Fitness Coaching",
+            "icon": "barbell"
+        },
+        {
+            "caption": "+150 Clientes",
+            "icon": "users-four"
+        }
+    ],
+    "hostId": "22b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a",
+    "keyFeatures": [
+        {
+            "caption": "Resultados garantizados",
+            "description": "No te ofrecemos solo una rutina de entrenamiento y un plan de alimentación, te garantizamos resultados ✅  (siempre y cuando cumplas todos los pasos al pie de la letra).",
+            "icon": "barbell"
+        },
+        {
+            "caption": "45 Días para comprender y transformar tu cuerpo",
+            "description": "Nuestra meta es que <strong>APRENDAS</strong> el porqué de lo que harás los próximos 45 días, para que puedas hacer un cambio físico y una vez lo hayas conseguido, puedas mantenerlo en el tiempo. </br></br> (No es lo mismo solo hacerlo, que realmente entenderlo 🧠)",
+            "icon": "lightning"
+        },
+        {
+            "caption": "Únete a la comunidad",
+            "description": "<strong>El entorno que te rodeas es fundamental para poder cambiar tu estilo de vida. </strong></br></br>Por eso, te ofrecemos la oportunidad de estar durante 6 semanas rodeado de personas comprometidas y disciplinadas que están en el mismo proceso que tú.",
+            "icon": "chats-circle"
+        }
+    ],
+    "language": "ES",
+    "mainGallery": [
+        {
+            "description": "Reto Sport Planning",
+            "order": 1,
+            "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-1.jpg",
+            "recordId": "11a7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "APP",
+            "type": "IMAGE"
+        },
+        {
+            "description": "Reto Sport Planning",
+            "order": 2,
+            "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-2.PNG",
+            "recordId": "22e7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "APP",
+            "type": "IMAGE"
+        },
+        {
+            "description": "Reto Sport Planning",
+            "order": 3,
+            "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-3.PNG",
+            "recordId": "33c7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "APP",
+            "type": "IMAGE"
+        },
+        {
+            "description": "Reto Sport Planning",
+            "order": 4,
+            "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-4.PNG",
+            "recordId": "44d7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "APP",
+            "type": "IMAGE"
+        },
+        {
+            "description": "Reto Sport Planning",
+            "order": 5,
+            "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-5.PNG",
+            "recordId": "55a7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "APP",
+            "type": "IMAGE"
+        },
+        {
+            "description": "Reto Sport Planning",
+            "isBanner": true,
+            "order": 6,
+            "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-banner.jpg",
+            "recordId": "55a7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "APP",
+            "type": "IMAGE"
+        }
+    ],
+    "price": {
+        "amount": 30,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "recordId": "33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Rutina de entrenamiento basada en tu estado físico actual y los días que quieras entrenar (gym o casa)",
+                    "icon": "pencil-ruler"
+                },
+                {
+                    "caption": "Cuadro de tu planificación de entrenamiento que irás llenando durante todo el reto e iremos monitoreando diariamente",
+                    "icon": "table"
+                },
+                {
+                    "caption": "Pack de videos de todos los ejercicios de la rutina  (incluye videos de calentamiento y estiramiento)",
+                    "icon": "video"
+                },
+                {
+                    "caption": "Guía de alimentación 100% personalizada (realizada por un nutricionista)",
+                    "icon": "fork-knife"
+                },
+                {
+                    "caption": "Recetario fitness con más de 28 recetas saludables  (incluye desayunos, almuerzos/cenas, meriendas y batidos)",
+                    "icon": "notebook"
+                },
+                {
+                    "caption": "Serie de videos explicativos de temas fundamentales que debes manejar para hacer un cambio físico",
+                    "icon": "video"
+                },
+                {
+                    "caption": "Guía de introducción al entrenamiento",
+                    "icon": "barbell"
+                },
+                {
+                    "caption": "Guía de aumento de masa muscular",
+                    "icon": "book-open-text"
+                },
+                {
+                    "caption": "Guía de pérdida de grasa corporal",
+                    "icon": "book-open-text"
+                },
+                {
+                    "caption": "Guía de suplementación",
+                    "icon": "book-open-text"
+                },
+                {
+                    "caption": "Lista de compras",
+                    "icon": "notepad"
+                },
+                {
+                    "caption": "Acceso a la comunidad de Sport Planning, a través del grupo de whatsapp del reto",
+                    "icon": "users-four"
+                },
+                {
+                    "caption": "Seguimiento vía whatsapp con el equipo Sport Planning durante los 45 días para aclarar cualquier duda",
+                    "icon": "whatsapp-logo"
+                },
+                {
+                    "caption": "Descuento en el próximo reto del 25% (si participas en esta edición, tendrás el descuento en la próxima)",
+                    "icon": "seal-percent"
+                }
+            ],
+            "position": 0,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "<strong>Métodos de pago disponibles:</strong> <br/> Efectivo, Pago Móvil, Binance y Zelle."
+                },
+                {
+                    "description": "El pago en efectivo se coordina luego de realizar la reserva."
+                }
+            ],
+            "position": 2,
+            "section": "PAYMENTS"
+        },
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Se debe completar el total del pago hasta 3 días antes del inicio del reto. "
+                },
+                {
+                    "description": "No hacemos reembolsos. Una vez cancelado el pago, en caso de no poder participar por alguna razón adversa, tendrás la posibilidad de inscribir con tu pago a algún amigo o familiar. También tienes la posibilidad de postergar tu participación a la próxima edición del reto. "
+                }
+            ],
+            "position": 1,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "slogan": "Cambia tu físico en 45 días y gánate un viaje a la playa",
+    "termsAndConditions": {
+        "content": "<div> <strong><h2>1. Liberaci&oacute;n de responsabilidad:</h2></strong><br/> <p> El reto SP proporciona informaci&oacute;n general sobre entrenamiento f&iacute;sico y h&aacute;bitos alimenticios con el prop&oacute;sito de educar y motivar a los participantes a adoptar un estilo de vida activo y saludable. </p><br/> <p> Sin embargo, es importante tener en cuenta que el ejercicio conlleva ciertos riesgos y puede no ser apropiado para todos los individuos. </p><br/> <p> Los programas de entrenamiento de este reto est&aacute;n dise&ntilde;ados para personas sanas y activas, pero cada persona es &uacute;nica y puede tener condiciones m&eacute;dicas preexistentes o limitaciones f&iacute;sicas que requieran una atenci&oacute;n especializada. </p><br/> <p> Por lo tanto, se recomienda encarecidamente que cualquier persona interesada en comenzar un nuevo programa de ejercicio consulte a un profesional de la salud cualificado antes de comenzar, como un m&eacute;dico, entrenador personal, nutricionista o fisioterapeuta de confianza. </p><br/> <p> Adem&aacute;s, los autores y editores de este contenido no asumen responsabilidad por cualquier lesi&oacute;n, da&ntilde;o o consecuencia adversa que pueda resultar del uso de la informaci&oacute;n proporcionada en este reto. Los participantes son responsables de su propia salud y seguridad y deben ejercer precauci&oacute;n y buen juicio al participar en cualquier programa de ejercicio. </p><br/> <p> Recuerda siempre escuchar a tu cuerpo, respetar tus l&iacute;mites y buscar orientaci&oacute;n profesional cuando sea necesario para garantizar una pr&aacute;ctica de ejercicio segura y efectiva. </p><br/> <strong><h2>2. Pol&iacute;ticas de cancelaci&oacute;n:</h2></strong><br/> <p> Independientemente del tipo de servicio que escoja el cliente, debe cancelar la totalidad del mismo hasta 3 d&iacute;as antes del inicio del reto. </p><br/> <p> No hacemos reembolsos, una vez cancelado el pago. En caso de no poder participar por alguna raz&oacute;n adversa, tendr&aacute;s la posibilidad de inscribir con tu pago a alg&uacute;n amigo o familiar. Tambi&eacute;n tienes la posibilidad de postergar tu participaci&oacute;n a la pr&oacute;xima edici&oacute;n del reto. </p><br/> </div>",
+        "updatedAt": "2024-12-17T12:00:00Z"
+    },
+    "testimonials": [
+        {
+            "comment": "Gracias por todo el apoyo que me brindaron en este proceso, quedé sorprendido al ver la diferencia entre el día 1 y el día 45, gracias a ustedes ahora voy por un mejor camino, y haciendo las cosas mejor 💪, esto es solo el incio de lo que se vendrá 🔥",
+            "date": "2024-11-01T09:15:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-1.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-1-2.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-1-3.jpg"
+            ],
+            "rating": 5,
+            "userName": "Piero Di Rauso"
+        },
+        {
+            "comment": "Agradezco inmensamente a Fabián y a Vicente @⁨Sportplanning⁩ porque me resolvieron más de un inconveniente, desde problemas de autoestima, hasta dolores de espalda. Y de verdad que quedo satisfecha inmensamente porque me llevo el premio, una disciplina que AMO, un estilo de alimentación rentable, práctico y que adoptaré por el resto de mi vida, una experiencia increíble y un par de amigos ❤️. Gracias gracias gracias ❤️❤️❤️ muchachos sigan haciendo lo que hacen porque están cambiando vidas y eso es increíble.",
+            "date": "2024-10-25T14:45:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-2.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-2-2.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-2-3.jpg"
+            ],
+            "rating": 5,
+            "userName": "Nemesis Mcdonald"
+        },
+        {
+            "comment": "De verdad muchísimas gracias! La metodología que aplican hace que te mantengas motivado y enfocado. Cuando vi los cambios del día 1 al día 45 quedé impresionado porque nunca pensé que en tan poco tiempo si se logre ver un cambio así. De verdad que tuvieron una atención bastante personalizada y aún así cuando estábamos todos en un grupo grande, siempre o Fabián o Vicente se tomaron el tiempo de  responder la preguntas de todos. Muchísimas gracias de verdad.",
+            "date": "2024-10-30T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-3.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-3-2.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-3-3.jpg"
+            ],
+            "rating": 5,
+            "userName": "Carlos Colina"
+        },
+        {
+            "comment": "Quiero felicitarlos por su excelente labor y trabajo que hacen, me encantó esta idea del reto la verdad más que sentirme bien físicamente me siento bien mentalmente y eso lo vale todo 🫶🏽 gané o pierda me disfruté mucho estas semanas, aprendí mucho y creo que ya será un estilo de vida para mí el cual por decisión propia decidí tomar, sin este reto no hubiese visto lo mal que estaba y lo mucho que se puede mejorar con dieta y ejercicio sin matarme horas en el gym 🙌🏽✨🩷 amé todo, el recetario, las rutinas y el grupo también, un abrazo y felicitaciones para ambos que se lucieron, les deseo todo el éxito del mundo 🌍 sé que llegarán muy lejos.",
+            "date": "2024-12-15T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-1.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-2.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-3.jpg"
+            ],
+            "rating": 5,
+            "userName": "Joelizbeth Bravo"
+        },
+        {
+            "comment": "Agradecido con todos ustedes! De verdad! Más allá del premio me dieron responsabilidad conmigo mismo, disciplina y sobre todo amor propio, no solo con mi cuerpo si no personalmente! Aprendí que lo que me proponga lo lograré, sea lo que sea 🖤 Felicidades a todos los ganadores y a los participantes, ustedes también son ganadores 🥇🏆",
+            "date": "2024-12-09T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-4.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-5.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-6.jpg"
+            ],
+            "rating": 5,
+            "userName": "David Petrelli"
+        },
+        {
+            "comment": "La verdad me fue increíble! Quería aprovechar para agradecerles porque nunca me había sentido tan cómoda con mi cuerpo, siempre he sido muy insegura y con estos resultados que estoy logrando estoy súper orgullosa de mi. Aún me falta mucho por llegar al resultado que realmente quiero pero honestamente yo fui poco a poco con este reto para hacerlo lo más sostenible para mí a largo plazo. Durante estas 6 semanas aprendí a escuchar muchísimo más a mi cuerpo y con los resultados lo rectifico. Súper feliz de ver los cambios para seguir esforzándome y llevar un estilo de vida mucho más saludable💞",
+            "date": "2024-12-19T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-7.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-8.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-9.jpg"
+            ],
+            "rating": 5,
+            "userName": "Alejandra Fuentes"
+        },
+        {
+            "comment": "Un gusto para mí participar en este reto que fue super chevere, me disfrute demasiado el cambio, estoy orgulloso de haber completado el reto y de ustedes muchachos por tan buen trabajo @Vicente⁩ @Fábian. Recuerden que el esfuerzo vale la pena y te enseña a crecer como persona, la clave de todo es la constancia y disciplina. Gracias grupo por todo🥰",
+            "date": "2024-12-19T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-10.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-11.jpg",
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-12.jpg"
+            ],
+            "rating": 5,
+            "userName": "Alejandro Gonzalez"
+        },
+        {
+            "date": "2024-11-25T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-13.jpg"
+            ]
+        },
+        {
+            "date": "2024-11-30T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-14.jpg"
+            ]
+        },
+        {
+            "date": "2024-12-16T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-15.jpg"
+            ]
+        },
+        {
+            "date": "2024-12-17T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-16.jpg"
+            ]
+        },
+        {
+            "date": "2024-12-19T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-17.jpg"
+            ]
+        },
+        {
+            "date": "2024-12-19T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-18.jpg"
+            ]
+        },
+        {
+            "date": "2024-12-16T16:00:00.000Z",
+            "images": [
+                "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/testimonials/sportplanning-testimonio-19122024-19.jpg"
+            ]
+        }
+    ],
+    "timezone": "America/Caracas",
+    "title": "Reto Sport Planning",
+    "type": "ONE_TIME",
+    "videoGallery": [
+        {
+            "description": "Inscripción al reto SP",
+            "order": 1,
+            "path": "https://youtu.be/NoAgTrotpB4?si=uH8Wxp-3xTDeL6fN",
+            "recordId": "12a7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "LINK",
+            "thumbnail": {
+                "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/sportplanning-video1-thumbnail.jpg",
+                "source": "APP"
+            },
+            "type": "VIDEO"
+        },
+        {
+            "description": "Qué incluye y cómo funciona todo",
+            "order": 2,
+            "path": "https://youtu.be/NpgX9fXBEdw?si=ybOW7Ww04VLdCIDI",
+            "recordId": "13b7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "LINK",
+            "thumbnail": {
+                "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/sportplanning-video2-thumbnail.jpg",
+                "source": "APP"
+            },
+            "type": "VIDEO"
+        },
+        {
+            "description": "Gánate un viaje a la playa o $200",
+            "order": 3,
+            "path": "https://youtu.be/H83BoGN9k3k?si=Lk4M5oGjiURR7H1j",
+            "recordId": "14b7b109-1d42-ac42-c27f-8d7ff89d5711",
+            "source": "LINK",
+            "thumbnail": {
+                "path": "public/services/33d7b109-1d42-ac42-c27f-8d7ff89d5711/sportplanning-video3-thumbnail.jpg",
+                "source": "APP"
+            },
+            "type": "VIDEO"
+        }
+    ],
+    "contactOptions": {
+        "title": "¿Deseas un servicio personalizado?",
+        "content": {
+            "description": "Si buscas un servicio personalizado, no dudes en agendar una reunión con nosotros para atender tus necesidades."
+        },
+        "actions": [
+            {
+                "type": "link",
+                "label": "Agenda una reunión",
+                "value": "https://wa.me/584242716954",
+                "icon": "phone"
+            }
+        ]
+    }
+}

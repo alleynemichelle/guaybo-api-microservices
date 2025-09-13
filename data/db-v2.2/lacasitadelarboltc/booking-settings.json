@@ -1,0 +1,16 @@
+{
+    "PK": "SERVICE#51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "SK": "PROFILE#BOOKING_SETTINGS",
+    "bookingFlow": "WHATSAPP_BOOKING",
+    "currencies": ["USD"],
+    "price": {
+        "amount": 1,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON"
+    },
+    "recordId": "efeab84d-4b72-4d15-a016-edeaae45e41f0",
+    "recordType": "BOOKING_SETTINGS",
+    "requiredData": ["email", "firstName", "lastName"],
+    "requirementScope": "RESERVER_ONLY"
+}

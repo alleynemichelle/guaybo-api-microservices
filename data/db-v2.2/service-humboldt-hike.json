@@ -1,0 +1,268 @@
+{
+    "PK": "SERVICE#5f739fe3-f298-42e7-992e-8b43ad8a510d",
+    "SK": "PROFILE#DETAILS",
+    "type": "RECURRING",
+    "alias": "humboldt-hike",
+    "timezone": "America/Caracas",
+
+    "averageRating": 0,
+    "bookingScope": {
+        "bookingFlow": "APP_BOOKING",
+        "paymentOptions": [
+            {
+                "bank": "BANCO_MERCANTIL",
+                "name": "John Doe",
+                "nationalId": "V-12345678",
+                "paymentMethod": "MOBILE_PAYMENT",
+                "phoneNumber": "58123456789"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "BINANCE",
+                "username": "msmith"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "ZELLE",
+                "phoneNumber": "58123456789"
+            }
+        ],
+        "requiredData": ["email", "firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["AVENTURA", "NATURALEZA"],
+    "createdAt": "2024-08-08T20:12:32.490Z",
+    "customPage": {
+        "hostTitle": "Conoce a los organizadores",
+        "mainTitle": "¡Únete a este tour! ⚡🔥"
+    },
+    "description": "Embárcate en una emocionante caminata hacia el Hotel Humboldt, disfrutando de la belleza natural de la montaña en Caracas.",
+    "highlightedFeatures": [
+        {
+            "caption": "Guías Expertos",
+            "icon": "guide"
+        }
+    ],
+    "hostId": "d523c654-e024-4210-a01f-2c6e912f3391",
+    "keyFeatures": [
+        {
+            "caption": "Recorrido Escénico",
+            "description": "Disfruta de un recorrido escénico a través del Parque Nacional El Ávila, con vistas espectaculares de Caracas y la costa. 🏞️🌄",
+            "icon": "mountains"
+        },
+        {
+            "caption": "Transporte en Teleférico",
+            "description": "El regreso se realiza en el teleférico, ofreciendo una experiencia única y vistas panorámicas. 🚡🌆",
+            "icon": "cable-car"
+        },
+        {
+            "caption": "Guías Locales",
+            "description": "Nuestros guías expertos te acompañarán durante el recorrido, brindándote información sobre la flora, fauna y la historia del área. 🌿👣",
+            "icon": "person-simple-hike"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.48293,
+            "longitude": -66.88934
+        },
+        "country": "Venezuela",
+        "description": "Inicio en la entrada del Parque Nacional El Ávila, Caracas. El recorrido termina en el Hotel Humboldt.",
+        "state": "Distrito Capital"
+    },
+    "maxCapacity": 20,
+    "price": {
+        "amount": 10,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "recordId": "5f739fe3-f298-42e7-992e-8b43ad8a510d",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Realiza una caminata emocionante con vistas impresionantes del Parque Nacional El Ávila y Caracas."
+                },
+                {
+                    "description": "Llegada al icónico Hotel Humboldt, un símbolo histórico en la cima de la montaña."
+                },
+                {
+                    "description": "Disfruta del viaje de regreso en teleférico, ofreciendo una vista panorámica única."
+                }
+            ],
+            "position": 0,
+            "section": "WHAT_WILL_YOU_DO"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Embárcate en una caminata guiada desde la entrada del Parque Nacional El Ávila hasta el Hotel Humboldt. Experimenta la majestuosidad del paisaje montañoso y disfruta de vistas impresionantes de Caracas. Al final del recorrido, regresa en el teleférico para una experiencia inolvidable."
+                }
+            ],
+            "position": 1,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Guía de montaña",
+                    "icon": "compass"
+                },
+                {
+                    "caption": "Transporte en teleférico",
+                    "icon": "cable-car"
+                },
+                {
+                    "caption": "Vistas panorámicas",
+                    "icon": "panorama"
+                },
+                {
+                    "caption": "Refrigerios y agua",
+                    "icon": "beer-bottle"
+                },
+                {
+                    "caption": "Parada para fotos en puntos clave",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Seguro de aventura",
+                    "icon": "shield"
+                },
+                {
+                    "caption": "Bastones de senderismo",
+                    "icon": "footprints"
+                },
+                {
+                    "caption": "Visita guiada al Hotel Humboldt",
+                    "icon": "bed"
+                },
+                {
+                    "caption": "Kit de primeros auxilios",
+                    "icon": "first-aid-kit"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "COMPOSED",
+            "items": [
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "caption": "Ropa cómoda y deportiva."
+                        },
+                        {
+                            "caption": "Calzado adecuado para senderismo."
+                        },
+                        {
+                            "caption": "Protección solar (bloqueador y sombrero)."
+                        }
+                    ],
+                    "position": 0,
+                    "section": "ITEMS_TO_BRING"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Trabajamos previa reservación y con horarios asignados."
+                        },
+                        {
+                            "description": "Cada grupo es de un máximo de 20 personas para garantizar una experiencia óptima."
+                        }
+                    ],
+                    "position": 1,
+                    "section": "RESERVATION"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Sólo se acepta pago móvil y divisas."
+                        },
+                        {
+                            "description": "Si el pago se realiza en divisas, el monto debe ser exacto o en billetes de baja denominación. No se aceptan billetes deteriorados."
+                        }
+                    ],
+                    "position": 2,
+                    "section": "PAYMENTS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "La actividad se realiza con lluvia o sol, así que prepárate para cualquier clima."
+                        },
+                        {
+                            "description": "No se permiten mascotas."
+                        },
+                        {
+                            "description": "No se permite la entrada con alimentos o bebidas no permitidas."
+                        }
+                    ],
+                    "position": 3,
+                    "section": "WARNINGS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "1. ⁠Prohibido caminar fuera de los senderos establecidos."
+                        },
+                        {
+                            "description": "2. ⁠Prohibido ingresar con armas de fuego y bebidas alcohólicas."
+                        },
+                        {
+                            "description": "3. ⁠Prohibido fumar durante el recorrido."
+                        },
+                        {
+                            "description": "4. ⁠Respeta la flora y fauna del parque."
+                        }
+                    ],
+                    "position": 4,
+                    "section": "REGULATIONS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "En caso de no asistir el día de su reservación, <strong>no se realiza reembolso</strong> y para una nueva reservación debe volver a cancelar el monto de la reservación. Antes de reservar asegure confirmar su asistencia."
+                        }
+                    ],
+                    "position": 5,
+                    "section": "CANCELLATION_POLICY"
+                }
+            ],
+            "position": 3,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "tags": ["Senderismo", "Naturaleza"],
+    "title": "Caminata al Hotel Humboldt",
+    "totalBookings": 1,
+    "totalReviews": 0,
+    "updatedAt": "2024-08-08T20:12:32.490Z",
+    "sessions": [
+        {
+            "dayOfTheWeek": "FRIDAY",
+            "times": ["08:00"]
+        },
+        {
+            "dayOfTheWeek": "SATURDAY",
+            "times": ["08:00"]
+        },
+        {
+            "dayOfTheWeek": "SUNDAY",
+            "times": ["10:00"]
+        }
+    ]
+}

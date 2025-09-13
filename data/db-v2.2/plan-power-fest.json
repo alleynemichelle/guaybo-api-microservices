@@ -1,0 +1,22 @@
+{
+    "PK": "SERVICE#cffcfbff-8f60-4961-8a83-b9e7c81d914a",
+    "SK": "PROFILE#PLAN#96bbc1df-2b50-454e-b6d3-f6835e50d664",
+    "keyFeatures": [
+        {
+            "caption": "En apoyo a Yoselin Guedez",
+            "icon": "heart"
+        }
+    ],
+    "price": [
+        {
+            "amount": 10,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON"
+        }
+    ],
+    "recordId": "96bbc1df-2b50-454e-b6d3-f6835e50d664",
+    "recordType": "PLAN",
+    "shortDescription": "Adquire tu bandana POWER FEST en apoyo a Yoselin (Sólo para los asistentes del evento).\n\n¡Tu apoyo puede hacer la diferencia! 💜💪",
+    "title": "Power Fest, en apoyo a Yoselin Guedez"
+}

@@ -1,0 +1,11 @@
+{
+    "PK": "HOST#22b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a#DISCOUNT",
+    "SK": "DISCOUNT#SPORTPLANNING25",
+    "active": true,
+    "code": "SPORTPLANNING25",
+    "discountStatus": "ACTIVE",
+    "name": "Descuento en el reto Sport Planning del 25%",
+    "percentage": 25,
+    "recordId": "21a7b149-2d43-4a42-927f-8d7ff89d5709",
+    "recordType": "DISCOUNT"
+}

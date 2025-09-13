@@ -1,0 +1,67 @@
+{
+    "PK": "SERVICE#51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "SK": "PROFILE#PLAN#d38887ae-cb5b-43f3-a751-6bc18034e40f",
+    "duration": {
+        "quantity": 8,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Incluye comida",
+            "icon": "fork-knife"
+        },
+        {
+            "caption": "Experiencia Completa",
+            "icon": "star"
+        },
+        {
+            "caption": "Transporte durante todo el día",
+            "icon": "car"
+        }
+    ],
+    "maxCapacity": 5,
+    "price": [
+        {
+            "amount": 240,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_BOOKING"
+        }
+    ],
+    "recordId": "d38887ae-cb5b-43f3-a751-6bc18034e40f",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Sumérgete en una experiencia de Full Day con transporte durante todo el día hacia los sitios seleccionados. <strong> Incluye desayuno o almuerzo gratis </strong> según tu preferencia y la posibilidad de recorrer hasta 18 rutas extremas. 🚙🍽️"
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Transporte ida y vuelta",
+                    "icon": "car"
+                },
+                {
+                    "caption": "Puedes elegir entre 18 paradas en la Colonia Tovar",
+                    "icon": "map-pin-simple"
+                },
+                {
+                    "caption": "Desayuno o Almuerzo (según selección del cliente)",
+                    "icon": "fork-knife"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Full Day de Aventura con acceso a las 18 paradas y desayuno o almuerzo gratis",
+    "title": "Full Day",
+    "totalBookings": 3
+}

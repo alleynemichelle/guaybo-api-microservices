@@ -1,0 +1,64 @@
+{
+    "PK": "SERVICE#51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "SK": "PROFILE#PLAN#ac63543a-30ae-40e6-8f06-03a45c7d3ee2",
+    "duration": {
+        "quantity": 4,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Duración: Medio Día",
+            "icon": "clock"
+        },
+        {
+            "caption": "Incluye transporte",
+            "icon": "car"
+        }
+    ],
+    "maxCapacity": 5,
+    "minCapacity": 1,
+    "price": [
+        {
+            "amount": 120,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_BOOKING"
+        }
+    ],
+    "recordId": "ac63543a-30ae-40e6-8f06-03a45c7d3ee2",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "¡Sumérgete en nuestra Ruta Extrema! Disfruta de un recorrido aventurero en vehículos Kawasaki con paradas en los mejores puntos turísticos de la Colonia Tovar. 🌄🚙 <br/>  <br/> Visitarás hasta quince (15) paradas de la Colonia Tovar."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Traslado en vehículo Kawasaki para máximo 5 personas (ida y vuelta)",
+                    "icon": "car"
+                },
+                {
+                    "caption": "Se realizan quince (15) paradas",
+                    "icon": "signpost"
+                },
+                {
+                    "caption": "Sólo medio día",
+                    "icon": "clock"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Conoce quince (15) paradas en la Colonia Tovar en medio día. Transporte ida y vuelta",
+    "title": "Ruta Extrema",
+    "totalBookings": 24
+}

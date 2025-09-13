@@ -1,0 +1,92 @@
+{
+    "PK": "SERVICE#12c7b109-2d43-4c42-927f-8d7ff89d5704",
+    "SK": "PROFILE#PLAN#e14dab94-0b8d-40fb-bfa5-9850849bcd40",
+    "recordId": "e14dab94-0b8d-40fb-bfa5-9850849bcd40",
+    "recordType": "PLAN",
+    "duration": {
+        "quantity": 4,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "4 horas",
+            "icon": "clock"
+        },
+        {
+            "caption": "Grupos de 20 personas",
+            "icon": "users-four"
+        },
+        {
+            "caption": "Incluye certificado",
+            "icon": "certificate"
+        }
+    ],
+    "maxCapacity": 20,
+    "price": [
+        {
+            "amount": 50,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "En este curso de escultura en arcilla, aprenderás a crear hermosas piezas con técnicas profesionales, sin necesidad de experiencia previa. Incluye todos los materiales, instrucción experta, un ambiente creativo, y la oportunidad de llevarte a casa tu obra terminada. Ideal para explorar tu creatividad y adquirir una nueva habilidad en un entorno inspirador."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Todo el material necesario",
+                    "icon": "pencil-ruler"
+                },
+                {
+                    "caption": "Instrucción profesional",
+                    "icon": "medal-military"
+                },
+                {
+                    "caption": "2 cócteles refrescantes",
+                    "icon": "cheers"
+                },
+                {
+                    "caption": "Pieza final horneada y lista para llevar",
+                    "icon": "puzzle-piece"
+                },
+                {
+                    "caption": "Recetario con técnicas y consejos",
+                    "icon": "book-open"
+                },
+                {
+                    "caption": "Delantal personalizado",
+                    "icon": "t-shirt"
+                },
+                {
+                    "caption": "Certificado de participación",
+                    "icon": "certificate"
+                },
+                {
+                    "caption": "Acceso a clases adicionales en línea",
+                    "icon": "laptop"
+                },
+                {
+                    "caption": "Fotografías del proceso y la pieza final",
+                    "icon": "camera"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Curso de arcilla para principantes. Todos los materiales incluidos. ",
+    "title": "Curso de arcilla para principiantes",
+    "totalBookings": 0
+}

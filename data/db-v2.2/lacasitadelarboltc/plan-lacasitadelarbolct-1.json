@@ -1,0 +1,67 @@
+{
+    "PK": "SERVICE#51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "SK": "PROFILE#PLAN#aaa321aa-30ae-40e6-8f06-03a45c7d3ee2",
+    "keyFeatures": [
+        {
+            "caption": "Duración variable",
+            "icon": "clock"
+        },
+        {
+            "caption": "Puente colgante",
+            "icon": "bridge"
+        }
+    ],
+    "minCapacity": 1,
+    "price": [
+        {
+            "amount": 0,
+            "currency": "USD",
+            "fareType": "CHILD",
+            "pricingModel": "PER_PERSON"
+        },
+        {
+            "amount": 1,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON"
+        }
+    ],
+    "privateGroup": "OPTIONAL",
+    "recordId": "aaa321aa-30ae-40e6-8f06-03a45c7d3ee2",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Disfruta de la única casita en un árbol a 28 metros de altura con un puente colgante impresionante. Es el sitio perfecto para apreciar la naturaleza y  tomar cuantas fotos quieras 🌄"
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Entrada a la casita del árbol",
+                    "icon": "car"
+                },
+                {
+                    "caption": "<strong>No es necesario reservar</strong>. Puedes ir cuando quieras",
+                    "icon": "tree"
+                },
+                {
+                    "caption": "Abierta todos los días desde las 9:00 AM",
+                    "icon": "clock"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+
+    "shortDescription": "Conoce la casita del árbol a 28 metros de altura",
+    "title": "Visita a la casita del árbol",
+    "viewOnly": true
+}

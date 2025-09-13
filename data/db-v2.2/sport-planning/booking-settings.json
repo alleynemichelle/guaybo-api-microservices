@@ -1,0 +1,26 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "SK": "PROFILE#BOOKING_SETTINGS",
+    "currencies": ["USD", "VES"],
+    "price": {
+        "amount": 35,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "bookingFlow": "APP_BOOKING",
+    "maxCapacity": 1,
+    "minCapacity": 1,
+    "bookingDeadlineDays": 3,
+    "installments": {
+        "initialPartialPaymentAmount": 15,
+        "partialPaymentActive": true,
+        "partialPaymentCount": 2,
+        "paymentDeadlineDaysBeforeEvent": 5
+    },
+    "requiredData": ["email", "firstName", "lastName", "phoneNumber"],
+    "requirementScope": "RESERVER_ONLY",
+    "recordType": "BOOKING_SETTINGS",
+    "recordId": "ab4e0183-749e-42f9-9f1e-ab51693a3f60"
+}

@@ -1,0 +1,59 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "SK": "PROFILE#PLAN#33e7c109-1d42-ac42-c27f-8d7ff89d5711",
+    "duration": {
+        "quantity": 1,
+        "unit": "YY"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Pagas los 3 retos del año",
+            "icon": "clock"
+        },
+        {
+            "caption": "25% de descuento",
+            "icon": "seal-percent"
+        }
+    ],
+    "price": [
+        {
+            "amount": 95,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "recordId": "33e7c109-1d42-ac42-c27f-8d7ff89d5711",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Al adquirir este paquete anual, tienes acceso a los tres retos del año con el plan Gold a un precio especial de 90$ <strong>(un 25% de descuento)</strong>."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Acceso a los 3 retos del año",
+                    "icon": "calendar-dots"
+                },
+                {
+                    "caption": "Todos los beneficios del plan Gold",
+                    "icon": "medal"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Plan anual (pagas los 3 retos del año)",
+    "title": "Plan Anual 🏆",
+    "totalBookings": 0
+}

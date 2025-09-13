@@ -1,0 +1,131 @@
+{
+    "$schema": "https://json.schemastore.org/nest-cli",
+    "collection": "@nestjs/schematics",
+    "sourceRoot": "apps/guaybo-microservices.ts/src",
+    "compilerOptions": {
+        "deleteOutDir": true,
+        "webpack": true,
+        "tsConfigPath": "apps/guaybo-microservices.ts/tsconfig.app.json"
+    },
+    "monorepo": true,
+    "root": "apps/guaybo-microservices.ts",
+    "projects": {
+        "hosts": {
+            "type": "application",
+            "root": "apps/hosts",
+            "entryFile": "main",
+            "sourceRoot": "apps/hosts/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/hosts/tsconfig.app.json"
+            }
+        },
+        "users": {
+            "type": "application",
+            "root": "apps/users",
+            "entryFile": "main",
+            "sourceRoot": "apps/users/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/users/tsconfig.app.json"
+            }
+        },
+        "users-v2": {
+            "type": "application",
+            "root": "apps/users-v2",
+            "entryFile": "main",
+            "sourceRoot": "apps/users-v2/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/users-v2/tsconfig.app.json"
+            }
+        },
+        "bookings": {
+            "type": "application",
+            "root": "apps/bookings",
+            "entryFile": "main",
+            "sourceRoot": "apps/bookings/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/bookings/tsconfig.app.json"
+            }
+        },
+        "notifications": {
+            "type": "application",
+            "root": "apps/notifications",
+            "entryFile": "main",
+            "sourceRoot": "apps/notifications/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/notifications/tsconfig.app.json"
+            }
+        },
+        "settings": {
+            "type": "application",
+            "root": "apps/settings",
+            "entryFile": "main",
+            "sourceRoot": "apps/settings/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/settings/tsconfig.app.json"
+            }
+        },
+        "settings-v2": {
+            "type": "application",
+            "root": "apps/settings-v2",
+            "entryFile": "main",
+            "sourceRoot": "apps/settings-v2/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/settings-v2/tsconfig.app.json"
+            }
+        },
+        "automations": {
+            "type": "application",
+            "root": "apps/automations",
+            "entryFile": "main",
+            "sourceRoot": "apps/automations/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/automations/tsconfig.app.json"
+            }
+        },
+        "billings": {
+            "type": "application",
+            "root": "apps/billings",
+            "entryFile": "main",
+            "sourceRoot": "apps/billings/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/billings/tsconfig.app.json"
+            }
+        },
+        "payments": {
+            "type": "application",
+            "root": "apps/payments",
+            "entryFile": "main",
+            "sourceRoot": "apps/payments/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/payments/tsconfig.app.json"
+            }
+        },
+        "products": {
+            "type": "application",
+            "root": "apps/products",
+            "entryFile": "main",
+            "sourceRoot": "apps/products/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/products/tsconfig.app.json"
+            }
+        },
+        "products-v2": {
+            "type": "application",
+            "root": "apps/products-v2",
+            "entryFile": "main",
+            "sourceRoot": "apps/products-v2/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/products-v2/tsconfig.app.json"
+            }
+        },
+        "hosts-v2": {
+            "type": "application",
+            "root": "apps/hosts-v2",
+            "entryFile": "main",
+            "sourceRoot": "apps/hosts-v2/src",
+            "compilerOptions": {
+                "tsConfigPath": "apps/hosts-v2/tsconfig.app.json"
+            }
+        }
+    }
+}

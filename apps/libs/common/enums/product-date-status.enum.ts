@@ -1,0 +1,5 @@
+export enum ProductDateStatus {
+    DEPENDS_ON_DATE = 'DEPENDS_ON_DATE',
+    MANUALLY_OPENED = 'MANUALLY_OPENED',
+    MANUALLY_CLOSED = 'MANUALLY_CLOSED',
+}

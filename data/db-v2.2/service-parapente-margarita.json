@@ -1,0 +1,271 @@
+{
+    "PK": "SERVICE#ee684c1d-fa55-4c93-8a8c-05712e5e9d72",
+    "SK": "PROFILE#DETAILS",
+    "type": "RECURRING",
+    "alias": "parapente-margarita",
+    "timezone": "America/Caracas",
+    "averageRating": 0,
+    "bookingScope": {
+        "bookingFlow": "APP_BOOKING",
+        "initialPartialPaymentAmount": 10,
+        "partialPaymentActive": true,
+        "partialPaymentCount": 3,
+        "paymentOptions": [
+            {
+                "bank": "BANCO_DE_VENEZUELA",
+                "name": "John Doe",
+                "nationalId": "V-12345678",
+                "paymentMethod": "MOBILE_PAYMENT",
+                "phoneNumber": "58123456789"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "PAYPAL",
+                "phoneNumber": "58123456789"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "BINANCE",
+                "username": "msmith"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "ZELLE",
+                "phoneNumber": "58123456789"
+            }
+        ],
+        "requiredData": ["email", "firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["Aventura", "Parapente", "Isla de Margarita"],
+    "createdAt": "2024-08-20T22:18:58.864Z",
+    "description": "Vuela en parapente sobre la espectacular Isla de Margarita y disfruta de una experiencia única llena de adrenalina, paisajes impresionantes y momentos inolvidables.",
+    "highlightedFeatures": [
+        {
+            "caption": "Piloto certificado",
+            "icon": "certificate"
+        }
+    ],
+    "hostId": "61c0f929-8fa2-4379-81e2-0f60ea87071a",
+    "keyFeatures": [
+        {
+            "caption": "Vuelos seguros y emocionantes",
+            "description": "Experimenta la adrenalina de volar con seguridad garantizada y vistas impresionantes del Caribe 🌅.",
+            "icon": "rocket-launch"
+        },
+        {
+            "caption": "Planes especiales",
+            "description": "Celebra cumpleaños o comparte un vuelo romántico con opciones personalizadas 🎉.",
+            "icon": "gift"
+        },
+        {
+            "caption": "Captura el momento",
+            "description": "Fotos y videos de alta calidad para que revivas tu vuelo una y otra vez 📷.",
+            "icon": "camera"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.9576,
+            "longitude": -63.864
+        },
+        "country": "Venezuela",
+        "description": "Parapente en Playa El Yaque, Isla de Margarita",
+        "state": "Nueva Esparta"
+    },
+    "minCapacity": 1,
+    "price": {
+        "amount": 30,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "recordId": "ee684c1d-fa55-4c93-8a8c-05712e5e9d72",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Vuela sobre la hermosa Isla de Margarita y siente la libertad de estar en el aire mientras disfrutas de vistas espectaculares."
+                },
+                {
+                    "description": "Elige entre tres planes emocionantes: individual, cumpleañero o enamorados, y haz que tu vuelo sea aún más especial."
+                },
+                {
+                    "description": "Disfruta de atención personalizada, seguridad garantizada y una experiencia inolvidable en uno de los lugares más bellos del Caribe."
+                }
+            ],
+            "position": 0,
+            "section": "WHAT_WILL_YOU_DO"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Experimenta la emoción del parapente en la Isla de Margarita. Vuela con total seguridad mientras te sumerges en las impresionantes vistas de playas, montañas y el mar Caribe. Nuestros instructores certificados te guiarán en cada paso, asegurando que tengas una experiencia inolvidable y llena de adrenalina. <br/><br/> Ya sea que elijas un vuelo individual, celebrar tu cumpleaños o compartir esta aventura con tu pareja, te garantizamos un vuelo seguro, divertido y cargado de emociones."
+                }
+            ],
+            "position": 1,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Instructores certificados",
+                    "icon": "certificate"
+                },
+                {
+                    "caption": "Parapente para 1 o 2 personas",
+                    "icon": "users"
+                },
+                {
+                    "caption": "Fotos y videos con GoPro",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Vuelos disponibles a las 6, 8 y 10 am",
+                    "icon": "clock"
+                },
+                {
+                    "caption": "Disponible jueves a domingo",
+                    "icon": "calendar"
+                },
+                {
+                    "caption": "Vuelos sobre Playa El Yaque",
+                    "icon": "map-pin-simple-area"
+                },
+                {
+                    "caption": "Opciones especiales para enamorados",
+                    "icon": "heart"
+                },
+                {
+                    "caption": "Especial para cumpleaños",
+                    "icon": "gift"
+                },
+                {
+                    "caption": "Vuelo panorámico sobre el mar Caribe",
+                    "icon": "island"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "COMPOSED",
+            "items": [
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Es necesario traer ropa cómoda, la mejor actitud y los términos y condiciones impresos."
+                        },
+                        {
+                            "description": "Lugar de encuentro: Playa El Yaque, Nueva Esparta, Isla de Margarita."
+                        }
+                    ],
+                    "position": 0,
+                    "section": "RESERVATION"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "La actividad se realiza según las condiciones climáticas. Si el clima no es favorable, se reagenda la actividad."
+                        },
+                        {
+                            "description": "No se admiten mascotas."
+                        },
+                        {
+                            "description": "Se deben aceptar los términos y condiciones antes de volar."
+                        }
+                    ],
+                    "position": 1,
+                    "section": "WARNINGS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Aceptamos pagos en efectivo, Zelle y transferencia bancaria."
+                        }
+                    ],
+                    "position": 2,
+                    "section": "PAYMENTS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "La cancelación debe realizarse con al menos 3 días de antelación. No se realiza reembolso del monto abonado."
+                        }
+                    ],
+                    "position": 3,
+                    "section": "CANCELLATION_POLICY"
+                }
+            ],
+            "position": 4,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "tags": ["Aventura", "Parapente", "Isla de Margarita", "Playa", "Adrenalina", "Naturaleza"],
+    "testimonials": [
+        {
+            "comment": "Me encantó. Volvería a ir mil veces.",
+            "date": "2024-11-07T10:30:00.000Z",
+            "images": ["public/experiences/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/testimonials/fly-testimonio-1.jpg"],
+            "rating": 5,
+            "userName": "Andrés Mendoza"
+        },
+        {
+            "comment": "Volar en parapente fue una experiencia increíblemente liberadora. El paisaje desde las alturas era impresionante y la sensación de flotabilidad me hizo sentir como si estuviera tocando el cielo. Definitivamente, una aventura que recomendaría a todos los que buscan algo único y emocionante",
+            "date": "2024-10-07T11:30:00.000Z",
+            "images": ["public/experiences/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/testimonials/fly-testimonio-2.jpg"],
+            "rating": 4.5,
+            "userName": "Pedro Jimenez"
+        },
+        {
+            "comment": "Volar en parapente fue una de las experiencias más emocionantes de mi vida. La vista panorámica y el viento en el rostro me dieron una sensación de paz y adrenalina al mismo tiempo. Sin duda, una aventura que quedará grabada en mi memoria.",
+            "date": "2024-10-05T12:30:00.000Z",
+            "rating": 4.5,
+            "userName": "Camila Gutierrez"
+        }
+    ],
+    "title": "Disfruta de una aventura en parapente en Margarita",
+    "totalBookings": 4,
+    "totalReviews": 0,
+    "updatedAt": "2024-08-20T22:18:58.864Z",
+    "sessions": [
+        {
+            "dayOfTheWeek": "MONDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "TUESDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "WEDNESDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "THURSDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "FRIDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "SATURDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "SUNDAY",
+            "times": ["06:00", "08:00", "10:00"]
+        }
+    ]
+}

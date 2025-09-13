@@ -1,0 +1,203 @@
+{
+    "PK": "SERVICE#51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "SK": "PROFILE#DETAILS",
+    "type": "RECURRING",
+    "alias": "lacasitadelarbolct",
+    "timezone": "America/Caracas",
+    "averageRating": 0,
+    "bookingScope": {
+        "bookingFlow": "WHATSAPP_BOOKING",
+        "requiredData": ["email", "firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["NATURE", "TOURISM", "ADVENTURE"],
+    "createdAt": "2024-09-11T02:39:24.272Z",
+    "description": "¡Vive una aventura en la Colonia Tovar! <br/> <br/>Disfruta de la casita en el árbol a 28 metros de altura y explora la belleza natural de la Colonia Tovar en vehículos Kawasaki. <br/> <br/> <strong>¡Es una experiencia que no te querrás perder! </strong>🌲🚗🍽",
+    "highlightedFeatures": [
+        {
+            "caption": "¡Una aventura de altura!",
+            "icon": "medal"
+        }
+    ],
+    "hostId": "589db4f2-33e4-424d-9223-cfa8559cc94b",
+    "keyFeatures": [
+        {
+            "caption": "La Casita En El Árbol",
+            "description": "¡La casita en el árbol a 28 metros de altura! 🌳",
+            "icon": "tree"
+        },
+        {
+            "caption": "Puente Colgante",
+            "description": "Un puente colgante único que te ofrece vistas impresionantes y fotos espectaculares 🌉",
+            "icon": "bridge"
+        },
+        {
+            "caption": "Paseos en la Colonia Tovar",
+            "description": "Explora la Colonia Tovar en vehículos doble tracción diseñados para la aventura 🚙. <br/><br/> Más de 15 paradas disponibles, entre ellas: <br> - <strong> Cedro Gigante: </strong> Árbol Legendario de la Colonia tovar. <br/>  <strong> - Pico Codazzi:</strong>  El Monumento Natural Pico Codazzi.<br/>  - <strong> Llano Grande: </strong> Mirador natural desde donde se ve la zona sur del pueblo.  <br/> - <strong> Parapentes:</strong>  Puede ser en dos ubicaciones: Pie de Cerro (hacia la Victoria) y El Jarrillo. ",
+            "icon": "car"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.411633467644124,
+            "longitude": -67.27072512883569
+        },
+        "country": "Venezuela",
+        "description": "Colonia Tovar, Estado Aragua",
+        "state": "Aragua"
+    },
+    "minCapacity": 1,
+    "price": {
+        "amount": 1,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON"
+    },
+    "recordId": "51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "🌳 Disfruta de la casita en el árbol a más de 28 metros de altura y siente la emoción de estar en las nubes!"
+                },
+                {
+                    "description": "🚙 Embárcate en paseos turísticos en vehículos doble tracción Kawasaki para explorar la belleza de la Colonia Tovar con estilo y confort."
+                },
+                {
+                    "description": "📸 Captura momentos inolvidables en un puente colgante único, perfecto para tus fotos más épicas."
+                },
+                {
+                    "description": "🍽️ Saborea deliciosos platillos de la cocina alemana en nuestra área de esparcimiento y relájate con una bebida refrescante."
+                }
+            ],
+            "position": 0,
+            "section": "WHAT_WILL_YOU_DO"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Casita en el Árbol - A 28 metros de altura",
+                    "icon": "tree"
+                },
+                {
+                    "caption": "Puente colgante único",
+                    "icon": "bridge"
+                },
+                {
+                    "caption": "Paseos en vehículos doble tracción Kawasaki",
+                    "icon": "car"
+                },
+                {
+                    "caption": "Desayuno o almuerzo incluido en el plan Full Day",
+                    "icon": "bowl-steam"
+                },
+                {
+                    "caption": "Diferentes paradas en la Colonia Tovar durante el recorrido. <br/> ",
+                    "icon": "map-pin-line"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "COMPOSED",
+            "items": [
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "La entrada a la casita tiene un costo de $1 por persona, ¡gratis para niños menores de 8 años! 🎟️"
+                        },
+                        {
+                            "description": "Los paseos turísticos se reservan con un 10% del monto y están sujetos a disponibilidad. ¡Reserva con anticipación para asegurar tu lugar! ⏳"
+                        }
+                    ],
+                    "position": 0,
+                    "section": "RESERVATION"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "<strong>No se realizan reservas para la entrada a la casita</strong>, ¡ven cuando quieras! 🚶‍♂️"
+                        },
+                        {
+                            "description": "Los paseos turísticos (plan Ruta Exprema y Full Day)  <strong> requieren reserva previa </strong> y el monto no es reembolsable. 💸"
+                        }
+                    ],
+                    "position": 1,
+                    "section": "WARNINGS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Aceptamos pago móvil, efectivo, Zelle y divisas. ¡Elige la opción que te sea más conveniente! 💳"
+                        }
+                    ],
+                    "position": 2,
+                    "section": "PAYMENTS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "<strong>La reserva de paseos no es reembolsable </strong>. ¡Asegúrate de tu asistencia para no perderte la aventura! 🚫"
+                        }
+                    ],
+                    "position": 3,
+                    "section": "CANCELLATION_POLICY"
+                }
+            ],
+            "position": 4,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "tags": [
+        "Aventura",
+        "Turismo",
+        "Naturaleza",
+        "Colonia Tovar",
+        "Casita en el Árbol",
+        "Vehículos Kawasaki",
+        "Puente Colgante"
+    ],
+    "title": "Disfruta de una Aventura en La Colonia Tovar",
+    "totalBookings": 29,
+    "totalReviews": 0,
+    "updatedAt": "2024-09-11T02:39:24.272Z",
+    "sessions": [
+        {
+            "dayOfTheWeek": "MONDAY",
+            "times": ["9:00"]
+        },
+        {
+            "dayOfTheWeek": "TUESDAY",
+            "times": ["9:00"]
+        },
+        {
+            "dayOfTheWeek": "WEDNESDAY",
+            "times": ["9:00"]
+        },
+        {
+            "dayOfTheWeek": "THURSDAY",
+            "times": ["9:00"]
+        },
+        {
+            "dayOfTheWeek": "FRIDAY",
+            "times": ["9:00"]
+        },
+        {
+            "dayOfTheWeek": "SATURDAY",
+            "times": ["9:00"]
+        },
+        {
+            "dayOfTheWeek": "SUNDAY",
+            "times": ["9:00"]
+        }
+    ]
+}

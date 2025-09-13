@@ -1,0 +1,213 @@
+DELETE  dev-guaybo-experiences-index
+
+PUT dev-guaybo-experiences-index
+{
+  "mappings": {
+    "properties": {
+      "categories": { "type": "keyword" }
+    }
+  }
+}
+
+
+POST dev-guaybo-bookings-index/_delete_by_query
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+PUT dev-guaybo-bookings-index
+{
+  "mappings": {
+    "properties": {
+       "recordId": {
+        "type": "keyword"
+      },
+      "customerId": {
+        "type": "keyword"
+      },
+        "ticketNumber": {
+        "type": "keyword"
+      },
+      "hostId": {
+        "type": "keyword"
+      },
+      "planId": {
+        "type": "keyword"
+      },
+        "serviceId": {
+        "type": "keyword"
+      },
+      "eventId": {
+        "type": "keyword"
+      },
+      "sessionId": {
+        "type": "keyword"
+      },
+        "email": {
+        "type": "keyword"
+      },
+         "bookingStatus": {
+        "type": "keyword"
+      },
+            "paymentStatus": {
+        "type": "keyword"
+      },
+      "serviceDate": {
+        "type": "date"
+      },
+       "createdAt": {
+        "type": "date"
+      }
+    }
+  }
+}
+
+
+
+POST _reindex
+{
+  "source": {
+    "index": "dev-guaybo-bookings-index-v2"
+  },
+  "dest": {
+    "index": "dev-guaybo-bookings-index"
+  }
+}
+
+
+PUT dev-guaybo-bookings-index-v2
+{
+  "mappings": {
+    "properties": {
+       "recordId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "customerId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+            "userId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+        "ticketNumber": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "hostId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "planId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+        "serviceId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "eventId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "sessionId": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+        "email": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+         "bookingStatus": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+            "paymentStatus": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+         "paymentMode": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "planTitle": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+            "currency": {
+         "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "serviceDate": {
+        "type": "date"
+      },
+       "createdAt": {
+        "type": "date"
+      }
+    }
+  }
+}

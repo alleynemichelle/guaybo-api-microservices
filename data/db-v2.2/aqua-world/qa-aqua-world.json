@@ -1,0 +1,342 @@
+{
+    "details": {
+        "type": "RECURRING",
+        "timezone": "America/Caracas",
+        "recordId": "0220439a-d3ea-408b-b05a-5e2e5316325a",
+        "hostId": "7607664d-b762-48e5-a7e3-36e0a3c07ed7",
+        "alias": "aqua-world",
+        "location": {
+            "coordinates": {
+                "latitude": 10.9576,
+                "longitude": -63.864
+            },
+            "country": "Venezuela",
+            "description": "Playa El Yaque, Isla de Margarita",
+            "state": "Nueva Esparta"
+        },
+        "title": "Excursión en la Isla de Margarita en Moto de Agua",
+        "minCapacity": 2,
+        "sections": [
+            {
+                "format": "LIST",
+                "section": "WHAT_WILL_YOU_DO",
+                "position": 0,
+                "items": [
+                    {
+                        "description": "Disfruta de una emocionante aventura en moto de agua por las cristalinas aguas de la Isla de Margarita"
+                    },
+                    {
+                        "description": "Explora la belleza natural de la isla, incluyendo playas de arena blanca y manglares exóticos"
+                    },
+                    {
+                        "description": "Descubre la rica vida marina mientras navegas por la costa"
+                    },
+                    {
+                        "description": "Haz una parada para nadar y practicar snorkel en arrecifes de coral"
+                    },
+                    {
+                        "description": "Siente la adrenalina mientras recorres las olas y disfrutas del sol caribeño"
+                    }
+                ]
+            },
+            {
+                "format": "TEXT",
+                "section": "LONG_DESCRIPTION",
+                "position": 1,
+                "items": [
+                    {
+                        "description": "Vive una experiencia única de 4 horas en moto de agua por la impresionante Isla de Margarita. Comienza tu aventura en Playa El Yaque, uno de los destinos más famosos de la isla, conocido por sus aguas tranquilas y su arena fina. <br/><br/> Recorre la costa de la isla, pasando por hermosos paisajes naturales y playas vírgenes. Haz una parada en una de las mejores zonas de snorkel de la isla, donde podrás sumergirte en el agua cristalina y descubrir la ..."
+                    }
+                ]
+            },
+            {
+                "format": "ICON",
+                "section": "INCLUDES",
+                "position": 2,
+                "items": [
+                    {
+                        "icon": "boat",
+                        "caption": "Moto de Agua - Para 2 personas"
+                    },
+                    {
+                        "icon": "gas-pump",
+                        "caption": "Combustible"
+                    },
+                    {
+                        "icon": "tote",
+                        "caption": "Bolsa impermeable para tus pertenencias"
+                    },
+                    {
+                        "icon": "lifebuoy",
+                        "caption": "Chalecos salvavidas"
+                    },
+                    {
+                        "icon": "fork-knife",
+                        "caption": "Merienda"
+                    },
+                    {
+                        "icon": "clock",
+                        "caption": "Tour guiado por 30 minutos"
+                    },
+                    {
+                        "icon": "camera",
+                        "caption": "Fotos y videos de la experiencia"
+                    },
+                    {
+                        "icon": "umbrella-simple",
+                        "caption": "Sombrilla en la playa"
+                    },
+                    {
+                        "icon": "sunglasses",
+                        "caption": "Gafas de sol"
+                    },
+                    {
+                        "icon": "van",
+                        "caption": "Transporte desde el hotel"
+                    }
+                ]
+            },
+            {
+                "format": "COMPOSED",
+                "section": "IMPORTANT_INFO",
+                "position": 4,
+                "items": [
+                    {
+                        "format": "LIST",
+                        "section": "RESERVATION",
+                        "position": 0,
+                        "items": [
+                            {
+                                "description": "En caso de mal tiempo, como lluvia fuerte o tormenta, el proveedor de la actividad puede cancelar el tour. Si esto ocurre, podrás elegir una alternativa o recibir un reembolso completo."
+                            },
+                            {
+                                "description": "Se requiere experiencia previa para manejar la moto de agua o tomar una breve sesión de entrenamiento incluida en el tour."
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "WARNINGS",
+                        "position": 1,
+                        "items": [
+                            {
+                                "description": "Servicio sólo disponible para mayores de 18 años."
+                            },
+                            {
+                                "description": "No ofrecemos servicios de transporte."
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "PAYMENTS",
+                        "position": 2,
+                        "items": [
+                            {
+                                "description": "Aceptamos: pago móvil, transferencia bancaria, Zelle, Paypal y efectivo."
+                            },
+                            {
+                                "description": "Si el pago se realiza en efectivo, el monto debe ser exacto."
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "CANCELLATION_POLICY",
+                        "position": 3,
+                        "items": [
+                            {
+                                "description": "La cancelación de la reserva sólo está disponible 48 horas antes de la fecha reservada."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": "ES",
+        "totalReviews": 0,
+        "averageRating": 0,
+        "categories": ["DE_TODITO", "BEACH"],
+        "keyFeatures": [
+            {
+                "icon": "boat",
+                "caption": "Carrera de pura adrenalina",
+                "description": "Siente la emoción mientras aceleras por las olas a bordo de tu moto de agua, ¡como si estuvieras en una película de acción! 😎"
+            },
+            {
+                "icon": "island",
+                "caption": "Una vista brutaal!",
+                "description": "Consigue las mejores fotos con fondos de playas paradisíacas y agua cristalina 🌴 ¡para que tus seguidores mueran de envidia! 😏"
+            },
+            {
+                "icon": "drop",
+                "caption": "Splash y risas garantizadas",
+                "description": "Prepárate para divertirte y reír a carcajadas mientras desafías las olas y salpicas a tus amigos 😂"
+            }
+        ],
+        "description": "¡Siente la adrenalina recorriendo tu cuerpo mientras navegas las olas del Caribe en moto acuática! Diviértete en la Isla de Margarita, la perla del Caribe, y disfruta de paisajes paradisíacos desde una perspectiva única.",
+        "highlightedFeatures": [
+            {
+                "icon": "medal",
+                "caption": "Anfitrión estrella"
+            }
+        ],
+        "tags": [
+            "Aventura",
+            "Deportes Acuáticos",
+            "Moto de Agua",
+            "Isla de Margarita",
+            "Playa",
+            "Diversión",
+            "Aventura Extrema"
+        ],
+        "customPage": {
+            "theme": {
+                "primary": "#a1cbe5"
+            },
+            "checkoutTitle": "Reserva esta aventura",
+            "hostTitle": "Conoce al experto"
+        },
+        "testimonials": [
+            {
+                "date": "2024-11-07T10:30:00.000Z",
+                "rating": 5,
+                "comment": "¡Excelente experiencia! El servicio fue maravilloso y todo estuvo perfecto.",
+                "images": [
+                    "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/testimonials/testimonio-aqua-world-1.jpeg",
+                    "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/testimonials/testimonio-aqua-world-2.jpeg"
+                ],
+                "userName": "Carlos Mendoza"
+            }
+        ],
+        "faqs": [
+            {
+                "question": "¿Necesito experiencia previa para conducir la moto acuática?",
+                "answer": "No es necesario tener experiencia previa. Nuestros guías te proporcionarán una breve instrucción antes de salir al agua para asegurarse de que estés cómodo y seguro.",
+                "order": 1
+            },
+            {
+                "question": "¿Es seguro navegar en moto acuática?",
+                "answer": "Sí, la seguridad es nuestra prioridad. Todos los guías están altamente capacitados, y se te proporcionará equipo de seguridad como chalecos salvavidas para garantizar una experiencia segura y divertida.",
+                "order": 2
+            },
+            {
+                "question": "¿Puedo llevar a un acompañante en la moto acuática?",
+                "answer": "Sí, puedes llevar a un acompañante en la moto acuática, siempre y cuando cumpla con los requisitos de peso y seguridad establecidos por nuestro equipo.",
+                "order": 3
+            },
+            {
+                "question": "¿Cuánto tiempo dura la experiencia de navegación en moto acuática?",
+                "answer": "La experiencia dura aproximadamente una hora, pero puedes disfrutar del paisaje y navegar a tu ritmo mientras exploras las aguas cristalinas del Caribe.",
+                "order": 4
+            }
+        ]
+    },
+    "multimedia": [
+        {
+            "recordId": "810ac31a-d03e-4c52-a79b-077986adf39a",
+            "description": "810ac31a-d03e-4c52-a79b-077986adf39a",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/moto-de-agua-1.png",
+            "order": 1,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "ba950f53-d0fb-432f-b788-cafbff0f33c7",
+            "description": "ba950f53-d0fb-432f-b788-cafbff0f33c7",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/moto-de-agua-2.png",
+            "order": 2,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "bf2016c1-3525-4d1c-8667-635ddd729373",
+            "description": "bf2016c1-3525-4d1c-8667-635ddd729373",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/moto-de-agua-3.png",
+            "order": 3,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "5ee0bece-38aa-46ae-ae95-8a7d70574fc6",
+            "description": "5ee0bece-38aa-46ae-ae95-8a7d70574fc6",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/moto-de-agua-4.png",
+            "order": 4,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "920ac31a-d03e-4c52-a79b-077986adf39a",
+            "description": "920ac31a-d03e-4c52-a79b-077986adf39a",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/moto-de-agua-5.png",
+            "order": 5,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "455ac31a-d03e-4c52-a79b-077986adf39a",
+            "description": "455ac31a-d03e-4c52-a79b-077986adf39a",
+            "isBanner": true,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/moto-de-agua-6.png",
+            "order": 6,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "b064111a-7e69-411b-939b-5be80e7e039d",
+            "description": "b064111a-7e69-411b-939b-5be80e7e039d",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/0220439a-d3ea-408b-b05a-5e2e5316325a/video-de-actividad-en-modo-de-agua.mp4",
+            "order": 7,
+            "type": "VIDEO"
+        }
+    ],
+    "host": {
+        "recordId": "7607664d-b762-48e5-a7e3-36e0a3c07ed7",
+        "name": "Juan Martinez",
+        "alias": "juan-martinez",
+        "email": "somoshomi.vzla@gmail.com",
+        "phoneNumber": "584124787905",
+        "yearsOfExperience": 4,
+        "location": {
+            "country": "Venezuela",
+            "description": "Isla De Margarita",
+            "state": "Nueva Esparta",
+            "city": "La Asunción",
+            "postalCode": "1203"
+        },
+        "rating": 0,
+        "averageResponseTime": {
+            "unit": "MIN",
+            "quantity": 15
+        },
+        "keyFeatures": [
+            {
+                "icon": "person-simple-swim",
+                "description": "Experto en deportes acuáticos"
+            },
+            {
+                "icon": "student",
+                "description": "100% Ucabista"
+            }
+        ],
+        "details": [
+            {
+                "description": "Soy Juan y me encanta conocer otras culturas conociendo gente nueva en mi querida isla de Margarita."
+            },
+            {
+                "icon": "person-simple-tai-chi",
+                "description": " Me encanta la adrenalina"
+            }
+        ],
+        "verified": true,
+        "multimedia": [
+            {
+                "path": "https://d225100flpmtie.cloudfront.net/public/hosts/7607664d-b762-48e5-a7e3-36e0a3c07ed7/Juan Martinez.png",
+                "profile": true,
+                "order": 1,
+                "description": "Juan Martinez.",
+                "type": "IMAGE"
+            }
+        ]
+    }
+}

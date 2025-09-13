@@ -1,0 +1,65 @@
+{
+    "PK": "SERVICE#ee684c1d-fa55-4c93-8a8c-05712e5e9d72",
+    "SK": "PROFILE#PLAN#1a5fbc5b-f3c9-4fa4-ad02-d0c1af928abc",
+    "duration": {
+        "quantity": 30,
+        "unit": "MIN"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Para cumpleañeros",
+            "icon": "gift"
+        },
+        {
+            "caption": "Fotos incluidas",
+            "icon": "camera"
+        }
+    ],
+    "maxCapacity": 1,
+    "price": [
+        {
+            "amount": 50,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "privateGroup": "NEVER",
+    "recordId": "1a5fbc5b-f3c9-4fa4-ad02-d0c1af928abc",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Celebra tu cumpleaños de una manera única con un vuelo en parapente sobre la Isla de Margarita. Incluye una pancarta personalizada con tu nombre y fotos con GoPro para que nunca olvides este día especial."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Vuelo cumpleañero",
+                    "icon": "gift"
+                },
+                {
+                    "caption": "Fotos con GoPro",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Pancarta personalizada",
+                    "icon": "balloon"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Vuelo en parapente para cumpleaños con fotos y pancarta",
+    "title": "Plan cumpleañero",
+    "totalBookings": 0
+}

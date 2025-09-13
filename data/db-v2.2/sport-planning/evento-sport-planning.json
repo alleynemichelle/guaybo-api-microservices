@@ -1,0 +1,13 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711#EVENT",
+    "SK": "2025-01-13T04:00:00.000Z#1acccadf-2b50-454e-b6d3-f6835e50d664",
+    "alias": "reto-sport-planning-2024-q1",
+    "eventStatus": "OPEN",
+    "finalDate": "2025-02-21T04:00:00.000Z",
+    "initialDate": "2025-01-13T04:00:00.000Z",
+    "name": "Reto Sport Planning - 2024 Q1",
+    "recordId": "1acccadf-2b50-454e-b6d3-f6835e50d664",
+    "recordType": "EVENT",
+    "totalBookings": 0,
+    "timezone": "America/Caracas"
+}

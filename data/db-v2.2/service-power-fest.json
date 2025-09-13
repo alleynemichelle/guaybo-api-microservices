@@ -1,0 +1,163 @@
+{
+    "PK": "SERVICE#cffcfbff-8f60-4961-8a83-b9e7c81d914a",
+    "SK": "PROFILE#DETAILS",
+    "alias": "power-fest",
+    "timezone": "America/Caracas",
+    "bookingScope": {
+        "bookingFlow": "IGNORE_TICKET",
+        "requiredData": ["firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["FUNDRAISING_EVENT"],
+    "createdAt": "2024-09-10T04:23:25.070Z",
+    "customPage": {
+        "bookingFlow": "IGNORE_BOOKING",
+        "checkoutTitle": "Adquiere tu bandana para el POWER FEST",
+        "cto": "Quiero mi bandana",
+        "hostTitle": "Organizadores del evento",
+        "mainTitle": "Únete al POWER FEST 💜💪",
+        "providersInputLabel": "Organizador"
+    },
+    "description": "¡Únete al POWER FEST en Puerto Cabello este <strong>21 de septiembre</strong> para apoyar a Yoselin Guedez! <br/> <br/> Los centros de entrenamiento de Puerto Cabello se han unido para crear este evento de recaudación de fondos para nuestra querida atleta y coach de crossfit. <br/>  <br/> <strong> ¡Tu apoyo puede hacer la diferencia! </strong> 💜💪",
+    "highlightedFeatures": [
+        {
+            "caption": "#HoyTodosSomosMorados",
+            "icon": "flag"
+        }
+    ],
+    "hostId": "f4e34a81-e4cc-4361-b881-7ff6a44f31a6",
+    "ignoreTicket": true,
+    "keyFeatures": [
+        {
+            "caption": "Caminata 3K",
+            "description": "Comenzamos con una caminata masiva a las 5:00 PM desde el estadio Independencia hasta el Malecón de Puerto Cabello 🏋",
+            "icon": "person-simple-walk"
+        },
+        {
+            "caption": "Actividades en el Malecón",
+            "description": "En el Malecón de Puerto Cabello, podrás disfrutar de muchas actividades: bailoterapia, WOD de CrossFit, evento de relajación - cool down, y mucho más 💃🏋️️",
+            "icon": "barbell"
+        },
+        {
+            "caption": "¡Tu apoyo hace la diferencia!",
+            "description": "Si deseas apoyar a Yoselin, puedes realizar donaciones a las siguientes cuentas: <br/><br/><strong>Pago móvil: </strong> Banco del tesoro - Telf: 04121300861 - CI: 25536670 <br/><br/> <strong>Zelle: </strong>Dina Rodriguez Quintero - mayrelisra@gmail.com <br/><br/> Si quieres adquirir tu bandana como apoyo a Yoselin, presiona en <strong>Quiero mi bandana</strong>",
+            "icon": "heart"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.480680585894357,
+            "longitude": -68.01019387885076
+        },
+        "country": "Venezuela",
+        "description": "La caminata inicia en <strong>El Estadio Independencia​ hasta el Malecón de Puerto Cabello</strong> <br/> Las actividades del evento se realizarán en el <strong>Malecón</strong> ",
+        "state": "Carabobo"
+    },
+    "price": {
+        "amount": 10,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON"
+    },
+    "privateGroup": "NEVER",
+    "providers": [
+        {
+            "name": "Voy por mi cuenta",
+            "phoneNumber": "+584128668694"
+        },
+        {
+            "name": "Michelle Fit",
+            "phoneNumber": "+584141221422"
+        },
+        {
+            "name": "Tete Fit",
+            "phoneNumber": "+584241702939"
+        }
+    ],
+    "recordId": "cffcfbff-8f60-4961-8a83-b9e7c81d914a",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "<strong>Fecha:</strong> 25 de septiembre del 2024."
+                },
+                {
+                    "description": "<strong>Hora:</strong> 5:00pm"
+                },
+                {
+                    "description": "<strong>Lugar de encuentro:</strong> Estadio Independencia para la caminata, luego el Malecón de Puerto Cabello."
+                },
+                {
+                    "description": "<strong>Caminata 3K:</strong> Salida a las 5:00 PM desde el Estadio Independencia."
+                },
+                {
+                    "description": "<strong>Actividades en el Malecón de Puerto Cabello para recaudar fondos:</strong> Bailoterapia en el Malecón, súper WOD de CrossFit, evento de relajación y masajes, venta de comida y productos."
+                },
+                {
+                    "description": "<strong>Vestimenta:</strong> Lleva una prenda morada para mostrar tu apoyo 💜."
+                }
+            ],
+            "position": 0,
+            "section": "Sobre el evento"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Este <strong>21 de septiembre</strong>, únete a nosotros en el <strong>POWER FEST</strong> en el Malecón de Puerto Cabello. Este evento busca recaudar fondos para Yoselin Guedez, una atleta de crossfit que ha representado a Puerto Cabello en diferentes ediciones y que hoy se encuentra enfrentado un gran desafío de salud. <br/><br/>Iniciaremos el POWER FEST con una caminata de 3k y terminaremos en el Malecón de Puerto Cabello con diferentes actividades para recaudar fondos. <strong>Luce una prenda morada para mostrar tu apoyo y demuestra que hoy todos somos morados. 💜</strong><br/><br/> ¡Gracias por tu apoyo!"
+                }
+            ],
+            "position": 1,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Caminata 3k",
+                    "icon": "sneaker-move"
+                },
+                {
+                    "caption": "Bailoterapia",
+                    "icon": "music-notes"
+                },
+                {
+                    "caption": "Súper WOD de CrossFit",
+                    "icon": "barbell"
+                },
+                {
+                    "caption": "Evento de relajación",
+                    "icon": "peace"
+                },
+                {
+                    "caption": "Zona de fisioterapia",
+                    "icon": "person-arms-spread"
+                },
+                {
+                    "caption": "Venta de comida y productos",
+                    "icon": "orange"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Si deseas apoyar a Yoselin, puedes realizar donaciones a las siguientes cuentas: <br/><br/><strong>Pago móvil: </strong> Banco del tesoro - Telf: 04121300861 - CI: 25536670 <br/><br/> <strong>Zelle: </strong>Dina Rodriguez Quintero - mayrelisra@gmail.com <br/><br/> Si quieres adquirir tu bandana en apoyo a Yoselin, presiona en <strong>Quiero mi bandana</strong>"
+                }
+            ],
+            "position": 4,
+            "section": "Donaciones"
+        }
+    ],
+    "tags": ["Evento Benéfico", "Caminata", "CrossFit", "Puerto Cabello", "Salud", "Solidaridad"],
+    "title": "Power Fest, en apoyo a Yoselin Guedez",
+    "totalReviews": 0,
+    "updatedAt": "2024-09-10T04:23:25.070Z",
+    "type": "ONE_TIME"
+}

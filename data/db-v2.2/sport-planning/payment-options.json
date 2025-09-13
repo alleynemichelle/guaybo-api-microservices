@@ -1,0 +1,22 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "SK": "PROFILE#PAYMENT_OPTIONS",
+    "paymentOptions": [
+        {
+            "bank": "BANCO_DE_VENEZUELA",
+            "name": "Sport Planning",
+            "nationalId": "V-27027303",
+            "paymentMethod": "MOBILE_PAYMENT",
+            "phoneNumber": "584143374958"
+        },
+        {
+            "email": "fabianvmolina99@gmail.com",
+            "paymentMethod": "BINANCE"
+        },
+        {
+            "paymentMethod": "CASH"
+        }
+    ],
+    "recordId": "1b6b109-2d43-4c42-927f-8d7ff89d5704",
+    "recordType": "PAYMENT_OPTIONS"
+}

@@ -1,0 +1,11 @@
+{
+    "PK": "SERVICE#12c7b109-2d43-4c42-927f-8d7ff89d5704#EVENT",
+    "SK": "2024-11-07T10:30:00.000Z#22aab94-0b8d-40fb-bfa5-9850849bcd40",
+    "name": "Sesión v2",
+    "alias": "sesión-v2",
+    "recordId": "22aab94-0b8d-40fb-bfa5-9850849bcd40",
+    "recordType": "EVENT",
+    "initialDate": "2024-11-07T00:00:00.000Z",
+    "time": "10:30",
+    "totalBookings": 0
+}

@@ -1,0 +1,312 @@
+{
+    "details": {
+        "type": "RECURRING",
+        "timezone": "America/Caracas",
+        "recordId": "ee684c1d-fa55-4c93-8a8c-05712e5e9d72",
+        "hostId": "61c0f929-8fa2-4379-81e2-0f60ea87071a",
+        "alias": "parapente-margarita",
+        "location": {
+            "coordinates": {
+                "latitude": 10.9576,
+                "longitude": -63.864
+            },
+            "country": "Venezuela",
+            "description": "Parapente en Playa El Yaque, Isla de Margarita",
+            "state": "Nueva Esparta"
+        },
+        "title": "Disfruta de una aventura en parapente en Margarita",
+        "minCapacity": 1,
+        "sections": [
+            {
+                "format": "LIST",
+                "section": "WHAT_WILL_YOU_DO",
+                "position": 0,
+                "items": [
+                    {
+                        "description": "Vuela sobre la hermosa Isla de Margarita y siente la libertad de estar en el aire mientras disfrutas de vistas espectaculares."
+                    },
+                    {
+                        "description": "Elige entre tres planes emocionantes: individual, cumpleañero o enamorados, y haz que tu vuelo sea aún más especial."
+                    },
+                    {
+                        "description": "Disfruta de atención personalizada, seguridad garantizada y una experiencia inolvidable en uno de los lugares más bellos del Caribe."
+                    }
+                ]
+            },
+            {
+                "format": "TEXT",
+                "section": "LONG_DESCRIPTION",
+                "position": 1,
+                "items": [
+                    {
+                        "description": "Experimenta la emoción del parapente en la Isla de Margarita. Vuela con total seguridad mientras te sumerges en las impresionantes vistas de playas, montañas y el mar Caribe. Nuestros instructores certificados te guiarán en cada paso, asegurando que tengas una experiencia inolvidable y llena de adrenalina. <br/><br/> Ya sea que elijas un vuelo individual, celebrar tu cumpleaños o compartir esta aventura con tu pareja, te garantizamos un vuelo seguro, divertido y cargado de emociones."
+                    }
+                ]
+            },
+            {
+                "format": "ICON",
+                "section": "INCLUDES",
+                "position": 2,
+                "items": [
+                    {
+                        "icon": "certificate",
+                        "caption": "Instructores certificados"
+                    },
+                    {
+                        "icon": "users",
+                        "caption": "Parapente para 1 o 2 personas"
+                    },
+                    {
+                        "icon": "camera",
+                        "caption": "Fotos y videos con GoPro"
+                    },
+                    {
+                        "icon": "clock",
+                        "caption": "Vuelos disponibles a las 6, 8 y 10 am"
+                    },
+                    {
+                        "icon": "calendar",
+                        "caption": "Disponible jueves a domingo"
+                    },
+                    {
+                        "icon": "map-pin-simple-area",
+                        "caption": "Vuelos sobre Playa El Yaque"
+                    },
+                    {
+                        "icon": "heart",
+                        "caption": "Opciones especiales para enamorados"
+                    },
+                    {
+                        "icon": "gift",
+                        "caption": "Especial para cumpleaños"
+                    },
+                    {
+                        "icon": "island",
+                        "caption": "Vuelo panorámico sobre el mar Caribe"
+                    }
+                ]
+            },
+            {
+                "format": "COMPOSED",
+                "section": "IMPORTANT_INFO",
+                "position": 4,
+                "items": [
+                    {
+                        "format": "LIST",
+                        "section": "RESERVATION",
+                        "position": 0,
+                        "items": [
+                            {
+                                "description": "Es necesario traer ropa cómoda, la mejor actitud y los términos y condiciones impresos."
+                            },
+                            {
+                                "description": "Lugar de encuentro: Playa El Yaque, Nueva Esparta, Isla de Margarita."
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "WARNINGS",
+                        "position": 1,
+                        "items": [
+                            {
+                                "description": "La actividad se realiza según las condiciones climáticas. Si el clima no es favorable, se reagenda la actividad."
+                            },
+                            {
+                                "description": "No se admiten mascotas."
+                            },
+                            {
+                                "description": "Se deben aceptar los términos y condiciones antes de volar."
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "PAYMENTS",
+                        "position": 2,
+                        "items": [
+                            {
+                                "description": "Aceptamos pagos en efectivo, Zelle y transferencia bancaria."
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "CANCELLATION_POLICY",
+                        "position": 3,
+                        "items": [
+                            {
+                                "description": "La cancelación debe realizarse con al menos 3 días de antelación. No se realiza reembolso del monto abonado."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": "ES",
+        "totalReviews": 0,
+        "averageRating": 0,
+        "categories": ["Aventura", "Parapente", "Isla de Margarita"],
+        "keyFeatures": [
+            {
+                "icon": "rocket-launch",
+                "caption": "Vuelos seguros y emocionantes",
+                "description": "Experimenta la adrenalina de volar con seguridad garantizada y vistas impresionantes del Caribe 🌅."
+            },
+            {
+                "icon": "gift",
+                "caption": "Planes especiales",
+                "description": "Celebra cumpleaños o comparte un vuelo romántico con opciones personalizadas 🎉."
+            },
+            {
+                "icon": "camera",
+                "caption": "Captura el momento",
+                "description": "Fotos y videos de alta calidad para que revivas tu vuelo una y otra vez 📷."
+            }
+        ],
+        "description": "Vuela en parapente sobre la espectacular Isla de Margarita y disfruta de una experiencia única llena de adrenalina, paisajes impresionantes y momentos inolvidables.",
+        "highlightedFeatures": [
+            {
+                "icon": "certificate",
+                "caption": "Piloto certificado"
+            }
+        ],
+        "tags": ["Aventura", "Parapente", "Isla de Margarita", "Playa", "Adrenalina", "Naturaleza"],
+        "testimonials": [
+            {
+                "date": "2024-11-07T10:30:00.000Z",
+                "rating": 5,
+                "comment": "Me encantó. Volvería a ir mil veces.",
+                "images": [
+                    "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/testimonials/fly-testimonio-1.jpg"
+                ],
+                "userName": "Andrés Mendoza"
+            },
+            {
+                "date": "2024-10-07T11:30:00.000Z",
+                "rating": 4.5,
+                "comment": "Volar en parapente fue una experiencia increíblemente liberadora. El paisaje desde las alturas era impresionante y la sensación de flotabilidad me hizo sentir como si estuviera tocando el cielo. Definitivamente, una aventura que recomendaría a todos los que buscan algo único y emocionante",
+                "images": [
+                    "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/testimonials/fly-testimonio-2.jpg"
+                ],
+                "userName": "Pedro Jimenez"
+            },
+            {
+                "date": "2024-10-05T12:30:00.000Z",
+                "rating": 4.5,
+                "comment": "Volar en parapente fue una de las experiencias más emocionantes de mi vida. La vista panorámica y el viento en el rostro me dieron una sensación de paz y adrenalina al mismo tiempo. Sin duda, una aventura que quedará grabada en mi memoria.",
+                "userName": "Camila Gutierrez"
+            }
+        ]
+    },
+    "multimedia": [
+        {
+            "recordId": "b5c9fe4b-6a9f-4d20-91da-1f57940830b6",
+            "description": "b5c9fe4b-6a9f-4d20-91da-1f57940830b6",
+            "isBanner": false,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-1.png",
+            "order": 1,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "318d0373-9bd5-4ea2-b7f8-68fb07affc86",
+            "description": "318d0373-9bd5-4ea2-b7f8-68fb07affc86",
+            "isBanner": false,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-2.png",
+            "order": 2,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "594a3088-e9d1-4120-ba73-634f208ed67d",
+            "description": "594a3088-e9d1-4120-ba73-634f208ed67d",
+            "isBanner": false,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-3.png",
+            "order": 3,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "4b3a099b-71c7-4af0-bfb9-971cd9460c02",
+            "description": "4b3a099b-71c7-4af0-bfb9-971cd9460c02",
+            "isBanner": true,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-4.png",
+            "order": 4,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "9be31de6-8965-46c9-8c12-1d1972ca0336",
+            "description": "9be31de6-8965-46c9-8c12-1d1972ca0336",
+            "isBanner": false,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-5.png",
+            "order": 5,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "a2ea88d8-8cef-474d-bf01-ade34a9637a0",
+            "description": "a2ea88d8-8cef-474d-bf01-ade34a9637a0",
+            "isBanner": false,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-6.png",
+            "order": 6,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "299cc731-1b6d-4027-a544-178a9ac33026",
+            "description": "299cc731-1b6d-4027-a544-178a9ac33026",
+            "isBanner": false,
+            "path": "https://d16z70ud1xnffx.cloudfront.net/public/services/ee684c1d-fa55-4c93-8a8c-05712e5e9d72/parapente-7.png",
+            "order": 7,
+            "type": "IMAGE"
+        }
+    ],
+    "host": {
+        "recordId": "61c0f929-8fa2-4379-81e2-0f60ea87071a",
+        "name": "Fly Margarita",
+        "alias": "fly-margarita",
+        "email": "somoshomi.vzla@gmail.com",
+        "phoneNumber": "584124787905",
+        "yearsOfExperience": 7,
+        "location": {
+            "country": "Venezuela",
+            "description": "Ofrecemos vuelos en parapente sobre las más hermosas playas de la Isla de Margarita.",
+            "state": "Nueva Esparta",
+            "city": "Porlamar",
+            "postalCode": "6301"
+        },
+        "averageResponseTime": {
+            "unit": "MIN",
+            "quantity": 30
+        },
+        "keyFeatures": [
+            {
+                "icon": "medal",
+                "description": "Instructores con certificación internacional"
+            },
+            {
+                "icon": "users-four",
+                "description": "Experiencias diseñadas para todas las edades"
+            }
+        ],
+        "details": [
+            {
+                "description": "Fly Margarita es una compañía especializada en ofrecer emocionantes experiencias de parapente en la Isla de Margarita. Nuestro compromiso es brindar vuelos seguros, divertidos y llenos de adrenalina, siempre con vistas espectaculares del Caribe."
+            },
+            {
+                "icon": "shield-check",
+                "description": "Certificación en seguridad aérea"
+            },
+            {
+                "icon": "parachute",
+                "description": "Vuelos personalizados"
+            }
+        ],
+        "verified": true,
+        "multimedia": [
+            {
+                "path": "https://d16z70ud1xnffx.cloudfront.net/public/hosts/61c0f929-8fa2-4379-81e2-0f60ea87071a/logo-fly-margarita.png",
+                "profile": true,
+                "order": 1,
+                "description": "fly Margarita.",
+                "type": "IMAGE"
+            }
+        ]
+    }
+}

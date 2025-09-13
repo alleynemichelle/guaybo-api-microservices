@@ -1,0 +1,65 @@
+{
+    "PK": "SERVICE#ee684c1d-fa55-4c93-8a8c-05712e5e9d72",
+    "SK": "PROFILE#PLAN#0adc46b8-87c1-4b76-a620-67dd3882ddb1",
+    "duration": {
+        "quantity": 30,
+        "unit": "MIN"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Vuelo para 1 persona",
+            "icon": "rocket-launch"
+        },
+        {
+            "caption": "Fotos incluidas",
+            "icon": "camera"
+        }
+    ],
+    "maxCapacity": 1,
+    "price": [
+        {
+            "amount": 30,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "recordId": "0adc46b8-87c1-4b76-a620-67dd3882ddb1",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Disfruta de un emocionante vuelo individual en parapente sobre la Isla de Margarita. Incluye fotos con GoPro, clase de reconocimiento, atención personalizada y equipo de seguridad."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Vuelo individual",
+                    "icon": "user"
+                },
+                {
+                    "caption": "Fotos con GoPro",
+                    "icon": "image"
+                },
+                {
+                    "caption": "Clase de reconocimiento",
+                    "icon": "notebook"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+
+    "shortDescription": "Vuelo individual en parapente con fotos",
+    "title": "Vuelo individual",
+    "totalBookings": 3
+}

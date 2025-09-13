@@ -1,0 +1,87 @@
+{
+    "PK": "SERVICE#5f739fe3-f298-42e7-992e-8b43ad8a510d",
+    "SK": "PROFILE#PLAN#7ceef3f1-ed20-4acb-9202-1e500db44afd",
+    "duration": {
+        "quantity": 6,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "6 horas",
+            "icon": "clock"
+        },
+        {
+            "caption": "Guías expertos",
+            "icon": "person-simple-walk"
+        }
+    ],
+    "price": [
+        {
+            "amount": 10,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "recordId": "7ceef3f1-ed20-4acb-9202-1e500db44afd",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Únete a esta emocionante caminata hacia el Hotel Humboldt en Caracas, disfrutando de vistas impresionantes del Parque Nacional El Ávila y la ciudad. Guiado por expertos locales, explorarás la naturaleza y conocerás la historia del lugar. El recorrido incluye el regreso en teleférico, ofreciendo una experiencia única con vistas panorámicas. Ideal para los amantes de la aventura y la naturaleza."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Guía de montaña",
+                    "icon": "compass"
+                },
+                {
+                    "caption": "Transporte en teleférico",
+                    "icon": "cable-car"
+                },
+                {
+                    "caption": "Vistas panorámicas",
+                    "icon": "panorama"
+                },
+                {
+                    "caption": "Refrigerios y agua",
+                    "icon": "beer-bottle"
+                },
+                {
+                    "caption": "Parada para fotos en puntos clave",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Seguro de aventura",
+                    "icon": "shield"
+                },
+                {
+                    "caption": "Bastones de senderismo",
+                    "icon": "footprints"
+                },
+                {
+                    "caption": "Visita guiada al Hotel Humboldt",
+                    "icon": "bed"
+                },
+                {
+                    "caption": "Kit de primeros auxilios",
+                    "icon": "first-aid-kit"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Disfruta de una caminata guiada al Hotel Humboldt en Caracas.",
+    "title": "Caminata al Hotel Humboldt",
+    "totalBookings": 1
+}

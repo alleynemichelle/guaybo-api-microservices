@@ -1,0 +1,272 @@
+{
+    "details": {
+        "type": "RECURRING",
+        "timezone": "America/Caracas",
+        "recordId": "51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+        "hostId": "589db4f2-33e4-424d-9223-cfa8559cc94b",
+        "alias": "lacasitadelarbolct",
+        "location": {
+            "coordinates": {
+                "latitude": 10.411633467644124,
+                "longitude": -67.27072512883569
+            },
+            "country": "Venezuela",
+            "description": "Colonia Tovar, Estado Aragua",
+            "state": "Aragua"
+        },
+        "title": "Disfruta de una Aventura en La Colonia Tovar",
+        "minCapacity": 1,
+        "sections": [
+            {
+                "format": "LIST",
+                "section": "WHAT_WILL_YOU_DO",
+                "position": 0,
+                "items": [
+                    {
+                        "description": "🌳 Disfruta de la casita en el árbol a más de 28 metros de altura y siente la emoción de estar en las nubes!"
+                    },
+                    {
+                        "description": "🚙 Embárcate en paseos turísticos en vehículos doble tracción Kawasaki para explorar la belleza de la Colonia Tovar con estilo y confort."
+                    },
+                    {
+                        "description": "📸 Captura momentos inolvidables en un puente colgante único, perfecto para tus fotos más épicas."
+                    },
+                    {
+                        "description": "🍽️ Saborea deliciosos platillos de la cocina alemana en nuestra área de esparcimiento y relájate con una bebida refrescante."
+                    }
+                ]
+            },
+            {
+                "format": "ICON",
+                "section": "INCLUDES",
+                "position": 2,
+                "items": [
+                    {
+                        "icon": "tree",
+                        "caption": "Casita en el Árbol - A 28 metros de altura"
+                    },
+                    {
+                        "icon": "bridge",
+                        "caption": "Puente colgante único"
+                    },
+                    {
+                        "icon": "car",
+                        "caption": "Paseos en vehículos doble tracción Kawasaki"
+                    },
+                    {
+                        "icon": "bowl-steam",
+                        "caption": "Desayuno o almuerzo incluido en el plan Full Day"
+                    },
+                    {
+                        "icon": "map-pin-line",
+                        "caption": "Diferentes paradas en la Colonia Tovar durante el recorrido. <br/> "
+                    }
+                ]
+            },
+            {
+                "format": "COMPOSED",
+                "section": "IMPORTANT_INFO",
+                "position": 4,
+                "items": [
+                    {
+                        "format": "LIST",
+                        "section": "RESERVATION",
+                        "position": 0,
+                        "items": [
+                            {
+                                "description": "La entrada a la casita tiene un costo de $1 por persona, ¡gratis para niños menores de 8 años! 🎟️"
+                            },
+                            {
+                                "description": "Los paseos turísticos se reservan con un 10% del monto y están sujetos a disponibilidad. ¡Reserva con anticipación para asegurar tu lugar! ⏳"
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "WARNINGS",
+                        "position": 1,
+                        "items": [
+                            {
+                                "description": "<strong>No se realizan reservas para la entrada a la casita</strong>, ¡ven cuando quieras! 🚶‍♂️"
+                            },
+                            {
+                                "description": "Los paseos turísticos (plan Ruta Exprema y Full Day)  <strong> requieren reserva previa </strong> y el monto no es reembolsable. 💸"
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "PAYMENTS",
+                        "position": 2,
+                        "items": [
+                            {
+                                "description": "Aceptamos pago móvil, efectivo, Zelle y divisas. ¡Elige la opción que te sea más conveniente! 💳"
+                            }
+                        ]
+                    },
+                    {
+                        "format": "LIST",
+                        "section": "CANCELLATION_POLICY",
+                        "position": 3,
+                        "items": [
+                            {
+                                "description": "<strong>La reserva de paseos no es reembolsable </strong>. ¡Asegúrate de tu asistencia para no perderte la aventura! 🚫"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "language": "ES",
+        "totalReviews": 0,
+        "averageRating": 0,
+        "categories": ["NATURE", "TOURISM", "ADVENTURE"],
+        "keyFeatures": [
+            {
+                "icon": "tree",
+                "caption": "La Casita En El Árbol",
+                "description": "¡La casita en el árbol a 28 metros de altura! 🌳"
+            },
+            {
+                "icon": "bridge",
+                "caption": "Puente Colgante",
+                "description": "Un puente colgante único que te ofrece vistas impresionantes y fotos espectaculares 🌉"
+            },
+            {
+                "icon": "car",
+                "caption": "Paseos en la Colonia Tovar",
+                "description": "Explora la Colonia Tovar en vehículos doble tracción diseñados para la aventura 🚙. <br/><br/> Más de 15 paradas disponibles, entre ellas: <br> - <strong> Cedro Gigante: </strong> Árbol Legendario de la Colonia tovar. <br/>  <strong> - Pico Codazzi:</strong>  El Monumento Natural Pico Codazzi.<br/>  - <strong> Llano Grande: </strong> Mirador natural desde donde se ve la zona sur del pueblo.  <br/> - <strong> Parapentes:</strong>  Puede ser en dos ubicaciones: Pie de Cerro (hacia la Victoria) y El Jarrillo. "
+            }
+        ],
+        "description": "¡Vive una aventura en la Colonia Tovar! <br/> <br/>Disfruta de la casita en el árbol a 28 metros de altura y explora la belleza natural de la Colonia Tovar en vehículos Kawasaki. <br/> <br/> <strong>¡Es una experiencia que no te querrás perder! </strong>🌲🚗🍽",
+        "highlightedFeatures": [
+            {
+                "icon": "medal",
+                "caption": "¡Una aventura de altura!"
+            }
+        ],
+        "tags": [
+            "Aventura",
+            "Turismo",
+            "Naturaleza",
+            "Colonia Tovar",
+            "Casita en el Árbol",
+            "Vehículos Kawasaki",
+            "Puente Colgante"
+        ],
+        "testimonials": []
+    },
+    "multimedia": [
+        {
+            "recordId": "9c49af90-61b9-4b68-8ce1-d3825acc8ee6",
+            "description": "9c49af90-61b9-4b68-8ce1-d3825acc8ee6",
+            "isBanner": true,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-1.jpg",
+            "order": 1,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "bc708947-0269-46e6-ba88-3378081af091",
+            "description": "bc708947-0269-46e6-ba88-3378081af091",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-2.jpg",
+            "order": 2,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "bcffdb31-2375-45c3-b84b-2e4c9e66d97f",
+            "description": "bcffdb31-2375-45c3-b84b-2e4c9e66d97f",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-3.jpg",
+            "order": 3,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "ccd08947-0269-46e6-ba88-3378081af091",
+            "description": "ccd08947-0269-46e6-ba88-3378081af091",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-8.jpg",
+            "order": 3,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "133085ab-2c9a-4f86-b5a0-3934829fa0ee",
+            "description": "133085ab-2c9a-4f86-b5a0-3934829fa0ee",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-5.jpg",
+            "order": 5,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "68d05b95-14b9-447a-8477-9f21233efe93",
+            "description": "68d05b95-14b9-447a-8477-9f21233efe93",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-6.jpg",
+            "order": 6,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "6a71bd4c-b659-43f4-a6cb-59dfc57619e7",
+            "description": "6a71bd4c-b659-43f4-a6cb-59dfc57619e7",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-4.jpg",
+            "order": 6,
+            "type": "IMAGE"
+        },
+        {
+            "recordId": "e25f4163-1b26-44f5-b753-069390efe3ef",
+            "description": "e25f4163-1b26-44f5-b753-069390efe3ef",
+            "isBanner": false,
+            "path": "https://d225100flpmtie.cloudfront.net/public/services/51906cc3-e53e-48a2-a1ff-9c49e708eb2c/lacasitadelarbolct-7.jpg",
+            "order": 7,
+            "type": "IMAGE"
+        }
+    ],
+    "host": {
+        "recordId": "589db4f2-33e4-424d-9223-cfa8559cc94b",
+        "name": "La Casita del Árbol",
+        "alias": "lacasitadelarbolct",
+        "email": "somoshomi.vzla@gmail.com",
+        "phoneNumber": "584124091709",
+        "location": {
+            "country": "Venezuela",
+            "description": "Ubicada en la Colonia Tovar, Aragua",
+            "state": "Aragua",
+            "city": "Colonia Tovar",
+            "postalCode": "1030"
+        },
+        "keyFeatures": [
+            {
+                "icon": "star",
+                "description": "Experiencia única"
+            },
+            {
+                "icon": "beer-stein",
+                "description": "Platillos de la cocina alemana"
+            }
+        ],
+        "details": [
+            {
+                "description": "La Casita del Árbol se especializa en ofrecer recreación y esparcimiento para la familia venezolana. Nuestra hermosa casita en un árbol de cedro ofrece vistas espectaculares, áreas para el disfrute familiar y platillos de la cocina alemana."
+            },
+            {
+                "icon": "cheers",
+                "description": "Área de bebidas para liberar la tensión"
+            },
+            {
+                "icon": "car",
+                "description": "Recorridos turísticos en vehículos exóticos"
+            }
+        ],
+        "verified": true,
+        "multimedia": [
+            {
+                "path": "https://d225100flpmtie.cloudfront.net/public/hosts/589db4f2-33e4-424d-9223-cfa8559cc94b/la-casita-del-arbol.jpg",
+                "profile": true,
+                "order": 1,
+                "description": "La casita del árbol - La Colonia Tovar",
+                "type": "IMAGE"
+            }
+        ]
+    }
+}

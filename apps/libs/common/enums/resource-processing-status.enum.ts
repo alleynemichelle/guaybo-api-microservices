@@ -1,0 +1,9 @@
+export enum ResourceProcessingStatus {
+    CREATED = 'CREATED',
+    UPLOADED = 'UPLOADED',
+    PROCESSING = 'PROCESSING',
+    TRANSCODING = 'TRANSCODING',
+    FINISHED = 'FINISHED',
+    ERROR = 'ERROR',
+    UPLOAD_FAILED = 'UPLOAD_FAILED',
+}

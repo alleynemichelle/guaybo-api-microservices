@@ -1,0 +1,12 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "SK": "PROFILE#MULTIMEDIA#33c7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "recordId": "33c7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "description": "Reto Sport Planning",
+    "order": 3,
+    "path": "public/experiences/33d7b109-1d42-ac42-c27f-8d7ff89d5711/reto-sportplanning-3.png",
+    "preview": true,
+    "recordType": "MULTIMEDIA",
+    "status": "ACTIVE",
+    "type": "IMAGE"
+}

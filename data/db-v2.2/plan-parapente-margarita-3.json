@@ -1,0 +1,84 @@
+{
+    "PK": "SERVICE#ee684c1d-fa55-4c93-8a8c-05712e5e9d72",
+    "SK": "PROFILE#PLAN#4dda1285-1340-452c-9012-bcdc47d59c4d",
+    "duration": {
+        "quantity": 30,
+        "unit": "MIN"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Para enamorados",
+            "icon": "heart"
+        },
+        {
+            "caption": "Videos incluidos",
+            "icon": "camera"
+        }
+    ],
+    "maxCapacity": 2,
+    "planId": "4dda1285-1340-452c-9012-bcdc47d59c4d",
+    "price": [
+        {
+            "amount": 80,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "privateGroup": "NEVER",
+    "recordId": "4dda1285-1340-452c-9012-bcdc47d59c4d",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Comparte un vuelo romántico con esa persona especial. Incluye fotos y video con GoPro, un brindis en el aire, y una pancarta con un mensaje personalizado. Perfecto para propuestas o celebraciones de aniversario."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Vuelo romántico para 2 personas",
+                    "icon": "heart"
+                },
+                {
+                    "caption": "Fotos y video con GoPro",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Brindis al aterrizar",
+                    "icon": "cheers"
+                },
+                {
+                    "caption": "Pancarta personalizada",
+                    "icon": "balloon"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "sessions": [
+        {
+            "dayOfTheWeek": "FRIDAY",
+            "times": ["08:00", "10:00"]
+        },
+        {
+            "dayOfTheWeek": "SATURDAY",
+            "times": ["10:00"]
+        },
+        {
+            "dayOfTheWeek": "SUNDAY",
+            "times": ["06:00"]
+        }
+    ],
+    "shortDescription": "Vuelo romántico con brindis y fotos",
+    "title": "Plan para enamorados",
+    "totalBookings": 1
+}

@@ -1,0 +1,6 @@
+export enum PaymentProcessorType {
+    MANUAL = 'MANUAL',
+    AUTOMATIC_MOBILE_PAYMENT = 'AUTOMATIC_MOBILE_PAYMENT',
+    PAYPAL = 'PAYPAL',
+    STRIPE = 'STRIPE',
+}

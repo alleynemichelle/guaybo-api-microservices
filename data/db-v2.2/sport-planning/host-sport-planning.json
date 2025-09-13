@@ -1,0 +1,49 @@
+{
+    "PK": "HOST#22b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a",
+    "SK": "PROFILE#DETAILS",
+    "recordId": "22b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a",
+    "alias": "sportplanning",
+    "details": [
+        {
+            "description": "<strong>Nos apasiona ayudar a los demás en algo que nos costó tanto tiempo alcanzar por falta de conocimiento y experiencia</strong>, ahora lo tenemos y estamos felices de mostrarte lo fácil y divertido que puede ser. </br> </br>Lo mejor de todo es que no importa en qué rincón del mundo te encuentres, de igual forma puedes formar parte de la comunidad Sport Planning. "
+        },
+
+        {
+            "description": "Entrenamiento",
+            "icon": "barbell"
+        },
+        {
+            "description": "Nutrición",
+            "icon": "fork-knife"
+        },
+        {
+            "description": "Basado en ciencia",
+            "icon": "test-tube"
+        }
+    ],
+    "email": "sportplanningve@gmail.com",
+    "keyFeatures": [
+        {
+            "description": "sportplanning_ve",
+            "icon": "instagram-logo"
+        },
+        {
+            "description": "Facebook",
+            "icon": "facebook-logo"
+        }
+    ],
+    "location": {
+        "city": "Los Teques",
+        "country": "Venezuela",
+        "postalCode": "1203",
+        "state": "Miranda"
+    },
+    "name": "Sport Planning",
+    "phoneNumber": "584242716954",
+    "rating": 5,
+    "recordType": "HOST",
+    "reviews": 0,
+    "type": "INDIVIDUAL",
+    "verified": true,
+    "yearsOfExperience": 3
+}

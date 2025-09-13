@@ -1,0 +1,65 @@
+{
+    "PK": "SERVICE#51906cc3-e53e-48a2-a1ff-9c49e708eb2c",
+    "SK": "PROFILE#PLAN#ac61543b-20ae-40e6-8f06-03a45c7d3ee2",
+    "duration": {
+        "quantity": 4,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "Duración: Medio Día",
+            "icon": "clock"
+        },
+        {
+            "caption": "Incluye transporte",
+            "icon": "car"
+        }
+    ],
+    "maxCapacity": 5,
+    "minCapacity": 1,
+    "planId": "ac61543b-20ae-40e6-8f06-03a45c7d3ee2",
+    "price": [
+        {
+            "amount": 50,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_BOOKING"
+        }
+    ],
+    "recordId": "ac61543b-20ae-40e6-8f06-03a45c7d3ee2",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Conoce hasta cinco (5) paradas en la Colonia Tovar. 🌄🚙 <br/>"
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Traslado en vehículo Kawasaki para máximo 5 personas (ida y vuelta)",
+                    "icon": "car"
+                },
+                {
+                    "caption": "Se realizan cinco (5) paradas",
+                    "icon": "signpost"
+                },
+                {
+                    "caption": "Sólo medio día",
+                    "icon": "clock"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Ruta de cinco (5) paradas en la Colonia Tovar. Transporte ida y vuelta",
+    "title": "Ruta de cinco paradas",
+    "totalBookings": 2
+}

@@ -1,0 +1,1046 @@
+// ================================================
+// GUAYBO DATABASE SCHEMA
+// Database Markup Language (DBML) v3.0
+// Generated from PostgreSQL DDL
+// ================================================
+
+Project guaybo_database {
+  database_type: 'PostgreSQL'
+  Note: '''
+    # Guaybo Platform Database Schema
+    
+    Sistema de gestión para plataforma de reservas y eventos.
+    Incluye manejo de usuarios, hosts, productos, reservas, facturación y pagos.
+    
+    **Características principales:**
+    - Multi-tenant con separación por Host
+    - Sistema de facturación integrado
+    - Manejo de pagos móviles y notificaciones bancarias
+    - KYC (Know Your Customer) integrado
+    - Sistema de referidos
+    - Recursos multimedia polimórficos
+    - Transacciones y splits automáticos
+  '''
+}
+
+// ================================================
+// LOOKUP TABLES & ENUMS
+// ================================================
+
+Table status {
+  id bigint [pk, increment]
+  name varchar(100) [not null, unique]
+  description varchar(255)
+  entity_type varchar(100) [not null]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Global status table for different entity types'
+}
+
+Table product_type {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'EVENT, COURSE, DIGITAL_PRODUCT, etc.'
+}
+
+Table availability_type {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'CLIENT_AGREEMENT, DEFINED_RANGE'
+}
+
+Table meeting_platform {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'ZOOM, MEET, TEAMS'
+}
+
+Table transaction_type {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'SALE, COMMISSION, AFFILIATE_COMMISSION, WITHDRAWAL, FEE'
+}
+
+Table transaction_direction {
+  id bigint [pk, increment]
+  key varchar(10) [not null, unique]
+  description varchar(255)
+  
+  Note: 'IN, OUT'
+}
+
+Table beneficiary_type {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'HOST, CO_PRODUCER, AFFILIATE, GUAYBO, BANK'
+}
+
+Table product_resource_type {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'SECTION, RESOURCE, QUIZ, SURVEY'
+}
+
+Table question_type {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  description varchar(255)
+  
+  Note: 'MULTIPLE_CHOICE_SINGLE, TRUE_FALSE, OPEN_TEXT, etc.'
+}
+
+// ================================================
+// CORE SYSTEM TABLES
+// ================================================
+
+Table currency {
+  id bigint [pk, increment]
+  code varchar(10) [not null, unique]
+  symbol varchar(10) [not null]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'USD, VES, EUR with their symbols'
+}
+
+Table role {
+  id bigint [pk, increment]
+  name varchar(100) [not null, unique]
+  description varchar(255)
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'owner, admin, editor, viewer'
+}
+
+Table payment_method {
+  id bigint [pk, increment]
+  key varchar(50) [not null, unique]
+  icon varchar(50)
+  requires_coordination boolean [default: false]
+  automatic boolean [default: false]
+  currency_id bigint [not null, ref: > currency.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  status_id bigint [ref: > status.id]
+  
+  Note: 'MOBILE_PAYMENT, PAYPAL, ZELLE'
+}
+
+// ================================================
+// DISCOUNTS & BILLING
+// ================================================
+
+Table discount {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  name varchar(255) [not null]
+  description varchar(1000)
+  amount decimal(10,2) [not null]
+  type varchar(50) [not null]
+  scope varchar(50) [not null]
+  status_id bigint [ref: > status.id]
+  valid_from timestamptz
+  valid_until timestamptz
+  code varchar(100)
+  max_capacity int
+  duration jsonb
+  conditions jsonb
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Discount system with flexible conditions'
+}
+
+Table billing_plan {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  key varchar(100) [not null, unique]
+  description varchar(1000)
+  features jsonb
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'BASIC, PREMIUM, ENTERPRISE plans'
+}
+
+Table plan_breakdown {
+  id bigint [pk, increment]
+  billing_plan_id bigint [not null, ref: > billing_plan.id]
+  key varchar(100) [not null]
+  type varchar(50) [not null]
+  amount decimal(10,2) [not null]
+  
+  Note: 'Commission structure for billing plans'
+}
+
+// ================================================
+// MULTIMEDIA
+// ================================================
+
+Table multimedia {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  host_id bigint [ref: > host.id]
+  user_id bigint [ref: > app_user.id]
+  type varchar(50) [not null]
+  source varchar(50) [not null]
+  filename varchar(500)
+  path varchar(1000)
+  description varchar(1000)
+  usage_type varchar(50)
+  order_index int
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  status_id bigint [ref: > status.id]
+  
+  Note: '''
+    Polymorphic multimedia table
+    - Can belong to host OR user (constraint enforced)
+    - Types: image, video
+    - Sources: upload, youtube, drive, bunny
+    - Usage: profile, banner, preview, thumbnail
+  '''
+}
+
+// ================================================
+// USERS & HOSTS
+// ================================================
+
+Table app_user {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  first_name varchar(100)
+  last_name varchar(100)
+  full_name varchar(255)
+  email varchar(255) [unique, not null]
+  federated boolean [default: false]
+  registered boolean [default: false]
+  verified_email boolean [default: false]
+  phone_code varchar(10)
+  phone_number varchar(20)
+  social_media jsonb
+  timezone varchar(100)
+  last_access timestamptz [default: `CURRENT_TIMESTAMP`]
+  default_language varchar(20) [default: 'ES']
+  status_id bigint [ref: > status.id]
+  is_host boolean [default: false]
+  is_referrer boolean [default: false]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Main user entity with social media as JSON'
+}
+
+Table host {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  billing_plan_id bigint [not null, ref: > billing_plan.id]
+  commission_payer varchar(50) [not null, default: 'HOST']
+  name varchar(255) [not null]
+  alias varchar(255) [not null, unique]
+  email varchar(255) [not null]
+  collection_id varchar(255)
+  description varchar(1000)
+  phone_code varchar(10)
+  phone_number varchar(20)
+  timezone varchar(100)
+  verified boolean [default: false]
+  rating decimal(5,0)
+  reviews int
+  years_experience int
+  social_media jsonb
+  analytics jsonb
+  key_features jsonb
+  status_id bigint [ref: > status.id]
+  verification_status_id bigint [ref: > status.id]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Host/Business entity with flexible JSON fields'
+}
+
+Table host_user {
+  id bigint [pk, increment]
+  host_id bigint [not null, ref: > host.id]
+  user_id bigint [not null, ref: > app_user.id]
+  role_id bigint [not null, ref: > role.id]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  status_id bigint [ref: > status.id]
+  
+  indexes {
+    (host_id, user_id) [unique]
+  }
+  
+  Note: 'N:M relationship between hosts and users with roles'
+}
+
+Table host_billing_discount {
+  id bigint [pk, increment]
+  host_id bigint [not null, ref: > host.id]
+  discount_id bigint [not null, ref: > discount.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  status_id bigint [ref: > status.id]
+  valid_from timestamptz
+  valid_until timestamptz
+  
+  indexes {
+    (host_id, discount_id) [unique]
+  }
+  
+  Note: 'Host-specific billing discounts'
+}
+
+// ================================================
+// PRODUCTS & PLANS
+// ================================================
+
+Table product {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  host_id bigint [not null, ref: > host.id]
+  name varchar(500) [not null]
+  alias varchar(500) [not null]
+  description varchar(300)
+  description_section jsonb
+  product_type bigint [not null, ref: > product_type.id]
+  status_id bigint [ref: > status.id]
+  is_free boolean [default: false]
+  timezone varchar(100)
+  main_date timestamptz
+  min_capacity int [default: 0]
+  max_capacity int [default: 0]
+  total_bookings int [default: 0]
+  total_resources int [default: 0]
+  total_duration int [default: 0]
+  total_size bigint [default: 0]
+  total_sections int [default: 0]
+  availability_type bigint [ref: > availability_type.id]
+  meeting_platform bigint [ref: > meeting_platform.id]
+  meeting_url varchar(1000)
+  meeting_instructions text
+  terms_and_conditions jsonb
+  duration jsonb
+  template jsonb
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Main product/service entity with flexible configuration'
+}
+
+Table product_date {
+  id bigint [pk, increment]
+  record_id bigint [not null, unique]
+  product_id bigint [not null, ref: > product.id]
+  initial_date timestamptz [not null]
+  end_date timestamptz
+  timezone varchar(100)
+  status_id bigint [ref: > status.id]
+  total_bookings int [default: 0]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Available dates for products/events'
+}
+
+Table product_plan {
+  id bigint [pk, increment]
+  record_id bigint [not null, unique]
+  product_id bigint [not null, ref: > product.id]
+  name varchar(255) [not null]
+  description text
+  order_index int
+  total_bookings int [default: 0]
+  min_capacity int [default: 0]
+  max_capacity int [default: 0]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Pricing plans for products (Basic, Premium, VIP, etc.)'
+}
+
+Table product_price {
+  id bigint [pk, increment]
+  product_plan_id bigint [not null, ref: > product_plan.id]
+  amount decimal(10,2) [not null]
+  currency_id bigint [not null, ref: > currency.id]
+  fare_type varchar(50)
+  pricing_model varchar(50)
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Prices for each plan with currency support'
+}
+
+Table product_discount {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > product.id]
+  discount_id bigint [not null, ref: > discount.id]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  type varchar(50) [not null]
+  status_id bigint [ref: > status.id]
+  
+  indexes {
+    (product_id, discount_id) [unique]
+  }
+  
+  Note: 'Product-specific discounts and coupons'
+}
+
+// ================================================
+// PRODUCT CONTENT
+// ================================================
+
+Table faq {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > product.id]
+  question text [not null]
+  answer text [not null]
+  order_index int
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Frequently Asked Questions for products'
+}
+
+Table testimonial {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > product.id]
+  comment text [not null]
+  user_name varchar(255)
+  order_index int
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Customer testimonials for products'
+}
+
+Table testimonial_multimedia {
+  id bigint [pk, increment]
+  testimonial_id bigint [not null, ref: > testimonial.id]
+  multimedia_id bigint [not null, ref: > multimedia.id]
+  order_index int
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Media attachments for testimonials'
+}
+
+Table product_multimedia {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > product.id]
+  multimedia_id bigint [not null, ref: > multimedia.id]
+  order_index int
+  usage_type varchar(50)
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Media gallery for products (gallery, banner, preview)'
+}
+
+// ================================================
+// PRODUCT CONFIGURATION
+// ================================================
+
+Table product_booking_settings {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  product_id bigint [not null, ref: > product.id]
+  booking_flow varchar(50) [not null]
+  default_payment_status_id bigint [ref: > status.id]
+  currencies text[] [not null]
+  required_data text[] [not null]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Booking configuration per product'
+}
+
+Table product_post_booking_step {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  product_id bigint [not null, ref: > product.id]
+  type varchar(50) [not null]
+  title varchar(255) [not null]
+  description text [not null]
+  conditions jsonb
+  is_mandatory boolean [default: false]
+  is_meeting_invitation boolean [default: false]
+  custom_attributes jsonb
+  order_index int
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Post-booking steps (WhatsApp groups, meeting invitations, etc.)'
+}
+
+Table product_installment_program {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  product_id bigint [not null, ref: > product.id]
+  initial_payment_amount decimal(10,2)
+  installments_count int [not null]
+  payment_deadline_days_before_event int
+  payment_deadline_days_after_event int
+  frequency varchar(50) [not null]
+  interest_fee_amount decimal(10,2)
+  interest_fee_type varchar(50)
+  conditions jsonb
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  status_id bigint [ref: > status.id]
+  
+  Note: 'Installment payment configuration'
+}
+
+Table co_producer {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > product.id]
+  host_id bigint [not null, ref: > host.id]
+  user_id bigint [not null, ref: > app_user.id]
+  revenue_share decimal(5,2) [not null]
+  valid_from timestamptz [default: `now()`]
+  valid_until timestamptz
+  status_id bigint [ref: > status.id]
+  role_id bigint [not null, ref: > role.id]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    (product_id, user_id) [unique]
+  }
+  
+  Note: 'Co-producers with revenue sharing'
+}
+
+Table product_weekly_availability {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > product.id]
+  day_of_week smallint [not null]
+  start_time time [not null]
+  end_time time [not null]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Weekly availability schedule (0=Sunday, 6=Saturday)'
+}
+
+// ================================================
+// PAYMENTS & BOOKINGS
+// ================================================
+
+Table payment_option {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  user_id bigint [ref: > app_user.id]
+  payment_method_id bigint [not null, ref: > payment_method.id]
+  custom_attributes jsonb
+  status_id bigint [ref: > status.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'User payment methods with custom attributes'
+}
+
+Table invoice {
+  id bigint [pk, increment]
+  record_id bigint [not null, unique]
+  host_id bigint [not null, ref: > host.id]
+  status_id bigint [ref: > status.id, not null]
+  start_billing_date timestamptz [not null]
+  closing_billing_date timestamptz [not null]
+  subtotal decimal(10,2) [not null]
+  paid_commissions decimal(10,2) [default: 0]
+  total decimal(10,2)
+  billing_total decimal(10,2) [not null]
+  delayed boolean [default: false]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Host billing invoices'
+}
+
+Table invoice_breakdown {
+  id bigint [pk, increment]
+  invoice_id bigint [not null, ref: > invoice.id]
+  key varchar(100) [not null]
+  type varchar(50) [not null]
+  amount decimal(10,2) [not null]
+  calculated_amount decimal(10,2)
+  order_index int
+  
+  Note: 'Invoice line items breakdown'
+}
+
+Table invoice_item {
+  id bigint [pk, increment]
+  invoice_id bigint [not null, ref: > invoice.id]
+  type varchar(50) [not null]
+  description varchar(255)
+  amount decimal(10,2) [not null]
+  
+  Note: 'Additional invoice items (discounts, interests)'
+}
+
+Table invoice_payment {
+  id bigint [pk, increment]
+  invoice_id bigint [not null, ref: > invoice.id]
+  payment_method_id bigint [not null, ref: > payment_method.id]
+  reference_code varchar(100)
+  receipt varchar(1000)
+  amount decimal(10,2) [not null]
+  payment_date timestamptz [not null]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Invoice payments'
+}
+
+Table booking {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  invoice_id bigint [not null, ref: > invoice.id]
+  product_id bigint [not null, ref: > product.id]
+  host_id bigint [not null, ref: > host.id]
+  user_id bigint [ref: > app_user.id]
+  plan_id bigint [ref: > product_plan.id]
+  date_id bigint [ref: > product_date.id]
+  ticket_number varchar(100)
+  payment_mode varchar(50)
+  booking_status_id bigint [ref: > status.id]
+  payment_status_id bigint [ref: > status.id]
+  payment_method_id bigint [ref: > payment_method.id]
+  timezone varchar(100)
+  total_attendees int
+  is_test boolean [default: false]
+  free_access boolean [default: false]
+  app_fee_amount decimal(10,2)
+  app_fee_commission_payer varchar(50)
+  conversion_currency varchar(10)
+  conversion_rate decimal(18,6)
+  amount_usd decimal(10,2)
+  amount_converted decimal(18,2)
+  subtotal decimal(10,2)
+  total decimal(10,2)
+  discounted_amount decimal(10,2)
+  remaining_amount decimal(10,2)
+  total_installments int
+  installments_interest_fee decimal(10,2)
+  installments_program_applied boolean [default: false]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Main booking entity with comprehensive pricing info'
+}
+
+Table booking_item {
+  id bigint [pk, increment]
+  booking_id bigint [not null, ref: > booking.id]
+  fare_type varchar(50)
+  price decimal(10,2) [not null]
+  final_price decimal(10,2) [not null]
+  quantity int [not null]
+  total_amount decimal(10,2) [not null]
+  
+  Note: 'Booking line items'
+}
+
+Table booking_discount {
+  id bigint [pk, increment]
+  booking_id bigint [not null, ref: > booking.id]
+  discount_id bigint [ref: > discount.id]
+  amount decimal(10,2) [not null]
+  
+  Note: 'Applied discounts per booking'
+}
+
+Table attendee {
+  id bigint [pk, increment]
+  booking_id bigint [not null, ref: > booking.id]
+  user_id bigint [ref: > app_user.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Event attendees'
+}
+
+Table payment {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  booking_id bigint [not null, ref: > booking.id]
+  amount decimal(10,2) [not null]
+  payment_option_id bigint [not null, ref: > payment_option.id]
+  payment_date timestamptz [default: `now()`]
+  payment_receipt varchar(1000)
+  payment_status_id bigint [ref: > status.id]
+  reference_code varchar(100)
+  conversion_rate decimal(18,6)
+  amount_converted decimal(18,2)
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Individual payments for bookings'
+}
+
+Table installment {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  booking_id bigint [not null, ref: > booking.id]
+  installment_number int [not null]
+  amount decimal(10,2) [not null]
+  due_date timestamptz [not null]
+  payment_id bigint [ref: > payment.id]
+  payment_status_id bigint [ref: > status.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Installment payment schedule'
+}
+
+// ================================================
+// REFERRAL SYSTEM
+// ================================================
+
+Table referral_code {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  referrer_id bigint [not null, ref: > app_user.id]
+  code varchar(50) [not null, unique]
+  referral_rate decimal(5,2) [not null]
+  duration_days int
+  cap_minor decimal(12,2)
+  window_days int
+  status_id bigint [ref: > status.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Referral codes with commission structure'
+}
+
+Table referral_association {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  referrer_id bigint [not null, ref: > app_user.id]
+  referred_id bigint [not null, ref: > app_user.id]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Active referral relationships'
+}
+
+// ================================================
+// AUTHENTICATION & SECURITY
+// ================================================
+
+Table temporal_token {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  user_id bigint [ref: > app_user.id]
+  email varchar(255) [not null]
+  token_type varchar(50) [not null]
+  redirect_url varchar(1000)
+  expires_at timestamptz [not null]
+  used boolean [default: false]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Temporary tokens for registration, login, password reset'
+}
+
+Table confirmation_code {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  email varchar(255) [not null]
+  code varchar(20) [not null]
+  code_type varchar(50) [not null]
+  status_id bigint [ref: > status.id, not null]
+  ttl int [not null]
+  redirect_type varchar(50)
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'Email verification and 2FA codes'
+}
+
+// ================================================
+// DIGITAL CONTENT & RESOURCES
+// ================================================
+
+Table product_resource {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  product_id bigint [not null, ref: > product.id]
+  parent_id bigint [ref: > product_resource.id]
+  type varchar(50) [not null]
+  title varchar(255) [not null]
+  description text
+  long_description text
+  multimedia_id bigint [ref: > multimedia.id]
+  thumbnail_id bigint [ref: > multimedia.id]
+  file_id varchar(255)
+  processing_status_id bigint [ref: > status.id]
+  encode_progress int
+  size decimal(10,2)
+  duration decimal(10,2)
+  preview boolean [default: false]
+  downloadable boolean [default: false]
+  order_index int [not null]
+  total_views int [default: 0]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  status_id bigint [ref: > status.id]
+  
+  Note: 'Hierarchical digital resources (sections, lessons, videos, etc.)'
+}
+
+Table question {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  product_resource_id bigint [not null, ref: > product_resource.id]
+  text text [not null]
+  question_type varchar(50) [not null]
+  order_index int [not null]
+  explanation text
+  rating_scale int
+  min_rating_label varchar(255)
+  max_rating_label varchar(255)
+  is_required boolean [default: false]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  status_id bigint [ref: > status.id]
+  
+  Note: 'Quiz and survey questions'
+}
+
+Table answer_option {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  question_id bigint [not null, ref: > question.id]
+  text text [not null]
+  order_index int
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  status_id bigint [ref: > status.id]
+  
+  Note: 'Multiple choice answer options'
+}
+
+Table user_answer {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  question_id bigint [not null, ref: > question.id]
+  user_id bigint [not null, ref: > app_user.id]
+  answer_text text
+  rating_value int
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  indexes {
+    (question_id, user_id) [unique]
+  }
+  
+  Note: 'User responses to questions'
+}
+
+Table user_answer_option {
+  id bigint [pk, increment]
+  user_answer_id bigint [not null, ref: > user_answer.id]
+  answer_option_id bigint [not null, ref: > answer_option.id]
+  
+  indexes {
+    (user_answer_id, answer_option_id) [unique]
+  }
+  
+  Note: 'Selected answer options for multiple choice'
+}
+
+// ================================================
+// KYC (Know Your Customer)
+// ================================================
+
+Table kyc_session {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  user_id bigint [ref: > app_user.id]
+  session_id uuid [not null]
+  session_number int [not null]
+  session_token varchar(255) [not null]
+  vendor_data varchar(255)
+  metadata jsonb
+  status_id bigint [ref: > status.id, not null]
+  workflow_id uuid [not null]
+  callback_url varchar(1000) [not null]
+  verification_url varchar(1000) [not null]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'KYC verification sessions with external providers'
+}
+
+Table kyc_identity {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  user_id bigint [ref: > app_user.id]
+  person_type varchar(50) [not null, default: 'NATURAL']
+  first_name varchar(255)
+  last_name varchar(255)
+  full_name varchar(500)
+  gender varchar(20)
+  age int
+  date_of_birth date
+  marital_status varchar(50)
+  nationality varchar(100)
+  place_of_birth varchar(255)
+  document_number varchar(100) [not null]
+  document_type varchar(100)
+  issuing_state varchar(10)
+  issuing_state_name varchar(255)
+  date_of_issue date
+  expiration_date date
+  portrait_image text
+  front_image text
+  back_image text
+  front_video text
+  back_video text
+  full_front_image text
+  full_back_image text
+  address text
+  formatted_address text
+  parsed_address text
+  extra_fields jsonb
+  extra_files jsonb
+  session_id uuid
+  status_id bigint [ref: > status.id, not null]
+  created_at timestamptz [default: `now()`]
+  updated_at timestamptz [default: `now()`]
+  
+  Note: 'KYC identity verification data'
+}
+
+// ================================================
+// BANKING & NOTIFICATIONS
+// ================================================
+
+Table bank_notification {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  identifier varchar(255) [not null]
+  source varchar(50) [not null]
+  currency_id bigint [not null, ref: > currency.id]
+  merchant_id varchar(20) [not null]
+  merchant_phone varchar(15) [not null]
+  issuer_phone varchar(15) [not null]
+  description varchar(100)
+  issuing_bank varchar(10) [not null]
+  amount decimal(18,2) [not null]
+  timestamp timestamptz [not null]
+  reference varchar(50) [not null]
+  network_code varchar(2) [not null]
+  original_payload jsonb [not null]
+  status_id bigint [ref: > status.id]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Mobile payment notifications (Pago Móvil, etc.)'
+}
+
+// ================================================
+// TRANSACTIONS & FINANCIAL TRACKING
+// ================================================
+
+Table transaction {
+  id bigint [pk, increment]
+  record_id uuid [not null, unique, default: `gen_random_uuid()`]
+  booking_id bigint [ref: > booking.id]
+  payment_id bigint [ref: > payment.id]
+  host_id bigint [ref: > host.id]
+  amount decimal(12,2) [not null]
+  conversion_rate decimal(18,6) [not null]
+  amount_converted decimal(12,2) [not null]
+  type_id bigint [not null, ref: > transaction_type.id]
+  direction varchar(10) [not null]
+  status_id bigint [ref: > status.id, not null]
+  reference varchar(100)
+  bank_notification_id bigint [ref: > bank_notification.id]
+  description varchar(500)
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Financial transactions with automatic splits'
+}
+
+Table transaction_split {
+  id bigint [pk, increment]
+  transaction_id bigint [not null, ref: > transaction.id]
+  beneficiary_type varchar(50) [not null]
+  beneficiary_id bigint
+  amount decimal(12,2) [not null]
+  conversion_rate decimal(18,6) [not null]
+  amount_converted decimal(12,2) [not null]
+  share decimal(5,2)
+  status_id bigint [ref: > status.id, not null]
+  created_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamptz [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Automatic revenue splits (host, co-producers, affiliates, platform)'
+}
+
+// ================================================
+// RELATIONSHIPS SUMMARY
+// ================================================
+
+// Core User Relationships
+Ref: host_user.host_id > host.id [delete: cascade]
+Ref: host_user.user_id > app_user.id [delete: cascade]
+Ref: host_user.role_id > role.id [delete: restrict]
+
+// Product Relationships
+Ref: product.host_id > host.id [delete: cascade]
+Ref: product_date.product_id > product.id [delete: cascade]
+Ref: product_plan.product_id > product.id [delete: cascade]
+Ref: product_price.product_plan_id > product_plan.id [delete: cascade]
+
+// Booking Chain
+Ref: booking.product_id > product.id [delete: cascade]
+Ref: booking.host_id > host.id [delete: cascade]
+Ref: booking.invoice_id > invoice.id [delete: cascade]
+Ref: payment.booking_id > booking.id [delete: cascade]
+Ref: attendee.booking_id > booking.id [delete: cascade]
+
+// Financial Relationships
+Ref: transaction.booking_id > booking.id [delete: set null]
+Ref: transaction.payment_id > payment.id [delete: set null]
+Ref: transaction_split.transaction_id > transaction.id [delete: cascade]
+
+// Content & Media
+Ref: product_resource.product_id > product.id [delete: cascade]
+Ref: product_resource.parent_id > product_resource.id [delete: cascade]
+Ref: question.product_resource_id > product_resource.id [delete: cascade]
+Ref: answer_option.question_id > question.id [delete: cascade]
+Ref: user_answer.question_id > question.id [delete: cascade]
+Ref: user_answer.user_id > app_user.id [delete: cascade]
+
+// KYC Relationships
+Ref: kyc_session.user_id > app_user.id [delete: cascade]
+Ref: kyc_identity.user_id > app_user.id [delete: cascade]
+
+// Referral Relationships
+Ref: referral_code.referrer_id > app_user.id [delete: cascade]
+Ref: referral_association.referrer_id > app_user.id [delete: cascade]
+Ref: referral_association.referred_id > app_user.id [delete: cascade]

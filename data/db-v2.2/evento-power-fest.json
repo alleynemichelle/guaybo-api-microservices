@@ -1,0 +1,11 @@
+{
+    "PK": "SERVICE#cffcfbff-8f60-4961-8a83-b9e7c81d914a#EVENT",
+    "SK": "2024-12-20T17:00:00.000Z#96bbc1df-2b50-454e-b6d3-f6835e50d664",
+    "name": "power-fest",
+    "alias": "power-fest",
+    "recordId": "96bbc1df-2b50-454e-b6d3-f6835e50d664",
+    "recordType": "EVENT",
+    "initialDate": "2024-12-20",
+    "time": "17:00",
+    "totalBookings": 0
+}

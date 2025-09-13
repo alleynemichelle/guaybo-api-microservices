@@ -1,0 +1,69 @@
+{
+    "PK": "SERVICE#0220439a-d3ea-408b-b05a-5e2e5316325a",
+    "SK": "PROFILE#PLAN#283b76a9-5771-4421-8d5d-60b3b3221e81",
+    "recordId": "283b76a9-5771-4421-8d5d-60b3b3221e81",
+    "recordType": "PLAN",
+    "duration": {
+        "quantity": 30,
+        "unit": "MIN"
+    },
+    "keyFeatures": [
+        {
+            "caption": "30 minutos",
+            "icon": "clock"
+        },
+        {
+            "caption": "Ideal en familia",
+            "icon": "heart"
+        }
+    ],
+    "maxCapacity": 20,
+    "price": [
+        {
+            "amount": 10,
+            "currency": "USD",
+            "fareType": "ADULT",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        },
+        {
+            "amount": 8,
+            "currency": "USD",
+            "fareType": "CHILD",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "privateGroup": "OPTIONAL",
+
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Paseo corto por la costa: Disfruta de un recorrido de 30 minutos en moto de agua, perfecto para quienes buscan una experiencia rápida pero llena de emoción. Navega a alta velocidad mientras admiras el paisaje marino y siente la adrenalina en cada ola."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Moto de Agua - Para 2 personas",
+                    "icon": "boat"
+                },
+                {
+                    "caption": "Tour guiado por 30 minutos",
+                    "icon": "clock"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Recorrido de 30 minutos en moto de agua",
+    "title": "Paseo corto por la costa",
+    "totalBookings": 4
+}

@@ -1,0 +1,67 @@
+{
+    "PK": "SERVICE#33d7b109-1d42-ac42-c27f-8d7ff89d5711",
+    "SK": "PROFILE#PLAN#22e7c109-1d42-ac42-c27f-8d7ff89d5711",
+    "duration": {
+        "quantity": 45,
+        "unit": "DD"
+    },
+    "keyFeatures": [
+        {
+            "caption": "45 días",
+            "icon": "clock"
+        },
+        {
+            "caption": "Incluye guía de alimentación",
+            "icon": "certificate"
+        }
+    ],
+    "price": [
+        {
+            "amount": 45,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "recordId": "22e7c109-1d42-ac42-c27f-8d7ff89d5711",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Incluye todos beneficios del reto más la guía de alimentación personalizada."
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Guía de alimentación",
+                    "icon": "fork-knife"
+                },
+                {
+                    "caption": "Rutina de entrenamiento",
+                    "icon": "barbell"
+                },
+                {
+                    "caption": "Cuadro de tu planificación de entrenamiento",
+                    "icon": "table"
+                },
+                {
+                    "caption": "Acceso a la comunidad",
+                    "icon": "users-four"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Plan gold (incluye guía de alimentación)",
+    "title": "Plan Gold 🥇 ",
+    "totalBookings": 0
+}

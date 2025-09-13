@@ -1,0 +1,12 @@
+{
+    "PK": "HOST#22b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a",
+    "SK": "PROFILE#MULTIMEDIA#26b0f4d7-6b70-4e2f-8bec-12d8cbc7aa31",
+    "description": "Imagen de perfil de Sport Planning",
+    "order": 1,
+    "path": "public/hosts/22b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a/sport-planning.png",
+    "profile": true,
+    "recordId": "26b0f4d7-6b70-4e2f-8bec-12d8cbc7aa31",
+    "recordType": "MULTIMEDIA",
+    "status": "ACTIVE",
+    "type": "IMAGE"
+}

@@ -1,0 +1,306 @@
+{
+    "PK": "SERVICE#12c7b109-2d43-4c42-927f-8d7ff89d5704",
+    "SK": "PROFILE#DETAILS",
+    "alias": "el-mundo-de-la-escultura",
+    "timezone": "America/Caracas",
+
+    "averageRating": 0,
+    "bookingScope": {
+        "bookingFlow": "APP_BOOKING",
+        "initialPartialPaymentAmount": 10,
+        "partialPaymentActive": true,
+        "partialPaymentCount": 4,
+        "paymentOptions": [
+            {
+                "bank": "BANCO_DE_VENEZUELA",
+                "name": "John Doe",
+                "nationalId": "V-12345678",
+                "paymentMethod": "MOBILE_PAYMENT",
+                "phoneNumber": "58123456789"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "PAYPAL",
+                "phoneNumber": "58123456789"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "BINANCE",
+                "username": "msmith"
+            },
+            {
+                "email": "msmith@example.com",
+                "paymentMethod": "ZELLE",
+                "phoneNumber": "58123456789"
+            }
+        ],
+        "requiredData": ["email", "firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["ARTE_Y_CULTURA", "MANUALIDADES"],
+    "createdAt": "2024-08-07T20:52:15.501Z",
+    "customPage": {
+        "checkoutTitle": "Reservar",
+        "hostTitle": "Conoce al experto",
+        "mainTitle": "¡Únete a este tour! ⚡🔥"
+    },
+    "description": "En este curso de escultura en arcilla, aprenderás a crear hermosas piezas con técnicas profesionales, sin necesidad de experiencia previa. Incluye todos los materiales, instrucción experta, un ambiente creativo, y la oportunidad de llevarte a casa tu obra terminada.",
+    "faqs": [
+        {
+            "answer": "No, este curso está diseñado para todos los niveles de habilidad, incluidos los principiantes. Nuestro instructor experto te guiará a través de cada paso del proceso.",
+            "order": 1,
+            "question": "¿Necesito experiencia previa para tomar este curso?"
+        },
+        {
+            "answer": "Sí, todos los materiales necesarios para esculpir, incluidos el barro y las herramientas, están proporcionados como parte del curso.",
+            "order": 2,
+            "question": "¿Están incluidos los materiales en el curso?"
+        },
+        {
+            "answer": "¡Absolutamente! Podrás llevarte tu escultura terminada a casa para exhibirla y disfrutarla.",
+            "order": 3,
+            "question": "¿Puedo llevarme mi escultura a casa después de la clase?"
+        },
+        {
+            "answer": "Te recomendamos usar ropa cómoda que no te importe ensuciar, ya que trabajar con arcilla es una experiencia bastante práctica.",
+            "order": 4,
+            "question": "¿Qué debo ponerme para la clase?"
+        }
+    ],
+    "highlightedFeatures": [
+        {
+            "caption": "Instructor Profesional",
+            "icon": "medal"
+        }
+    ],
+    "hostId": "26b0f4d7-6b70-4e2f-8bec-72d8cbc7aa3a",
+    "keyFeatures": [
+        {
+            "caption": "Curso Completo",
+            "description": "Domina el arte de la escultura en arcilla, desde técnicas básicas hasta avanzadas. 🏺🎨",
+            "icon": "palette"
+        },
+        {
+            "caption": "Materiales Incluidos",
+            "description": "Todos los materiales necesarios están incluidos en el curso. 🧱🛠️",
+            "icon": "toolbox"
+        },
+        {
+            "caption": "Ambiente Creativo",
+            "description": "Disfruta de un ambiente inspirador y creativo. 🌿🏡",
+            "icon": "lightbulb"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.4806,
+            "longitude": -66.9036
+        },
+        "country": "Venezuela",
+        "description": "Taller de Escultura, Calle Arte y Cultura, Caracas.",
+        "state": "Distrito Capital"
+    },
+    "price": {
+        "amount": 50,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "recordId": "12c7b109-2d43-4c42-927f-8d7ff89d5704",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Aprende diferentes técnicas de escultura en arcilla."
+                },
+                {
+                    "description": "Crea tus propias esculturas con la guía de un instructor experto."
+                },
+                {
+                    "description": "Participa en un proyecto grupal al finalizar el curso."
+                }
+            ],
+            "position": 0,
+            "section": "WHAT_WILL_YOU_DO"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Este curso es perfecto para aquellos que quieren explorar su creatividad y aprender una nueva habilidad. ¡No se requiere experiencia previa! 🏺🎨"
+                }
+            ],
+            "position": 1,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Todo el material necesario",
+                    "icon": "pencil-ruler"
+                },
+                {
+                    "caption": "Instrucción profesional",
+                    "icon": "medal-military"
+                },
+                {
+                    "caption": "2 cócteles refrescantes",
+                    "icon": "cheers"
+                },
+                {
+                    "caption": "Pieza final horneada y lista para llevar",
+                    "icon": "puzzle-piece"
+                },
+                {
+                    "caption": "Recetario con técnicas y consejos",
+                    "icon": "book-open"
+                },
+                {
+                    "caption": "Delantal personalizado",
+                    "icon": "t-shirt"
+                },
+                {
+                    "caption": "Certificado de participación",
+                    "icon": "certificate"
+                },
+                {
+                    "caption": "Acceso a clases adicionales en línea",
+                    "icon": "laptop"
+                },
+                {
+                    "caption": "Fotografías del proceso y la pieza final",
+                    "icon": "camera"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "COMPOSED",
+            "items": [
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Ropa cómoda que se pueda ensuciar."
+                        },
+                        {
+                            "description": "Ganas de aprender."
+                        }
+                    ],
+                    "position": 0,
+                    "section": "ITEMS_TO_BRING"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Trabajamos previa reservación y con horarios asignados."
+                        },
+                        {
+                            "description": "Cada sesión se ofrece en diferentes horarios y no se mezcla con otros cursos."
+                        }
+                    ],
+                    "position": 1,
+                    "section": "RESERVATION"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Sólo se acepta pago en efectivo y transferencia bancaria."
+                        },
+                        {
+                            "description": "Si el pago se realiza en efectivo, el monto debe ser exacto."
+                        }
+                    ],
+                    "position": 2,
+                    "section": "PAYMENTS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "En caso de no asistir el día de su reservación, <strong>no se realiza reembolso</strong> y para una nueva reservación debe volver a cancelar el monto de la reservación. Antes de reservar asegure confirmar su asistencia."
+                        },
+                        {
+                            "description": "Se realizan cambios de horarios para el mismo día de la reservación (de haber disponibilidad), pero no se reagenda para otro día."
+                        }
+                    ],
+                    "position": 3,
+                    "section": "CANCELLATION_POLICY"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Niños a partir de 10 años."
+                        },
+                        {
+                            "description": "No ofrecemos servicios de transporte."
+                        },
+                        {
+                            "description": "No somos Pet-friendly."
+                        },
+                        {
+                            "description": "No se permiten acompañantes que no estén inscritos en el curso."
+                        }
+                    ],
+                    "position": 4,
+                    "section": "WARNINGS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "1. Prohibido el uso de teléfonos móviles durante la clase."
+                        },
+                        {
+                            "description": "2. Prohibido el ingreso con bebidas alcohólicas."
+                        },
+                        {
+                            "description": "3. Prohibido fumar dentro de nuestras instalaciones."
+                        },
+                        {
+                            "description": "4. Prohibido dañar las herramientas y materiales del taller."
+                        },
+                        {
+                            "description": "5. Prohibido asistir sin previa autorización."
+                        }
+                    ],
+                    "position": 5,
+                    "section": "REGULATIONS"
+                }
+            ],
+            "position": 3,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "tags": ["Escultura", "Arcilla", "Creatividad"],
+    "testimonials": [
+        {
+            "comment": "¡Excelente experiencia! El servicio fue maravilloso y todo estuvo perfecto.",
+            "date": "2024-11-07T10:30:00.000Z",
+            "images": ["public/experiences/12c7b109-2d43-4c42-927f-8d7ff89d5704/testimonials/testimonio-1.jpg"],
+            "rating": 5,
+            "userName": "Carlos Mendoza"
+        },
+        {
+            "comment": "¡Lo amé! Simplemente increible. ",
+            "date": "2024-10-07T10:30:00.000Z",
+            "images": ["public/experiences/12c7b109-2d43-4c42-927f-8d7ff89d5704/testimonials/testimonio-2.jpg"],
+            "rating": 4.5,
+            "userName": "Maria Oliveros"
+        }
+    ],
+    "title": "Curso de Escultura en Arcilla",
+    "totalBookings": 0,
+    "totalReviews": 0,
+    "type": "ONE_TIME",
+    "updatedAt": "2024-08-07T20:52:15.501Z"
+}

@@ -1,0 +1,68 @@
+{
+    "PK": "SERVICE#c0c90235-cc39-46c4-9c02-a207717e493d",
+    "SK": "PROFILE#PLAN#c2043fce-4da6-412f-b11c-46cfcb66399b",
+    "duration": {
+        "quantity": 4,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "4 horas",
+            "icon": "clock"
+        },
+        {
+            "caption": "Fotografía los mejores momentos",
+            "icon": "camera"
+        }
+    ],
+    "maxCapacity": 20,
+    "planId": "c2043fce-4da6-412f-b11c-46cfcb66399b",
+    "price": [
+        {
+            "amount": 15,
+            "currency": "USD",
+            "fareType": "GENERAL",
+            "pricingModel": "PER_PERSON"
+        }
+    ],
+    "recordId": "c2043fce-4da6-412f-b11c-46cfcb66399b",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Vive una experiencia única explorando 5 de los lugares más icónicos de Maracaibo, como la Basílica de la Chinita, el Puente General Rafael Urdaneta, la Plaza Baralt, el Teatro Baralt, y el casco central de la ciudad. Además, incluye snack de merienda, fotografías en lugares emblemáticos, y un ebook descargable. ¡Un recorrido que no te puedes perder! 📸"
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "5 paradas en sitios icónicos",
+                    "icon": "path"
+                },
+                {
+                    "caption": "Fotografías en lugares emblemáticos",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Snack de merienda",
+                    "icon": "cookie"
+                },
+                {
+                    "caption": "Ebook descargable",
+                    "icon": "book-open"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+    "shortDescription": "Tour cultural por Maracaibo",
+    "title": "Tour por Maracaibo",
+    "totalBookings": 0
+}

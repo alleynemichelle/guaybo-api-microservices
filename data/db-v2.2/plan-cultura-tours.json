@@ -1,0 +1,72 @@
+{
+    "PK": "SERVICE#c0c90235-cc39-46c4-9c02-a207717e493d",
+    "SK": "PROFILE#PLAN#aab2c70c-98c0-4b99-a7b3-2f03059dfd7c",
+    "duration": {
+        "quantity": 4,
+        "unit": "HR"
+    },
+    "keyFeatures": [
+        {
+            "caption": "4 horas",
+            "icon": "clock"
+        },
+        {
+            "caption": "Historia divertida",
+            "icon": "book"
+        }
+    ],
+    "maxCapacity": 20,
+    "price": [
+        {
+            "amount": 10,
+            "currency": "USD",
+            "fareType": "ADULT",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        },
+        {
+            "amount": 5,
+            "currency": "USD",
+            "fareType": "CHILD",
+            "pricingModel": "PER_PERSON",
+            "symbol": "$"
+        }
+    ],
+    "recordId": "aab2c70c-98c0-4b99-a7b3-2f03059dfd7c",
+    "recordType": "PLAN",
+    "sections": [
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Descubre 5 de los lugares más emblemáticos de la ciudad, incluyendo la Plaza Bolívar, el Panteón Nacional, la Casa Natal del Libertador, la Catedral de Caracas, y el Museo de Bellas Artes. <br/> <br/> ¡Un recorrido lleno de historia y cultura que no te puedes perder! Incluye snack de merienda, ebook descargable, y mucha diversión. 😄"
+                }
+            ],
+            "position": 0,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "5 paradas en sitios históricos",
+                    "icon": "path"
+                },
+                {
+                    "caption": "Snack de merienda",
+                    "icon": "cookie"
+                },
+                {
+                    "caption": "Ebook descargable",
+                    "icon": "books"
+                }
+            ],
+            "position": 1,
+            "section": "INCLUDES"
+        }
+    ],
+
+    "shortDescription": "Tour cultural por el Centro de Caracas",
+    "title": "Tour en el Centro de Caracas",
+    "totalBookings": 0
+}

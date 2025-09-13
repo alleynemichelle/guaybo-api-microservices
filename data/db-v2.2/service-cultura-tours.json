@@ -1,0 +1,196 @@
+{
+    "PK": "SERVICE#c0c90235-cc39-46c4-9c02-a207717e493d",
+    "SK": "PROFILE#DETAILS",
+    "type": "RECURRING",
+    "alias": "cultura-tours-venezuela",
+    "timezone": "America/Caracas",
+
+    "averageRating": 0,
+    "bookingScope": {
+        "requiredData": ["email", "firstName", "lastName"],
+        "requirementScope": "RESERVER_ONLY"
+    },
+    "categories": ["Cultura", "Historia"],
+    "createdAt": "2024-08-20T23:17:36.376Z",
+    "description": "Explora la rica historia y cultura de Venezuela con nuestros tours guiados por el Centro de Caracas y Maracaibo. Descubre lugares emblemáticos, disfruta de un snack y captura los mejores momentos en fotografías.",
+    "highlightedFeatures": [
+        {
+            "caption": "Experto en Cultura Venezolana",
+            "icon": "medal"
+        }
+    ],
+    "hostId": "d35688b1-2512-4655-b3ca-fe300a7d7310",
+    "keyFeatures": [
+        {
+            "caption": "Recorridos de 4 horas",
+            "description": "Sumérgete en la historia y cultura de Venezuela en solo 4 horas. ¡Aprenderás más de lo que imaginas!",
+            "icon": "clock"
+        },
+        {
+            "caption": "Fotografía los momentos",
+            "description": "Lleva contigo recuerdos inolvidables capturados en los lugares más emblemáticos. 📸",
+            "icon": "camera"
+        },
+        {
+            "caption": "Grupos pequeños",
+            "description": "Disfruta de una experiencia más íntima y personalizada con nuestros grupos reducidos. 🤝",
+            "icon": "users-three"
+        }
+    ],
+    "language": "ES",
+    "location": {
+        "coordinates": {
+            "latitude": 10.496,
+            "longitude": -66.88
+        },
+        "country": "Venezuela",
+        "description": "Centro de Caracas y Maracaibo",
+        "state": "Distrito Capital y Zulia"
+    },
+    "maxCapacity": 20,
+    "price": {
+        "amount": 5,
+        "currency": "USD",
+        "fareType": "GENERAL",
+        "pricingModel": "PER_PERSON",
+        "symbol": "$"
+    },
+    "recordId": "c0c90235-cc39-46c4-9c02-a207717e493d",
+    "recordType": "SERVICE",
+    "sections": [
+        {
+            "format": "LIST",
+            "items": [
+                {
+                    "description": "Disfruta de un recorrido lleno de historia y cultura en los lugares más emblemáticos del Centro de Caracas y Maracaibo."
+                },
+                {
+                    "description": "Aprende sobre la rica historia de Venezuela mientras te sumerges en la vibrante vida urbana."
+                },
+                {
+                    "description": "Haz una pausa para disfrutar de un delicioso snack y aprovecha para tomar fotografías en los lugares más icónicos."
+                },
+                {
+                    "description": "Descarga un ebook exclusivo con información detallada sobre los sitios que visitaremos."
+                },
+                {
+                    "description": "Comparte risas y buenos momentos con nuestros guías expertos, que harán de esta experiencia algo inolvidable. 😄"
+                }
+            ],
+            "position": 0,
+            "section": "WHAT_WILL_YOU_DO"
+        },
+        {
+            "format": "TEXT",
+            "items": [
+                {
+                    "description": "Únete a Cultura Tours Venezuela en un emocionante recorrido de 4 horas por los lugares más emblemáticos del Centro de Caracas o Maracaibo. <br/><br/> En el tour del Centro de Caracas, visitaremos sitios históricos como la Plaza Bolívar, el Panteón Nacional, la Casa Natal del Libertador, la Catedral de Caracas, y el Museo de Bellas Artes. <br/><br/> En el tour de Maracaibo, haremos paradas en la Basílica de la Chinita, el Puente General Rafael Urdaneta, la Plaza Baralt, el Teatro Baralt, y el casco central de Maracaibo. <br/><br/> ¡No te pierdas esta oportunidad de conocer más sobre la historia y cultura de Venezuela, mientras disfrutas del humor y la diversión que solo nuestros guías pueden ofrecer! 😎"
+                }
+            ],
+            "position": 1,
+            "section": "LONG_DESCRIPTION"
+        },
+        {
+            "format": "ICON",
+            "items": [
+                {
+                    "caption": "Recorrido cultural por 5 sitios históricos",
+                    "icon": "sneaker-move"
+                },
+                {
+                    "caption": "Snack de merienda",
+                    "icon": "cookie"
+                },
+                {
+                    "caption": "Fotografías en lugares emblemáticos",
+                    "icon": "camera"
+                },
+                {
+                    "caption": "Ebook descargable",
+                    "icon": "book-open"
+                },
+                {
+                    "caption": "Guía experto y atención personalizada",
+                    "icon": "users-four"
+                },
+                {
+                    "caption": "Hidratación",
+                    "icon": "drop"
+                },
+                {
+                    "caption": "Humor y diversión garantizados",
+                    "icon": "smiley-wink"
+                }
+            ],
+            "position": 2,
+            "section": "INCLUDES"
+        },
+        {
+            "format": "COMPOSED",
+            "items": [
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Debido a que la ruta es larga, se recomienda llevar zapatos deportivos y ropa cómoda. 🏃‍♂️"
+                        },
+                        {
+                            "description": "El recorrido inicia a la hora puntual."
+                        }
+                    ],
+                    "position": 1,
+                    "section": "WARNINGS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "Aceptamos Zelle y transferencia bancaria."
+                        }
+                    ],
+                    "position": 2,
+                    "section": "PAYMENTS"
+                },
+                {
+                    "format": "LIST",
+                    "items": [
+                        {
+                            "description": "No se realiza reembolso del monto abonado."
+                        }
+                    ],
+                    "position": 3,
+                    "section": "CANCELLATION_POLICY"
+                }
+            ],
+            "position": 4,
+            "section": "IMPORTANT_INFO"
+        }
+    ],
+    "tags": ["Cultura", "Historia", "Caracas", "Maracaibo", "Tour guiado", "Diversión", "Aventura Cultural"],
+    "title": "Cultura Tours Venezuela",
+    "totalBookings": 0,
+    "totalReviews": 0,
+    "updatedAt": "2024-08-20T23:17:36.376Z",
+    "sessions": [
+        {
+            "dayOfTheWeek": "MONDAY",
+            "times": ["10:00"]
+        },
+        {
+            "dayOfTheWeek": "WEDNESDAY",
+            "times": ["10:00"]
+        },
+        {
+            "dayOfTheWeek": "FRIDAY",
+            "times": ["10:00"]
+        },
+        {
+            "dayOfTheWeek": "SATURDAY",
+            "times": ["10:00"]
+        },
+        {
+            "dayOfTheWeek": "SUNDAY",
+            "times": ["10:00"]
+        }
+    ]
+}
