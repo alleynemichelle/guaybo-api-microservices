@@ -166,7 +166,7 @@ INSERT INTO discount (
 -- ================================================
 -- PAYMENT_OPTION
 -- ================================================
-INSERT INTO payment_option (record_id, owner_type, host_id, payment_method_id, custom_attributes, status_id, created_at, updated_at) VALUES
+INSERT INTO payment_option (record_id, owner_type, user_id, payment_method_id, custom_attributes, status_id, created_at, updated_at) VALUES
 (
     '28d23974-191e-4c1f-9455-05c7fa2576fd',
     'APP',
