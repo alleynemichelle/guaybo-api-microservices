@@ -7,6 +7,7 @@ import {
     IsEnum,
     IsNotEmpty,
     IsNumber,
+    IsObject,
     IsOptional,
     IsString,
     Max,
@@ -22,47 +23,32 @@ import { MultimediaType } from 'apps/libs/common/enums/multimedia-type.enum';
 import { DatabaseKeys } from 'apps/libs/common/enums/database-keys.enum';
 import { getUTCDate } from 'apps/libs/common/utils/date';
 import { Multimedia } from '../common/multimedia.entity';
-import { Base } from '../common/base.entity';
+import { Base, BaseData } from '../common/base.entity';
 import { Quiz } from './quiz.entity';
 import { Survey } from './survey.entity';
-import { QuestionResponseDto } from 'apps/libs/common/dto/question-response.dto';
-
-/**
- * Enum for resource types
- */
-export enum ProductResourceType {
-    SECTION = 'SECTION',
-    RESOURCE = 'RESOURCE',
-    QUIZ = 'QUIZ',
-    SURVEY = 'SURVEY',
-}
-
-/**
- * Enum for file types
- */
-export enum ProductResourceFileType {
-    VIDEO = 'VIDEO',
-    DOCUMENT = 'DOCUMENT',
-    IMAGE = 'IMAGE',
-    AUDIO = 'AUDIO',
-    TEXT = 'TEXT',
-    URL = 'URL',
-    MODULE = 'MODULE',
-    LESSON = 'LESSON',
-    OTHER = 'OTHER',
-}
+import { Status } from 'apps/libs/common/enums/status.enum';
+import { ProductResourceType } from 'apps/libs/common/enums/product-resource-type.enum';
+import { ProductResourceFileType } from 'apps/libs/common/enums/product-resource-file-type.enum';
+//import { QuestionResponseDto } from 'apps/libs/domain/questions/question-response.entity';
 
 /**
  * Entity that represents a product resource
  */
 export class ProductResource extends Base {
+    @ApiPropertyOptional({
+        description: 'Parent key of the resource',
+    })
+    @IsObject()
+    @IsOptional()
+    parent?: BaseData;
+
     @ApiProperty({
         description: 'ID of the product this resource belongs to',
         example: '12345678-abcd-efgh-ijkl-123456789012',
     })
     @IsString()
-    @IsNotEmpty()
-    productId: string;
+    @IsOptional()
+    productId?: string;
 
     @ApiPropertyOptional({
         description: 'ID of the parent resource (for nested structure)',
@@ -284,12 +270,12 @@ export class ProductResource extends Base {
     @IsOptional()
     planIds?: string[];
 
-    @ApiPropertyOptional({
-        description: 'Questions for this resource (if it is a quiz or survey)',
-        type: [QuestionResponseDto],
-    })
-    @IsOptional()
-    questions?: QuestionResponseDto[];
+    // @ApiPropertyOptional({
+    //     description: 'Questions for this resource (if it is a quiz or survey)',
+    //     type: [QuestionResponseDto],
+    // })
+    // @IsOptional()
+    // questions?: QuestionResponseDto[];
 
     @ApiPropertyOptional({
         description: 'Number of views for this resource',
@@ -306,6 +292,7 @@ export class ProductResource extends Base {
 
         this.recordId = productResource.recordId || uuidv4();
         this.recordType = DatabaseKeys.PRODUCT_RESOURCE;
+        this.recordStatus = productResource.recordStatus ?? Status.ACTIVE;
         this.createdAt = productResource.createdAt || getUTCDate().toISOString();
         this.updatedAt = productResource.updatedAt || getUTCDate().toISOString();
 

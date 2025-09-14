@@ -20,6 +20,8 @@ import {
     testimonialMultimedia,
     status,
     multimedia,
+    host,
+    productType,
 } from '../schemas';
 import { Status } from './common.type';
 
@@ -77,11 +79,20 @@ export type NewQuestion = InferInsertModel<typeof question>;
 export type AnswerOption = InferSelectModel<typeof answerOption>;
 export type NewAnswerOption = InferInsertModel<typeof answerOption>;
 
-export type ProductWithTotalBookings = typeof product.$inferSelect & { totalBookings: number };
+export type ProductWithRelations = Product & {
+    status: InferSelectModel<typeof status>;
+    productType: InferSelectModel<typeof productType>;
+    host: InferSelectModel<typeof host>;
+};
+
+export type ProductWithTotalBookings = typeof product.$inferSelect & {
+    totalBookings: number;
+};
 
 export type ProductResourceWithRelations = ProductResource & {
     status?: InferSelectModel<typeof status>;
     processingStatus?: InferSelectModel<typeof status>;
     multimedia?: InferSelectModel<typeof multimedia>;
     thumbnail?: InferSelectModel<typeof multimedia>;
+    parent?: InferSelectModel<typeof productResource>;
 };

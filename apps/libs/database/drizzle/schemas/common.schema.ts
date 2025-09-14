@@ -1,4 +1,4 @@
-import { bigint, boolean, integer, pgTable, serial, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
+import { bigint, boolean, decimal, integer, pgTable, serial, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 import { host } from './hosts.schema';
 import { appUser } from './users.schema';
@@ -108,6 +108,8 @@ export const multimedia = pgTable('multimedia', {
     userId: bigint('user_id', { mode: 'number' }).references(() => appUser.id, { onDelete: 'cascade' }),
     type: varchar('type', { length: 50 }).notNull(),
     source: varchar('source', { length: 50 }).notNull(),
+    size: decimal('size', { precision: 10, scale: 2 }),
+    duration: decimal('duration', { precision: 10, scale: 2 }),
     filename: varchar('filename', { length: 500 }),
     path: varchar('path', { length: 1000 }),
     description: varchar('description', { length: 1000 }),

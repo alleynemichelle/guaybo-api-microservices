@@ -4,9 +4,10 @@ import { Injectable } from '@nestjs/common';
 import { Timer } from 'apps/libs/common/api/decorators/timer.decorator';
 import { PaymentOption } from 'apps/libs/domain/bookings/payment-option.entity';
 import { OwnerType } from 'apps/libs/common/enums/owner-type.enum';
+
 import { DatabaseService, TransactionalExecutor } from '../services/database.service';
 import { PaymentOptionWithMethod, NewPaymentOption } from '../types';
-import { paymentOption } from '../schemas';
+import { hostPaymentOption, paymentOption } from '../schemas';
 import { PaymentOptionMapper } from '../mappers/payment-option.mapper';
 
 @Injectable()
@@ -123,5 +124,28 @@ export class PaymentOptionsRepository {
             .where(eq(paymentOption.recordId, recordId))
             .returning();
         return result as PaymentOptionWithMethod | null;
+    }
+
+    @Timer('[PAYMENT_OPTIONS] findByHostId')
+    public async findByHostId(hostId: number): Promise<PaymentOption[]> {
+        const executor = this.getExecutor();
+        const rows = await executor.query.hostPaymentOption.findMany({
+            where: eq(hostPaymentOption.hostId, hostId),
+            with: {
+                status: true,
+                paymentOption: {
+                    with: {
+                        status: true,
+                        paymentMethod: {
+                            with: {
+                                currency: true,
+                            },
+                        },
+                    },
+                },
+            },
+        });
+
+        return rows.map((row) => PaymentOptionMapper.toDomain(row.paymentOption as PaymentOptionWithMethod));
     }
 }

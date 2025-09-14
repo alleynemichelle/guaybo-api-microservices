@@ -1,8 +1,9 @@
 import { inArray } from 'drizzle-orm';
 import { Injectable } from '@nestjs/common';
+
+import { Timer } from 'apps/libs/common/api/decorators/timer.decorator';
 import { paymentMethod } from '../schemas';
 import { DatabaseService } from '../services/database.service';
-import { Timer } from 'apps/libs/common/api/decorators/timer.decorator';
 
 @Injectable()
 export class PaymentMethodsRepository {

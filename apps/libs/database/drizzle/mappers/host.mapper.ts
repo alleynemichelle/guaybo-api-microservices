@@ -8,7 +8,7 @@ import { Discount } from 'apps/libs/domain/bookings/discount.entity';
 import { Status } from 'apps/libs/common/enums/status.enum';
 import { KYCStatus } from 'apps/libs/common/enums/kyc-status.enum';
 import { DatabaseKeys } from 'apps/libs/common/enums/database-keys.enum';
-import { HostWithDetails, HostWithLogoAndStatus, NewHost } from '../types';
+import { Host as HostType, HostWithDetails, HostWithLogoAndStatus, NewHost } from '../types';
 import { MultimediaType } from 'apps/libs/common/enums/multimedia-type.enum';
 import { MultimediaSource } from 'apps/libs/common/enums/multimedia-source.enum';
 import { AmountType } from 'apps/libs/common/enums/amount-type.enum';
@@ -18,7 +18,7 @@ import { DiscountScope } from 'apps/libs/common/enums/discount-scope.enum';
 import { Unit } from 'apps/libs/common/enums/unit.enum';
 
 export class HostMapper {
-    static toDomain(row: HostWithDetails | HostWithLogoAndStatus): Host {
+    static toDomain(row: HostType | HostWithDetails | HostWithLogoAndStatus): Host {
         // Map phone number if both code and number exist
         let phoneNumber: PhoneNumber | undefined;
         if (row.phoneCode && row.phoneNumber) {
@@ -124,8 +124,8 @@ export class HostMapper {
                       }))
                     : undefined,
             billingPlan: billingPlan,
-            verificationStatus: row.verificationStatus?.name as KYCStatus,
-            recordStatus: (row.status?.name as Status) ?? Status.ACTIVE,
+            verificationStatus: 'verificationStatus' in row ? (row.verificationStatus?.name as KYCStatus) : undefined,
+            recordStatus: 'status' in row ? (row.status?.name as Status) : Status.ACTIVE,
             recordType: DatabaseKeys.HOST,
             createdAt: row.createdAt?.toISOString(),
             updatedAt: row.updatedAt?.toISOString(),

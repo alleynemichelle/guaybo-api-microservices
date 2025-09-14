@@ -7,7 +7,7 @@ import { HostErrorCodes } from 'apps/libs/common/constants/error-codes.constant'
 import { DatabaseService, TransactionalExecutor } from '../services/database.service';
 import { billingPlan, host, hostBillingDiscount, hostUser, multimedia, role, status } from '../schemas';
 
-import { Host as HostType, NewHost, NewMultimedia, HostWithDetails, HostWithLogoAndStatus } from '../types';
+import { NewHost, NewMultimedia, HostWithDetails, HostWithLogoAndStatus } from '../types';
 import { Host } from 'apps/libs/domain/hosts/hosts.entity';
 import { HostMapper } from '../mappers/host.mapper';
 
@@ -45,11 +45,11 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] create host')
-    public async create(data: NewHost, tx?: TransactionalExecutor): Promise<HostType> {
+    public async create(data: NewHost, tx?: TransactionalExecutor): Promise<Host> {
         const executor = this.getExecutor(tx);
         try {
             const [result] = await executor.insert(host).values(data).returning();
-            return result;
+            return HostMapper.toDomain(result);
         } catch (error: any) {
             if (error.code === '23505' && error.detail?.includes('(alias)')) {
                 throw new Error(HostErrorCodes.AliasAlreadyExists);
@@ -59,7 +59,7 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] findByRecordId host')
-    public async findByRecordId(recordId: string, tx?: TransactionalExecutor): Promise<HostType | null> {
+    public async findByRecordId(recordId: string, tx?: TransactionalExecutor): Promise<Host | null> {
         const executor = this.getExecutor(tx);
         const result = await executor.query.host.findFirst({
             where: eq(host.recordId, recordId),
@@ -67,11 +67,11 @@ export class HostsRepository {
                 status: true,
             },
         });
-        return result || null;
+        return result ? HostMapper.toDomain(result) : null;
     }
 
     @Timer('[HOSTS] findByAlias host')
-    public async findByAlias(alias: string, tx?: TransactionalExecutor): Promise<HostType | null> {
+    public async findByAlias(alias: string, tx?: TransactionalExecutor): Promise<Host | null> {
         const executor = this.getExecutor(tx);
         const result = await executor.query.host.findFirst({
             where: eq(host.alias, alias),
@@ -79,14 +79,14 @@ export class HostsRepository {
                 status: true,
             },
         });
-        return result || null;
+        return result ? HostMapper.toDomain(result) : null;
     }
 
     @Timer('[HOSTS] updateById host')
-    public async updateById(id: number, data: Partial<NewHost>, tx?: TransactionalExecutor): Promise<HostType | null> {
+    public async updateById(id: number, data: Partial<NewHost>, tx?: TransactionalExecutor): Promise<Host | null> {
         const executor = this.getExecutor(tx);
         const [result] = await executor.update(host).set(data).where(eq(host.id, id)).returning();
-        return result || null;
+        return result ? HostMapper.toDomain(result) : null;
     }
 
     @Timer('[HOSTS] deleteById host')
@@ -235,7 +235,7 @@ export class HostsRepository {
         userData,
         billingData,
         logoData,
-    }: CreateHostWithDetailsParams): Promise<HostType> {
+    }: CreateHostWithDetailsParams): Promise<Host> {
         const db = this.databaseService.getDatabase();
         return db.transaction(async (tx) => {
             const hostRole = await tx.query.role.findFirst({
@@ -261,11 +261,11 @@ export class HostsRepository {
 
             const newHost = await this.create({ ...hostData, billingPlanId: plan.id }, tx);
 
-            await this.addUserToHost(newHost.id, userData.userId, hostRole.id, statusData.id, tx);
+            await this.addUserToHost(newHost.id!, userData.userId, hostRole.id, statusData.id, tx);
 
             if (billingData.discount) {
                 await tx.insert(hostBillingDiscount).values({
-                    hostId: newHost.id,
+                    hostId: newHost.id!,
                     discountId: billingData.discount.id,
                     statusId: statusData.id,
                     validFrom: billingData.discount.validFrom,

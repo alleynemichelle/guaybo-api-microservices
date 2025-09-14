@@ -4,12 +4,15 @@ import { Injectable } from '@nestjs/common';
 import { Status } from 'apps/libs/common/enums/status.enum';
 import { ProductType } from 'apps/libs/common/enums/product-type.enum';
 import { ProductStatus } from 'apps/libs/common/enums/product-status.enum';
+import { BaseProduct } from 'apps/libs/domain/products/product.entity';
+import { BookingStatus } from 'apps/libs/common/enums/booking-status.enum';
 
 import { StatusRepository } from './status.repository';
 import { ProductTypesRepository } from './product-types.repository';
 import { DatabaseService } from '../services/database.service';
-import { ProductWithTotalBookings, NewProduct, Product } from '../types';
+import { NewProduct, Product } from '../types';
 import { booking, product } from '../schemas';
+import { ProductMapper } from '../mappers/product.mapper';
 
 @Injectable()
 export class ProductsRepository {
@@ -23,7 +26,7 @@ export class ProductsRepository {
         data: Omit<NewProduct, 'statusId' | 'productTypeId'>,
         statusName: ProductStatus,
         productTypeName: ProductType,
-    ): Promise<Product> {
+    ): Promise<BaseProduct> {
         const db = this.databaseService.getDatabase();
 
         const status = await this.statusRepository.findByName(statusName);
@@ -39,23 +42,24 @@ export class ProductsRepository {
                 recordStatusId: recordStatus?.id!,
             })
             .returning();
-        return result as Product;
+
+        return ProductMapper.toDomain(result as Product);
     }
 
-    public async findByAlias(hostId: number, alias: string): Promise<Product[]> {
+    public async findByAlias(hostId: number, alias: string): Promise<BaseProduct[]> {
         const db = this.databaseService.getDatabase();
         const result = await db.query.product.findMany({
             where: (product, { eq, and, like }) => and(eq(product.hostId, hostId), like(product.alias, `${alias}%`)),
         });
-        return result as Product[];
+        return result.map((product) => ProductMapper.toDomain(product as Product));
     }
 
-    public async findByRecordId(productId: string): Promise<Product | undefined> {
+    public async findByRecordId(productId: string): Promise<BaseProduct | undefined> {
         const db = this.databaseService.getDatabase();
         const result = await db.query.product.findFirst({
             where: (product, { eq, and, like }) => and(eq(product.recordId, productId)),
         });
-        return result as Product | undefined;
+        return result ? ProductMapper.toDomain(result as Product) : undefined;
     }
 
     public async countByAlias(hostId: number, alias: string): Promise<number> {
@@ -67,12 +71,12 @@ export class ProductsRepository {
         return result.value;
     }
 
-    public async updateProduct(hostId: number, productId: number, data: Partial<Product>): Promise<void> {
+    public async updateProduct(productId: number, data: Partial<Product>): Promise<void> {
         const db = this.databaseService.getDatabase();
         await db
             .update(product)
             .set(data)
-            .where(and(eq(product.hostId, hostId), eq(product.id, productId)));
+            .where(and(eq(product.id, productId)));
     }
 
     public async delete(hostId: number, productId: number): Promise<void> {
@@ -80,9 +84,9 @@ export class ProductsRepository {
         await db.delete(product).where(and(eq(product.hostId, hostId), eq(product.id, productId)));
     }
 
-    public async findByRecordIdWithTotalBookings(productId: string): Promise<ProductWithTotalBookings | undefined> {
+    public async findByRecordIdWithTotalBookings(productId: string): Promise<BaseProduct | undefined> {
         const db = this.databaseService.getDatabase();
-        const receivedStatus = await this.statusRepository.findByName('RECEIVED');
+        const receivedStatus = await this.statusRepository.findByName(BookingStatus.RECEIVED);
 
         if (!receivedStatus) {
             return undefined;
@@ -106,6 +110,6 @@ export class ProductsRepository {
 
         if (!result) return undefined;
 
-        return { ...result[0], totalBookings: Number(result[0].totalBookings ?? 0) } as ProductWithTotalBookings;
+        return result && result.length > 0 ? ProductMapper.toDomain(result[0] as Product) : undefined;
     }
 }

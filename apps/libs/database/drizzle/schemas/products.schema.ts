@@ -515,8 +515,6 @@ export const productResource = pgTable('product_resource', {
         mode: 'number',
     }).references(() => status.id),
     encodeProgress: integer('encode_progress'),
-    size: decimal('size', { precision: 10, scale: 2 }),
-    duration: decimal('duration', { precision: 10, scale: 2 }),
     preview: boolean('preview').default(false),
     downloadable: boolean('downloadable').default(false),
     orderIndex: integer('order_index').notNull(),

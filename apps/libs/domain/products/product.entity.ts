@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Expose, plainToClass, Transform, Type } from 'class-transformer';
+import { Expose, Type } from 'class-transformer';
 
 import {
     IsString,
@@ -35,22 +35,21 @@ import { ProductDateStatus } from 'apps/libs/common/enums/product-date-status.en
 import { formatPlatformName, MeetingPlatform } from 'apps/libs/common/enums/meeting-platform.enum';
 import { LocationType } from 'apps/libs/common/enums/location-type.enum';
 
-import { Base } from '../common/base.entity';
+import { Base, BaseData } from '../common/base.entity';
 import { Location } from '../common/location.entity';
 import { Multimedia } from '../common/multimedia.entity';
 import { Price } from '../common/price.entity';
 import { SingleDate } from '../common/single-date.entity';
 import { Condition } from '../common/condition.entity';
-import { TermsAndConditions } from '../services/terms-and-conditions.entity';
-import { FAQ } from '../services/faq.entity';
-import { Testimonial } from '../services/testimonial.entity';
-import { CustomPageTheme } from '../services/custom-page.entity';
 import { Discount } from '../bookings/discount.entity';
 import { InstallmentsProgram } from '../bookings/installments-program.entity';
-import { Host } from '../hosts/hosts.entity';
 import { ValueItem } from '../common/value-item.entity';
 import { MeetingInvitation } from '../common/meeting-invite.entity';
 import { PhoneNumber } from '../common/phone-number.entity';
+import { CustomPageTheme } from './custom-page.entity';
+import { TermsAndConditions } from './terms-and-conditions.entity';
+import { FAQ } from './faq.entity';
+import { Testimonial } from './testimonial.entity';
 
 export class ProductDate {
     @ApiProperty({
@@ -416,6 +415,10 @@ export class ProductResourceMetrics {
 }
 
 export abstract class BaseProduct extends Base {
+    @IsString()
+    @IsObject()
+    host: BaseData;
+
     @IsString()
     @IsNotEmpty()
     hostId: string;
