@@ -15,7 +15,6 @@ import {
 } from 'class-validator';
 import { getUTCDate } from 'apps/libs/common/utils/date';
 import { DatabaseKeys } from 'apps/libs/common/enums/database-keys.enum';
-import { Logo } from 'apps/hosts/src/dto/logo.dto';
 import { cleanAlias } from 'apps/libs/common/utils/text-formatters';
 
 import { ValueItem } from '../common/value-item.entity';
@@ -26,6 +25,7 @@ import { Multimedia } from '../common/multimedia.entity';
 import { PhoneNumber } from '../common/phone-number.entity';
 import { BillingPlan } from '../billings/billing-plan.entity';
 import { KYCStatus } from 'apps/libs/common/enums/kyc-status.enum';
+import { Logo } from '../common/logo.dto';
 
 export class Host extends Base {
     @IsOptional()

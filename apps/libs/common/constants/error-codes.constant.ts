@@ -1,6 +1,7 @@
 export const ErrorCodes = {
     UNAUTHORIZED_ACCESS: 'UnauthorizedAccess',
     USER_DOES_NOT_HAVE_ACCESS_TO_PRODUCT: 'UserDoesNotHaveAccessToProduct',
+    Unauthorized: 'Unauthorized',
 };
 
 export enum UsersErrorCodes {

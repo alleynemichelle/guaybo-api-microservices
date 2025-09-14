@@ -2,6 +2,11 @@ import { Status } from 'apps/libs/common/enums/status.enum';
 import { IsArray, IsDateString, IsEnum, IsNumber, IsObject, IsOptional, IsString } from 'class-validator';
 import { Tag } from './tag.entity';
 
+export interface BaseData {
+    id?: number;
+    recordId?: string;
+}
+
 export class Base {
     @IsOptional()
     @IsNumber()

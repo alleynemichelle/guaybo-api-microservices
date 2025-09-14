@@ -9,6 +9,7 @@ export type NewReferralAssociation = InferInsertModel<typeof referralAssociation
 
 export type ReferralCodeWithStatus = typeof referralCode.$inferSelect & {
     status: typeof status.$inferSelect | null;
+    referrer: typeof appUser.$inferSelect;
 };
 
 export type ReferralAssociationWithRelations = typeof referralAssociation.$inferSelect & {

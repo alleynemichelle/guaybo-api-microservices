@@ -1,23 +1,25 @@
 import { eq } from 'drizzle-orm';
 import { Injectable } from '@nestjs/common';
 import { Timer } from 'apps/libs/common/api/decorators/timer.decorator';
+import { User } from 'apps/libs/domain/users/user.entity';
+import { UserMapper } from '../mappers/user.mapper';
 import { DatabaseService } from '../services/database.service';
 import { appUser, status } from '../schemas';
-import { AppUserWithHosts, AppUserWithStatus, NewAppUser, AppUser } from '../types';
+import { AppUserWithHosts, AppUserWithStatus, NewAppUser } from '../types';
 
 @Injectable()
 export class UsersRepository {
     constructor(private readonly databaseService: DatabaseService) {}
 
     @Timer('[USERS] create user')
-    public async create(data: NewAppUser): Promise<AppUserWithStatus> {
+    public async create(data: NewAppUser): Promise<User> {
         const db = this.databaseService.getDatabase();
         const [result] = await db.insert(appUser).values(data).returning();
-        return result as AppUserWithStatus;
+        return UserMapper.toDomain(result as AppUserWithStatus) as User;
     }
 
     @Timer('[USERS] findByRecordId user')
-    public async findByRecordId(recordId: string): Promise<AppUserWithStatus | null> {
+    public async findByRecordId(recordId: string): Promise<User | null> {
         const db = this.databaseService.getDatabase();
 
         const result = await db.query.appUser.findFirst({
@@ -26,11 +28,11 @@ export class UsersRepository {
                 status: true,
             },
         });
-        return (result as AppUserWithStatus) || null;
+        return result ? (UserMapper.toDomain(result as AppUserWithStatus) as User) : null;
     }
 
     @Timer('[USERS] findWithHostsByRecordId user')
-    public async findWithHostsByRecordId(recordId: string): Promise<AppUserWithHosts | null> {
+    public async findWithHostsByRecordId(recordId: string): Promise<User | null> {
         const db = this.databaseService.getDatabase();
         const result = await db.query.appUser.findFirst({
             where: eq(appUser.recordId, recordId),
@@ -40,6 +42,7 @@ export class UsersRepository {
                     with: {
                         host: {
                             columns: {
+                                id: true,
                                 recordId: true,
                                 name: true,
                                 alias: true,
@@ -56,11 +59,11 @@ export class UsersRepository {
                 },
             },
         });
-        return (result as AppUserWithHosts) || null;
+        return result ? (UserMapper.toDomain(result as AppUserWithHosts) as User) : null;
     }
 
     @Timer('[USERS] findByEmail user')
-    public async findByEmail(email: string): Promise<AppUserWithStatus | null> {
+    public async findByEmail(email: string): Promise<User | null> {
         const db = this.databaseService.getDatabase();
 
         const [result] = await db
@@ -94,11 +97,11 @@ export class UsersRepository {
             .where(eq(appUser.email, email))
             .limit(1);
 
-        return (result as AppUserWithStatus) || null;
+        return result ? (UserMapper.toDomain(result as AppUserWithStatus) as User) : null;
     }
 
     @Timer('[USERS] findWithHostsByEmail user')
-    public async findWithHostsByEmail(email: string): Promise<AppUserWithHosts | null> {
+    public async findWithHostsByEmail(email: string): Promise<User | null> {
         const db = this.databaseService.getDatabase();
         const result = await db.query.appUser.findFirst({
             where: eq(appUser.email, email),
@@ -113,14 +116,15 @@ export class UsersRepository {
                 },
             },
         });
-        return (result as AppUserWithHosts) || null;
+
+        return result ? (UserMapper.toDomain(result as AppUserWithHosts) as User) : null;
     }
 
     @Timer('[USERS] updateByRecordId user')
-    public async updateById(id: number, data: Partial<NewAppUser>): Promise<AppUser | null> {
+    public async updateById(id: number, data: Partial<NewAppUser>): Promise<User | null> {
         const db = this.databaseService.getDatabase();
         const [result] = await db.update(appUser).set(data).where(eq(appUser.id, id)).returning();
-        return result || null;
+        return result ? (UserMapper.toDomain(result as AppUserWithStatus) as User) : null;
     }
 
     @Timer('[USERS] deleteByRecordId user')

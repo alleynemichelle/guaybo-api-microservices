@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsString, IsNotEmpty } from 'class-validator';
+import { IsEnum, IsString, IsNotEmpty, IsOptional } from 'class-validator';
 import { Role } from 'apps/libs/common/enums/role.enum';
 import { getUTCDate } from 'apps/libs/common/utils/date';
 import { Status } from 'apps/libs/common/enums/status.enum';
@@ -42,6 +42,18 @@ export class UserHost extends Base {
     @IsNotEmpty()
     @IsEnum(Status)
     status: string;
+
+    @IsOptional()
+    @IsString()
+    alias?: string;
+
+    @IsOptional()
+    @IsString()
+    name?: string;
+
+    @IsOptional()
+    @IsString()
+    collectionId?: string;
 
     constructor(userHost: Partial<UserHost>) {
         super();

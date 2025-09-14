@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { IsEnum, IsBoolean, IsNotEmpty, IsString, IsOptional } from 'class-validator';
+import { IsEnum, IsBoolean, IsNotEmpty, IsString, IsOptional, IsNumber } from 'class-validator';
 import { PaymentMethod } from 'apps/libs/common/enums/payment-method.enum';
 import { getUTCDate } from 'apps/libs/common/utils/date';
 import { DatabaseKeys } from 'apps/libs/common/enums/database-keys.enum';
@@ -8,9 +8,13 @@ import { paymentOptionSettings } from 'apps/libs/common/constants/payment-method
 import { Status } from 'apps/libs/common/enums/status.enum';
 import { Currency } from 'apps/libs/common/enums/currency.enum';
 
-import { Base } from '../common/base.entity';
+import { Base, BaseData } from '../common/base.entity';
 
 export class PaymentOption extends Base {
+    @IsOptional()
+    @IsNumber()
+    user?: BaseData;
+
     @IsEnum(PaymentMethod)
     @IsNotEmpty()
     paymentMethod: PaymentMethod;

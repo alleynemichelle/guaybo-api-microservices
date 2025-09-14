@@ -5,7 +5,7 @@ import { Base } from '../common/base.entity';
 import { getUTCDate } from 'apps/libs/common/utils/date';
 import { DatabaseKeys } from 'apps/libs/common/enums/database-keys.enum';
 import { ConfirmationCodeStatus } from 'apps/libs/common/enums/confirmation-code-status.enum';
-import { AuthRedirectType } from 'apps/users/src/constants/auth.enum';
+import { AuthRedirectType } from 'apps/libs/common/enums/auth.enum';
 
 export class ConfirmationCode extends Base {
     @IsNotEmpty()

@@ -3,9 +3,12 @@ import { Injectable } from '@nestjs/common';
 
 import { ConfirmationCodeStatus } from 'apps/libs/common/enums/confirmation-code-status.enum';
 import { Timer } from 'apps/libs/common/api/decorators/timer.decorator';
+
+import { ConfirmationCode } from 'apps/libs/domain/users/confirmation-code.entity';
 import { confirmationCode, status } from '../schemas';
 import { DatabaseService } from '../services/database.service';
-import { ConfirmationCode, ConfirmationCodeWithStatus, NewConfirmationCode } from '../types';
+import { ConfirmationCodeWithStatus, NewConfirmationCode } from '../types';
+import { ConfirmationCodeMapper } from '../mappers/confirmation-code.mapper';
 
 @Injectable()
 export class ConfirmationCodesRepository {
@@ -15,11 +18,11 @@ export class ConfirmationCodesRepository {
     public async create(data: NewConfirmationCode): Promise<ConfirmationCode> {
         const db = this.databaseService.getDatabase();
         const [result] = await db.insert(confirmationCode).values(data).returning();
-        return result;
+        return ConfirmationCodeMapper.toDomain(result as ConfirmationCodeWithStatus);
     }
 
     @Timer('[CONFIRMATION_CODES] find')
-    public async find(userId: number, code: string, codeType: string): Promise<ConfirmationCodeWithStatus | null> {
+    public async find(userId: number, code: string, codeType: string): Promise<ConfirmationCode | null> {
         const db = this.databaseService.getDatabase();
 
         const [result] = await db
@@ -35,17 +38,18 @@ export class ConfirmationCodesRepository {
                 ),
             );
 
-        if (!result) {
-            return null;
-        }
-
-        return { ...result.confirmation_code, status: result.status } as ConfirmationCodeWithStatus;
+        return result
+            ? ConfirmationCodeMapper.toDomain({
+                  ...result.confirmation_code,
+                  status: result.status,
+              } as ConfirmationCodeWithStatus)
+            : null;
     }
 
     @Timer('[CONFIRMATION_CODES] update')
     public async update(id: number, data: Partial<NewConfirmationCode>): Promise<ConfirmationCode | null> {
         const db = this.databaseService.getDatabase();
         const [result] = await db.update(confirmationCode).set(data).where(eq(confirmationCode.id, id)).returning();
-        return result || null;
+        return result ? ConfirmationCodeMapper.toDomain(result as ConfirmationCodeWithStatus) : null;
     }
 }

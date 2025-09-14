@@ -1,16 +1,24 @@
 import { v4 as uuidv4 } from 'uuid';
-import { IsString, IsNotEmpty, IsNumber, IsOptional, IsDateString, Min, Max } from 'class-validator';
+import { IsString, IsNotEmpty, IsNumber, IsOptional, IsDateString, Min, Max, IsObject } from 'class-validator';
 
 import { getUTCDate } from 'apps/libs/common/utils/date';
 import { DatabaseKeys } from 'apps/libs/common/enums/database-keys.enum';
 import { Status } from 'apps/libs/common/enums/status.enum';
 
-import { Base } from '../common/base.entity';
+import { Base, BaseData } from '../common/base.entity';
 
 export class ReferralCode extends Base {
+    @IsObject()
+    @IsNotEmpty()
+    referrer: BaseData;
+
     @IsString()
     @IsNotEmpty()
-    referrerId: string;
+    referrerRecordId: string;
+
+    @IsNumber()
+    @IsNotEmpty()
+    referrerId: number;
 
     @IsString()
     @IsNotEmpty()

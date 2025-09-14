@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { Status } from 'apps/libs/common/enums/status.enum';
 import { StatusRepository } from '../repositories/status.repository';
+import { ConfirmationCodeStatus } from 'apps/libs/common/enums/confirmation-code-status.enum';
 
 @Injectable()
 export class StatusLookup {
-    private keyToId = new Map<Status, number>();
-    private idToKey = new Map<number, Status>();
+    private keyToId = new Map<Status | ConfirmationCodeStatus, number>();
+    private idToKey = new Map<number, Status | ConfirmationCodeStatus>();
 
     constructor(private readonly repo: StatusRepository) {}
 
@@ -18,7 +19,7 @@ export class StatusLookup {
         }
     }
 
-    async toId(method: Status): Promise<number> {
+    async toId(method: Status | ConfirmationCodeStatus): Promise<number> {
         let id = this.keyToId.get(method);
         if (!id) {
             await this.setData();
@@ -28,7 +29,7 @@ export class StatusLookup {
         return id;
     }
 
-    async toEnum(id: number): Promise<Status> {
+    async toEnum(id: number): Promise<Status | ConfirmationCodeStatus> {
         let key = this.idToKey.get(id);
         if (!key) {
             await this.setData();

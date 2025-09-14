@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 
-import { ResponseFormatterInterceptor } from 'apps/libs/common/api/interceptors/response.interceptor';
 import { DolarAPIService } from 'apps/libs/integrations/exchanges/dolarapi.service';
 import { ExchangeRateService } from 'apps/libs/integrations/exchanges/exchange-rate.service';
 import { DrizzleRepositoriesModule } from 'apps/libs/database/drizzle/repositories/drizzle-repositories.module';
@@ -19,11 +18,14 @@ import { GetWithdrawalMethodsHandler } from './handlers/get-withdrawal-methods.h
 import { CreatePresignedUrlHandler } from './handlers/create-presigned-url.handler';
 import { DeleteFileResponse } from './handlers/delete-file.handler';
 import { GetPaymentOptionHandler } from './handlers/get-payment-option.handler';
+import { ResponseFormatterInterceptor } from 'apps/libs/common/api/interceptors/response.interceptor';
+import { StatusLookup } from 'apps/libs/database/drizzle/lookups/status.lookup';
 
 @Module({
     imports: [ConfigModule.forRoot(), DatabaseModule, DrizzleRepositoriesModule],
     controllers: [SettingsController, ManagementSettingsController],
     providers: [
+        StatusLookup,
         ExchangeRateService,
         S3Service,
         DolarAPIService,

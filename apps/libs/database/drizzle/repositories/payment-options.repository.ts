@@ -18,15 +18,17 @@ export class PaymentOptionsRepository {
     }
 
     @Timer('[PAYMENT_OPTIONS] findByUserId')
-    public async findByUserId(userId: number): Promise<any[]> {
+    public async findByUserId(userId: number): Promise<PaymentOption[]> {
         const executor = this.getExecutor();
-        return executor.query.paymentOption.findMany({
+        const rows = await executor.query.paymentOption.findMany({
             where: eq(paymentOption.userId, userId),
             with: {
                 paymentMethod: true,
                 status: true,
             },
         });
+
+        return rows.map((row) => PaymentOptionMapper.toDomain(row as PaymentOptionWithMethod));
     }
 
     @Timer('[PAYMENT_OPTIONS] findByRecordId')

@@ -10,6 +10,11 @@ export class PaymentOptionMapper {
         return new PaymentOption({
             id: row.id,
             recordId: row.recordId,
+            user: row.userId
+                ? {
+                      id: row.userId,
+                  }
+                : undefined,
             createdAt: row.createdAt?.toISOString(),
             updatedAt: row.updatedAt?.toISOString(),
             recordStatus: (row.status?.name as Status) ?? Status.ACTIVE,
