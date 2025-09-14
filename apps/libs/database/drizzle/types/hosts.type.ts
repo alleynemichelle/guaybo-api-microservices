@@ -30,6 +30,7 @@ export type HostAnalyticsWithStatus = HostAnalytics & {
 
 export type HostWithLogoAndStatus = Host & {
     status: typeof status.$inferSelect | null;
+    verificationStatus: typeof status.$inferSelect | null;
     multimedia: (typeof multimedia.$inferSelect)[];
 };
 

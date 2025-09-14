@@ -50,7 +50,7 @@ export class Host extends Base {
 
     @IsOptional()
     @IsObject()
-    logo?: Multimedia | {};
+    logo?: Multimedia;
 
     @IsOptional()
     @IsString()

@@ -1,4 +1,4 @@
-import { IsArray, IsDateString, IsEnum, IsNumber, IsString, IsUUID, ValidateNested } from 'class-validator';
+import { IsArray, IsDateString, IsEnum, IsNumber, IsOptional, IsString, IsUUID, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 import { Unit } from 'apps/libs/common/enums/unit.enum';
 import { BillingType } from 'apps/libs/common/enums/billing-model.enum';
@@ -52,4 +52,13 @@ export class BillingPlan extends Base {
     @IsArray()
     @IsString({ each: true })
     features: string[];
+
+    @IsString()
+    @IsOptional()
+    description?: string;
+
+    constructor(billingPlan: Partial<BillingPlan>) {
+        super();
+        Object.assign(this, billingPlan);
+    }
 }

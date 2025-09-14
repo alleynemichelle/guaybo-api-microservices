@@ -8,6 +8,7 @@ import { AuthRedirectType, CodeEnum } from 'apps/libs/common/enums/auth.enum';
 export class ConfirmationCodeMapper {
     static toDomain(row: ConfirmationCodeWithStatus): ConfirmationCode {
         return new ConfirmationCode({
+            id: row.id,
             recordId: row.recordId,
             email: '', // Email not available in database schema, will be set separately
             code: row.code,

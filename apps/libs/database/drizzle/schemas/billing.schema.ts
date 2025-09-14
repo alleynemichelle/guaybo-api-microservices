@@ -4,7 +4,7 @@ import { status } from './common.schema';
 
 export const discount = pgTable('discount', {
     id: serial('id').primaryKey(),
-    recordId: bigint('record_id', { mode: 'number' }).notNull().unique(),
+    recordId: uuid('record_id').notNull().unique().defaultRandom(),
     ownerType: varchar('owner_type', { length: 50 }).notNull().default('APP'),
     name: varchar('name', { length: 255 }).notNull(),
     description: varchar('description', { length: 1000 }),

@@ -7,7 +7,9 @@ import { HostErrorCodes } from 'apps/libs/common/constants/error-codes.constant'
 import { DatabaseService, TransactionalExecutor } from '../services/database.service';
 import { billingPlan, host, hostBillingDiscount, hostUser, multimedia, role, status } from '../schemas';
 
-import { Host, NewHost, NewMultimedia, HostWithDetails, HostWithLogoAndStatus } from '../types';
+import { Host as HostType, NewHost, NewMultimedia, HostWithDetails, HostWithLogoAndStatus } from '../types';
+import { Host } from 'apps/libs/domain/hosts/hosts.entity';
+import { HostMapper } from '../mappers/host.mapper';
 
 interface CreateHostWithDetailsParams {
     hostData: Omit<NewHost, 'billingPlanId' | 'statusId'>;
@@ -43,7 +45,7 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] create host')
-    public async create(data: NewHost, tx?: TransactionalExecutor): Promise<Host> {
+    public async create(data: NewHost, tx?: TransactionalExecutor): Promise<HostType> {
         const executor = this.getExecutor(tx);
         try {
             const [result] = await executor.insert(host).values(data).returning();
@@ -57,7 +59,7 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] findByRecordId host')
-    public async findByRecordId(recordId: string, tx?: TransactionalExecutor): Promise<Host | null> {
+    public async findByRecordId(recordId: string, tx?: TransactionalExecutor): Promise<HostType | null> {
         const executor = this.getExecutor(tx);
         const result = await executor.query.host.findFirst({
             where: eq(host.recordId, recordId),
@@ -69,7 +71,7 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] findByAlias host')
-    public async findByAlias(alias: string, tx?: TransactionalExecutor): Promise<Host | null> {
+    public async findByAlias(alias: string, tx?: TransactionalExecutor): Promise<HostType | null> {
         const executor = this.getExecutor(tx);
         const result = await executor.query.host.findFirst({
             where: eq(host.alias, alias),
@@ -81,7 +83,7 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] updateById host')
-    public async updateById(id: number, data: Partial<NewHost>, tx?: TransactionalExecutor): Promise<Host | null> {
+    public async updateById(id: number, data: Partial<NewHost>, tx?: TransactionalExecutor): Promise<HostType | null> {
         const executor = this.getExecutor(tx);
         const [result] = await executor.update(host).set(data).where(eq(host.id, id)).returning();
         return result || null;
@@ -180,7 +182,7 @@ export class HostsRepository {
     }
 
     @Timer('[HOSTS] findDetailsByRecordId host')
-    public async findDetailsByRecordId(recordId: string): Promise<HostWithDetails | null> {
+    public async findDetailsByRecordId(recordId: string): Promise<Host | null> {
         const result = await this.databaseService.getDatabase().query.host.findFirst({
             where: eq(host.recordId, recordId),
             with: {
@@ -208,7 +210,7 @@ export class HostsRepository {
                 },
             },
         });
-        return result as HostWithDetails | null;
+        return result ? HostMapper.toDomain(result as HostWithDetails) : null;
     }
 
     @Timer('[HOSTS] findWithLogoAndStatusByRecordId host')
@@ -233,7 +235,7 @@ export class HostsRepository {
         userData,
         billingData,
         logoData,
-    }: CreateHostWithDetailsParams): Promise<Host> {
+    }: CreateHostWithDetailsParams): Promise<HostType> {
         const db = this.databaseService.getDatabase();
         return db.transaction(async (tx) => {
             const hostRole = await tx.query.role.findFirst({

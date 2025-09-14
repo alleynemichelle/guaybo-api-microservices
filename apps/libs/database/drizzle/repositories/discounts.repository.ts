@@ -3,8 +3,10 @@ import { Injectable } from '@nestjs/common';
 import { Status } from 'apps/libs/common/enums/status.enum';
 import { Timer } from 'apps/libs/common/api/decorators/timer.decorator';
 import { discount, status } from '../schemas';
-import { Discount, NewDiscount, DiscountWithStatus } from '../types';
+import { Discount as DiscountType, NewDiscount, DiscountWithStatus } from '../types';
 import { DatabaseService } from '../services/database.service';
+import { DiscountMapper } from '../mappers/discount.mapper';
+import { Discount } from 'apps/libs/domain/bookings/discount.entity';
 
 @Injectable()
 export class DiscountsRepository {
@@ -14,11 +16,11 @@ export class DiscountsRepository {
     public async create(data: NewDiscount): Promise<Discount> {
         const db = this.databaseService.getDatabase();
         const [result] = await db.insert(discount).values(data).returning();
-        return result;
+        return DiscountMapper.toDomain(result as DiscountWithStatus);
     }
 
     @Timer('[DISCOUNTS] getAll')
-    public async getAll(filters: { status?: string; ownerType?: string } = {}): Promise<DiscountWithStatus[]> {
+    public async getAll(filters: { status?: string; ownerType?: string } = {}): Promise<Discount[]> {
         const db = this.databaseService.getDatabase();
         const conditions: (SQL | undefined)[] = [];
 
@@ -41,11 +43,11 @@ export class DiscountsRepository {
                 status: true,
             },
         });
-        return rows as DiscountWithStatus[];
+        return rows.map((row) => DiscountMapper.toDomain(row as DiscountWithStatus));
     }
 
     @Timer('[DISCOUNTS] getByRecordId')
-    public async getByRecordId(recordId: number): Promise<DiscountWithStatus | null> {
+    public async getByRecordId(recordId: string): Promise<Discount | null> {
         const db = this.databaseService.getDatabase();
         const result = await db.query.discount.findFirst({
             where: eq(discount.recordId, recordId),
@@ -53,11 +55,11 @@ export class DiscountsRepository {
                 status: true,
             },
         });
-        return (result as DiscountWithStatus) || null;
+        return result ? DiscountMapper.toDomain(result as DiscountWithStatus) : null;
     }
 
     @Timer('[DISCOUNTS] getByCode')
-    public async getByCode(code: string, ownerType: string): Promise<DiscountWithStatus | null> {
+    public async getByCode(code: string, ownerType: string): Promise<Discount | null> {
         const db = this.databaseService.getDatabase();
         const result = await db.query.discount.findFirst({
             where: and(eq(discount.code, code), eq(discount.ownerType, ownerType)),
@@ -65,11 +67,11 @@ export class DiscountsRepository {
                 status: true,
             },
         });
-        return (result as DiscountWithStatus) || null;
+        return result ? DiscountMapper.toDomain(result as DiscountWithStatus) : null;
     }
 
     @Timer('[DISCOUNTS] getActiveByCode')
-    public async getActiveByCode(code: string, ownerType: string): Promise<DiscountWithStatus | null> {
+    public async getActiveByCode(code: string, ownerType: string): Promise<Discount | null> {
         const db = this.databaseService.getDatabase();
 
         const activeStatusQuery = db.select({ id: status.id }).from(status).where(eq(status.name, Status.ACTIVE));
@@ -84,18 +86,18 @@ export class DiscountsRepository {
             },
         });
 
-        return (result as DiscountWithStatus) || null;
+        return result ? DiscountMapper.toDomain(result as DiscountWithStatus) : null;
     }
 
     @Timer('[DISCOUNTS] updateByRecordId')
-    public async updateByRecordId(recordId: number, data: Partial<NewDiscount>): Promise<Discount | null> {
+    public async updateByRecordId(recordId: string, data: Partial<NewDiscount>): Promise<DiscountType | null> {
         const db = this.databaseService.getDatabase();
         const [result] = await db.update(discount).set(data).where(eq(discount.recordId, recordId)).returning();
-        return result || null;
+        return (result as DiscountType) || null;
     }
 
     @Timer('[DISCOUNTS] deleteByRecordId')
-    public async deleteByRecordId(recordId: number): Promise<void> {
+    public async deleteByRecordId(recordId: string): Promise<void> {
         const db = this.databaseService.getDatabase();
         await db.delete(discount).where(eq(discount.recordId, recordId));
     }
