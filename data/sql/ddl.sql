@@ -720,14 +720,14 @@ CREATE TABLE invoice_payment (
 CREATE TABLE booking (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     record_id BIGINT NOT NULL UNIQUE,
-    invoice_id BIGINT NOT NULL REFERENCES invoice(id) ON DELETE CASCADE,
+    invoice_id BIGINT NOT NULL REFERENCES invoice(id) ON DELETE SET NULL,
 
-    product_id BIGINT NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+ --  product_id BIGINT NOT NULL REFERENCES product(id) ON DELETE CASCADE,
     host_id BIGINT NOT NULL REFERENCES host(id) ON DELETE CASCADE,
-    user_id BIGINT REFERENCES app_user(id) ON DELETE SET NULL, -- buyer
+    buyer_id BIGINT REFERENCES app_user(id) ON DELETE SET NULL, -- buyer
 
-    plan_id BIGINT REFERENCES product_plan(id) ON DELETE SET NULL,
-    date_id BIGINT REFERENCES product_date(id) ON DELETE SET NULL,
+    -- plan_id BIGINT REFERENCES product_plan(id) ON DELETE SET NULL,
+    -- date_id BIGINT REFERENCES product_date(id) ON DELETE SET NULL,
 
     ticket_number VARCHAR(100),
     payment_mode VARCHAR(50),              -- 'UPFRONT', 'INSTALLMENTS'
@@ -736,7 +736,7 @@ CREATE TABLE booking (
     payment_method_id BIGINT REFERENCES payment_method(id) ON DELETE SET NULL,
     timezone VARCHAR(100),
 
-    total_attendees INT,
+    -- total_attendees INT,
     is_test BOOLEAN DEFAULT FALSE,
     free_access BOOLEAN DEFAULT FALSE,
 
@@ -766,7 +766,10 @@ CREATE TABLE booking (
 CREATE TABLE booking_item (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     booking_id BIGINT NOT NULL REFERENCES booking(id) ON DELETE CASCADE,
-
+    product_id BIGINT NOT NULL REFERENCES product(id) ON DELETE CASCADE,
+    plan_id BIGINT REFERENCES product_plan(id) ON DELETE SET NULL,
+    date_id BIGINT REFERENCES product_date(id) ON DELETE SET NULL,
+    discount_id BIGINT REFERENCES discount(id) ON DELETE SET NULL,
     fare_type VARCHAR(50),           -- 'GENERAL', 'VIP', etc.
     price BIGINT NOT NULL,                 -- precio base en céntimos
     final_price BIGINT NOT NULL,           -- precio después de descuento en céntimos

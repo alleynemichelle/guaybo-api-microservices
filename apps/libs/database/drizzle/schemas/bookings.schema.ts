@@ -62,23 +62,23 @@ export const booking = pgTable('booking', {
     recordId: bigint('record_id', { mode: 'number' }).notNull().unique(),
     invoiceId: bigint('invoice_id', { mode: 'number' })
         .notNull()
-        .references(() => invoice.id, { onDelete: 'cascade' }),
-    productId: bigint('product_id', { mode: 'number' })
-        .notNull()
-        .references(() => product.id, { onDelete: 'cascade' }),
+        .references(() => invoice.id, { onDelete: 'set null' }),
     hostId: bigint('host_id', { mode: 'number' })
         .notNull()
         .references(() => host.id, { onDelete: 'cascade' }),
-    userId: bigint('user_id', { mode: 'number' }).references(() => appUser.id, { onDelete: 'set null' }),
-    planId: bigint('plan_id', { mode: 'number' }).references(() => productPlan.id, { onDelete: 'set null' }),
-    dateId: bigint('date_id', { mode: 'number' }).references(() => productDate.id, { onDelete: 'set null' }),
+    buyerId: bigint('buyer_id', { mode: 'number' }).references(() => appUser.id, { onDelete: 'set null' }),
     ticketNumber: varchar('ticket_number', { length: 100 }),
     paymentMode: varchar('payment_mode', { length: 50 }),
-    bookingStatusId: bigint('booking_status_id', { mode: 'number' }).references(() => status.id),
-    paymentStatusId: bigint('payment_status_id', { mode: 'number' }).references(() => status.id),
-    paymentMethodId: bigint('payment_method_id', { mode: 'number' }).references(() => paymentMethod.id),
+    bookingStatusId: bigint('booking_status_id', { mode: 'number' }).references(() => status.id, {
+        onDelete: 'set null',
+    }),
+    paymentStatusId: bigint('payment_status_id', { mode: 'number' }).references(() => status.id, {
+        onDelete: 'set null',
+    }),
+    paymentMethodId: bigint('payment_method_id', { mode: 'number' }).references(() => paymentMethod.id, {
+        onDelete: 'set null',
+    }),
     timezone: varchar('timezone', { length: 100 }),
-    totalAttendees: integer('total_attendees'),
     isTest: boolean('is_test').default(false),
     freeAccess: boolean('free_access').default(false),
     appFeeAmount: bigint('app_fee_amount', { mode: 'number' }),
@@ -105,25 +105,13 @@ export const bookingRelations = relations(booking, ({ one, many }) => ({
         fields: [booking.invoiceId],
         references: [invoice.id],
     }),
-    product: one(product, {
-        fields: [booking.productId],
-        references: [product.id],
-    }),
     host: one(host, {
         fields: [booking.hostId],
         references: [host.id],
     }),
-    user: one(appUser, {
-        fields: [booking.userId],
+    buyer: one(appUser, {
+        fields: [booking.buyerId],
         references: [appUser.id],
-    }),
-    plan: one(productPlan, {
-        fields: [booking.planId],
-        references: [productPlan.id],
-    }),
-    date: one(productDate, {
-        fields: [booking.dateId],
-        references: [productDate.id],
     }),
     bookingStatus: one(status, {
         fields: [booking.bookingStatusId],
@@ -147,6 +135,12 @@ export const bookingItem = pgTable('booking_item', {
     bookingId: bigint('booking_id', { mode: 'number' })
         .notNull()
         .references(() => booking.id, { onDelete: 'cascade' }),
+    productId: bigint('product_id', { mode: 'number' })
+        .notNull()
+        .references(() => product.id, { onDelete: 'cascade' }),
+    planId: bigint('plan_id', { mode: 'number' }).references(() => productPlan.id, { onDelete: 'set null' }),
+    dateId: bigint('date_id', { mode: 'number' }).references(() => productDate.id, { onDelete: 'set null' }),
+    discountId: bigint('discount_id', { mode: 'number' }).references(() => discount.id, { onDelete: 'set null' }),
     fareType: varchar('fare_type', { length: 50 }),
     price: bigint('price', { mode: 'number' }).notNull(),
     finalPrice: bigint('final_price', { mode: 'number' }).notNull(),
@@ -158,6 +152,22 @@ export const bookingItemRelations = relations(bookingItem, ({ one }) => ({
     booking: one(booking, {
         fields: [bookingItem.bookingId],
         references: [booking.id],
+    }),
+    product: one(product, {
+        fields: [bookingItem.productId],
+        references: [product.id],
+    }),
+    plan: one(productPlan, {
+        fields: [bookingItem.planId],
+        references: [productPlan.id],
+    }),
+    date: one(productDate, {
+        fields: [bookingItem.dateId],
+        references: [productDate.id],
+    }),
+    discount: one(discount, {
+        fields: [bookingItem.discountId],
+        references: [discount.id],
     }),
 }));
 

@@ -1,8 +1,9 @@
 import { IsEmail, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 import { PhoneNumber } from './phone-number.entity';
+import { Base } from './base.entity';
 
-export class Attendee {
+export class Attendee extends Base {
     @IsOptional()
     @IsEmail()
     email: string;

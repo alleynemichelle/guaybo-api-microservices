@@ -42,6 +42,13 @@ export class BookingBilling {
 
     @IsBoolean()
     commissionPaid: boolean;
+
+    // Constructor to initialize properties from a partial object
+    constructor(init?: Partial<BookingBilling>) {
+        if (init) {
+            Object.assign(this, init);
+        }
+    }
 }
 
 export class Booking extends Base {
@@ -158,4 +165,12 @@ export class Booking extends Base {
     @IsBoolean()
     @IsOptional()
     freeAccess?: boolean;
+
+    // Constructor to initialize properties from a partial object
+    constructor(init?: Partial<Booking>) {
+        super();
+        if (init) {
+            Object.assign(this, init);
+        }
+    }
 }

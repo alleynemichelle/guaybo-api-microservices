@@ -103,7 +103,7 @@ export class ProductsRepository {
                 totalBookings: sql<number>`COUNT(${booking.id})`,
             })
             .from(product)
-            .leftJoin(booking, and(eq(booking.productId, product.id), eq(booking.bookingStatusId, receivedStatus.id)))
+            .leftJoin(booking, eq(booking.bookingStatusId, receivedStatus.id))
             .where(eq(product.recordId, productId))
             .groupBy(product.id)
             .limit(1);
